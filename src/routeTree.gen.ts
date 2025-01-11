@@ -11,13 +11,20 @@
 // Import Routes
 
 import { Route as rootRoute } from './routes/__root'
+import { Route as DashboardImport } from './routes/dashboard'
 import { Route as IndexImport } from './routes/index'
 import { Route as RegisterIndexImport } from './routes/register/index'
 import { Route as LoginIndexImport } from './routes/login/index'
-import { Route as DashboardIndexImport } from './routes/dashboard/index'
 import { Route as BooksIndexImport } from './routes/books/index'
+import { Route as DashboardKotImport } from './routes/dashboard/kot'
 
 // Create/Update Routes
+
+const DashboardRoute = DashboardImport.update({
+  id: '/dashboard',
+  path: '/dashboard',
+  getParentRoute: () => rootRoute,
+} as any)
 
 const IndexRoute = IndexImport.update({
   id: '/',
@@ -37,16 +44,16 @@ const LoginIndexRoute = LoginIndexImport.update({
   getParentRoute: () => rootRoute,
 } as any)
 
-const DashboardIndexRoute = DashboardIndexImport.update({
-  id: '/dashboard/',
-  path: '/dashboard/',
-  getParentRoute: () => rootRoute,
-} as any)
-
 const BooksIndexRoute = BooksIndexImport.update({
   id: '/books/',
   path: '/books/',
   getParentRoute: () => rootRoute,
+} as any)
+
+const DashboardKotRoute = DashboardKotImport.update({
+  id: '/kot',
+  path: '/kot',
+  getParentRoute: () => DashboardRoute,
 } as any)
 
 // Populate the FileRoutesByPath interface
@@ -60,18 +67,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexImport
       parentRoute: typeof rootRoute
     }
+    '/dashboard': {
+      id: '/dashboard'
+      path: '/dashboard'
+      fullPath: '/dashboard'
+      preLoaderRoute: typeof DashboardImport
+      parentRoute: typeof rootRoute
+    }
+    '/dashboard/kot': {
+      id: '/dashboard/kot'
+      path: '/kot'
+      fullPath: '/dashboard/kot'
+      preLoaderRoute: typeof DashboardKotImport
+      parentRoute: typeof DashboardImport
+    }
     '/books/': {
       id: '/books/'
       path: '/books'
       fullPath: '/books'
       preLoaderRoute: typeof BooksIndexImport
-      parentRoute: typeof rootRoute
-    }
-    '/dashboard/': {
-      id: '/dashboard/'
-      path: '/dashboard'
-      fullPath: '/dashboard'
-      preLoaderRoute: typeof DashboardIndexImport
       parentRoute: typeof rootRoute
     }
     '/login/': {
@@ -93,18 +107,32 @@ declare module '@tanstack/react-router' {
 
 // Create and export the route tree
 
+interface DashboardRouteChildren {
+  DashboardKotRoute: typeof DashboardKotRoute
+}
+
+const DashboardRouteChildren: DashboardRouteChildren = {
+  DashboardKotRoute: DashboardKotRoute,
+}
+
+const DashboardRouteWithChildren = DashboardRoute._addFileChildren(
+  DashboardRouteChildren,
+)
+
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/dashboard': typeof DashboardRouteWithChildren
+  '/dashboard/kot': typeof DashboardKotRoute
   '/books': typeof BooksIndexRoute
-  '/dashboard': typeof DashboardIndexRoute
   '/login': typeof LoginIndexRoute
   '/register': typeof RegisterIndexRoute
 }
 
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/dashboard': typeof DashboardRouteWithChildren
+  '/dashboard/kot': typeof DashboardKotRoute
   '/books': typeof BooksIndexRoute
-  '/dashboard': typeof DashboardIndexRoute
   '/login': typeof LoginIndexRoute
   '/register': typeof RegisterIndexRoute
 }
@@ -112,33 +140,47 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRoute
   '/': typeof IndexRoute
+  '/dashboard': typeof DashboardRouteWithChildren
+  '/dashboard/kot': typeof DashboardKotRoute
   '/books/': typeof BooksIndexRoute
-  '/dashboard/': typeof DashboardIndexRoute
   '/login/': typeof LoginIndexRoute
   '/register/': typeof RegisterIndexRoute
 }
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/books' | '/dashboard' | '/login' | '/register'
+  fullPaths:
+    | '/'
+    | '/dashboard'
+    | '/dashboard/kot'
+    | '/books'
+    | '/login'
+    | '/register'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/books' | '/dashboard' | '/login' | '/register'
-  id: '__root__' | '/' | '/books/' | '/dashboard/' | '/login/' | '/register/'
+  to: '/' | '/dashboard' | '/dashboard/kot' | '/books' | '/login' | '/register'
+  id:
+    | '__root__'
+    | '/'
+    | '/dashboard'
+    | '/dashboard/kot'
+    | '/books/'
+    | '/login/'
+    | '/register/'
   fileRoutesById: FileRoutesById
 }
 
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  DashboardRoute: typeof DashboardRouteWithChildren
   BooksIndexRoute: typeof BooksIndexRoute
-  DashboardIndexRoute: typeof DashboardIndexRoute
   LoginIndexRoute: typeof LoginIndexRoute
   RegisterIndexRoute: typeof RegisterIndexRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  DashboardRoute: DashboardRouteWithChildren,
   BooksIndexRoute: BooksIndexRoute,
-  DashboardIndexRoute: DashboardIndexRoute,
   LoginIndexRoute: LoginIndexRoute,
   RegisterIndexRoute: RegisterIndexRoute,
 }
@@ -154,8 +196,8 @@ export const routeTree = rootRoute
       "filePath": "__root.tsx",
       "children": [
         "/",
+        "/dashboard",
         "/books/",
-        "/dashboard/",
         "/login/",
         "/register/"
       ]
@@ -163,11 +205,18 @@ export const routeTree = rootRoute
     "/": {
       "filePath": "index.tsx"
     },
+    "/dashboard": {
+      "filePath": "dashboard.tsx",
+      "children": [
+        "/dashboard/kot"
+      ]
+    },
+    "/dashboard/kot": {
+      "filePath": "dashboard/kot.tsx",
+      "parent": "/dashboard"
+    },
     "/books/": {
       "filePath": "books/index.tsx"
-    },
-    "/dashboard/": {
-      "filePath": "dashboard/index.tsx"
     },
     "/login/": {
       "filePath": "login/index.tsx"
