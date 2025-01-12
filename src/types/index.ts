@@ -8,3 +8,11 @@ export type User = {
   libraryCardCode: string;
 };
 export type UserDto = Omit<User, "id">;
+
+export type Log = {
+  id: string;
+  timestamp: string;
+  userId: string;
+  action: string;
+};
+export type LogDto = Omit<Log, "id">;

@@ -53,14 +53,26 @@
     {
       "id": "1",
       "timestamp": "2025-01-01T10:00:00Z",
-      "userId": 1,
+      "userId": "1",
       "action": "Login"
     },
     {
       "id": "2",
       "timestamp": "2025-01-01T10:10:00Z",
-      "userId": 1,
+      "userId": "1",
       "action": "Borrowed book - ID: 2"
+    },
+    {
+      "id": "69e3",
+      "userId": "2",
+      "action": "login",
+      "timestamp": "2025-01-12T20:02:46.111Z"
+    },
+    {
+      "id": "41c8",
+      "userId": "2",
+      "action": "login",
+      "timestamp": "2025-01-12T20:04:49.072Z"
     }
   ]
 }

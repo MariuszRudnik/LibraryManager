@@ -10,7 +10,7 @@ import {
 } from "@mui/material";
 import { UserDto } from "../../types/index.ts";
 import { v4 as uuidv4 } from "uuid";
-import { useCreateUserMutation } from "../../mutations/useCreatePartMutation.ts";
+import { useCreateUserMutation } from "../../mutations/useCreateUserMutation.ts";
 import { useSuspenseQuery } from "@tanstack/react-query";
 import { usersOptions } from "../../queries/users.ts";
 import { hasEmailInDataBase } from "../../utills/hasEmailInDataBase.ts";
