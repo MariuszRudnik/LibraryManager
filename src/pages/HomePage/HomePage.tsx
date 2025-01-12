@@ -9,7 +9,7 @@ function HomePage() {
     ];
 
     return (
-        <div>
+        <div style={{ backgroundColor: '#adaaaa', minHeight: '100vh' }}>
             <NavBar />
             <BookList books={books} />
         </div>
