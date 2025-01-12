@@ -1,23 +1,34 @@
-import * as React from 'react'
-import {Outlet,  createRootRouteWithContext} from '@tanstack/react-router'
+import * as React from "react";
+import { Outlet, createRootRouteWithContext } from "@tanstack/react-router";
+import { QueryClient } from "@tanstack/react-query";
+import { Navbar } from "../components/Navbar";
+import { CssBaseline, ThemeProvider } from "@mui/material";
+import { theme } from "../assets/theme";
 
-export const Route = createRootRouteWithContext()({
-    component: RootComponent,
-});
 const TanStackRouterDevtools = import.meta.env.DEV
-    ? React.lazy(() =>
-        import('@tanstack/router-devtools').then((res) => ({
-            default: res.TanStackRouterDevtools,
-        }))
+  ? React.lazy(() =>
+      import("@tanstack/router-devtools").then((res) => ({
+        default: res.TanStackRouterDevtools,
+      }))
     )
-    : null;
+  : null;
+
+type RootContext = {
+  queryClient: QueryClient;
+};
+
+export const Route = createRootRouteWithContext<RootContext>()({
+  component: RootComponent,
+});
 
 function RootComponent() {
   return (
-    <React.Fragment>
-
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <Navbar />
       <Outlet />
-        {TanStackRouterDevtools && <TanStackRouterDevtools />}
-    </React.Fragment>
-  )
+      {TanStackRouterDevtools && <TanStackRouterDevtools />}
+    </ThemeProvider>
+  );
 }
+// <CssBaseline /> resetuje domyślne ustawienia css przeglądarki

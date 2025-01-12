@@ -15,8 +15,8 @@ import { Route as DashboardImport } from './routes/dashboard'
 import { Route as IndexImport } from './routes/index'
 import { Route as RegisterIndexImport } from './routes/register/index'
 import { Route as LoginIndexImport } from './routes/login/index'
+import { Route as DashboardIndexImport } from './routes/dashboard/index'
 import { Route as BooksIndexImport } from './routes/books/index'
-import { Route as DashboardKotImport } from './routes/dashboard/kot'
 
 // Create/Update Routes
 
@@ -44,16 +44,16 @@ const LoginIndexRoute = LoginIndexImport.update({
   getParentRoute: () => rootRoute,
 } as any)
 
+const DashboardIndexRoute = DashboardIndexImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => DashboardRoute,
+} as any)
+
 const BooksIndexRoute = BooksIndexImport.update({
   id: '/books/',
   path: '/books/',
   getParentRoute: () => rootRoute,
-} as any)
-
-const DashboardKotRoute = DashboardKotImport.update({
-  id: '/kot',
-  path: '/kot',
-  getParentRoute: () => DashboardRoute,
 } as any)
 
 // Populate the FileRoutesByPath interface
@@ -74,19 +74,19 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DashboardImport
       parentRoute: typeof rootRoute
     }
-    '/dashboard/kot': {
-      id: '/dashboard/kot'
-      path: '/kot'
-      fullPath: '/dashboard/kot'
-      preLoaderRoute: typeof DashboardKotImport
-      parentRoute: typeof DashboardImport
-    }
     '/books/': {
       id: '/books/'
       path: '/books'
       fullPath: '/books'
       preLoaderRoute: typeof BooksIndexImport
       parentRoute: typeof rootRoute
+    }
+    '/dashboard/': {
+      id: '/dashboard/'
+      path: '/'
+      fullPath: '/dashboard/'
+      preLoaderRoute: typeof DashboardIndexImport
+      parentRoute: typeof DashboardImport
     }
     '/login/': {
       id: '/login/'
@@ -108,11 +108,11 @@ declare module '@tanstack/react-router' {
 // Create and export the route tree
 
 interface DashboardRouteChildren {
-  DashboardKotRoute: typeof DashboardKotRoute
+  DashboardIndexRoute: typeof DashboardIndexRoute
 }
 
 const DashboardRouteChildren: DashboardRouteChildren = {
-  DashboardKotRoute: DashboardKotRoute,
+  DashboardIndexRoute: DashboardIndexRoute,
 }
 
 const DashboardRouteWithChildren = DashboardRoute._addFileChildren(
@@ -122,17 +122,16 @@ const DashboardRouteWithChildren = DashboardRoute._addFileChildren(
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/dashboard': typeof DashboardRouteWithChildren
-  '/dashboard/kot': typeof DashboardKotRoute
   '/books': typeof BooksIndexRoute
+  '/dashboard/': typeof DashboardIndexRoute
   '/login': typeof LoginIndexRoute
   '/register': typeof RegisterIndexRoute
 }
 
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/dashboard': typeof DashboardRouteWithChildren
-  '/dashboard/kot': typeof DashboardKotRoute
   '/books': typeof BooksIndexRoute
+  '/dashboard': typeof DashboardIndexRoute
   '/login': typeof LoginIndexRoute
   '/register': typeof RegisterIndexRoute
 }
@@ -141,8 +140,8 @@ export interface FileRoutesById {
   __root__: typeof rootRoute
   '/': typeof IndexRoute
   '/dashboard': typeof DashboardRouteWithChildren
-  '/dashboard/kot': typeof DashboardKotRoute
   '/books/': typeof BooksIndexRoute
+  '/dashboard/': typeof DashboardIndexRoute
   '/login/': typeof LoginIndexRoute
   '/register/': typeof RegisterIndexRoute
 }
@@ -152,18 +151,18 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/dashboard'
-    | '/dashboard/kot'
     | '/books'
+    | '/dashboard/'
     | '/login'
     | '/register'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/dashboard' | '/dashboard/kot' | '/books' | '/login' | '/register'
+  to: '/' | '/books' | '/dashboard' | '/login' | '/register'
   id:
     | '__root__'
     | '/'
     | '/dashboard'
-    | '/dashboard/kot'
     | '/books/'
+    | '/dashboard/'
     | '/login/'
     | '/register/'
   fileRoutesById: FileRoutesById
@@ -208,15 +207,15 @@ export const routeTree = rootRoute
     "/dashboard": {
       "filePath": "dashboard.tsx",
       "children": [
-        "/dashboard/kot"
+        "/dashboard/"
       ]
-    },
-    "/dashboard/kot": {
-      "filePath": "dashboard/kot.tsx",
-      "parent": "/dashboard"
     },
     "/books/": {
       "filePath": "books/index.tsx"
+    },
+    "/dashboard/": {
+      "filePath": "dashboard/index.tsx",
+      "parent": "/dashboard"
     },
     "/login/": {
       "filePath": "login/index.tsx"
