@@ -17,6 +17,15 @@
       "password": "admin123",
       "role": "admin",
       "libraryCardCode": null
+    },
+    {
+      "id": "17f2",
+      "firstName": "xxx",
+      "lastName": "xxx",
+      "email": "xxx@so.pl",
+      "password": "aaaaa",
+      "role": "client",
+      "libraryCardCode": "aeb50543-02f8-400d-bf25-18e0c37c4763"
     }
   ],
   "books": [

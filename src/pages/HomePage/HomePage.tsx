@@ -1,5 +1,4 @@
 import BookList from './BookList';
-import NavBar from './NavBar';
 
 function HomePage() {
     const books = [
@@ -9,8 +8,8 @@ function HomePage() {
     ];
 
     return (
-        <div>
-            <NavBar />
+        <div style={{ backgroundColor: '#adaaaa', minHeight: '100vh' }}>
+
             <BookList books={books} />
         </div>
     );
