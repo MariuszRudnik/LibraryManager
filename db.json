@@ -1,7 +1,7 @@
 {
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "firstName": "Jan",
       "lastName": "Kowalski",
       "email": "jan.kowalski@example.com",
@@ -10,7 +10,7 @@
       "libraryCardCode": "123456789"
     },
     {
-      "id": 2,
+      "id": "2",
       "firstName": "Anna",
       "lastName": "Nowak",
       "email": "anna.nowak@example.com",
@@ -21,7 +21,7 @@
   ],
   "books": [
     {
-      "id": 1,
+      "id": "1",
       "title": "W pustyni i w puszczy",
       "author": "Henryk Sienkiewicz",
       "description": "Przygody Stasia i Nel w Afryce.",
@@ -30,7 +30,7 @@
       "borrowedCopies": 0
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "Lalka",
       "author": "Bolesław Prus",
       "description": "Historia Stanisława Wokulskiego.",
@@ -41,7 +41,7 @@
   ],
   "rentals": [
     {
-      "id": 1,
+      "id": "1",
       "userId": 1,
       "bookId": 2,
       "borrowDate": "2025-01-01",
@@ -51,13 +51,13 @@
   ],
   "logs": [
     {
-      "id": 1,
+      "id": "1",
       "timestamp": "2025-01-01T10:00:00Z",
       "userId": 1,
       "action": "Login"
     },
     {
-      "id": 2,
+      "id": "2",
       "timestamp": "2025-01-01T10:10:00Z",
       "userId": 1,
       "action": "Borrowed book - ID: 2"
