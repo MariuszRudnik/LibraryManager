@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { Suspense } from "react";
 import { Outlet, createRootRouteWithContext } from "@tanstack/react-router";
 import { QueryClient } from "@tanstack/react-query";
 import { Navbar } from "../components/Navbar";
@@ -27,7 +27,9 @@ function RootComponent() {
       <CssBaseline />
       <Navbar />
       <Outlet />
-      {TanStackRouterDevtools && <TanStackRouterDevtools />}
+      <Suspense>
+        {TanStackRouterDevtools && <TanStackRouterDevtools />}
+      </Suspense>
     </ThemeProvider>
   );
 }
