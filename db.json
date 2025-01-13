@@ -26,26 +26,47 @@
       "password": "aaaaa",
       "role": "client",
       "libraryCardCode": "aeb50543-02f8-400d-bf25-18e0c37c4763"
+    },
+    {
+      "id": "78d2",
+      "firstName": "xxxx",
+      "lastName": "xxxx",
+      "email": "xxx@w2.pl",
+      "password": "xxx",
+      "role": "client",
+      "libraryCardCode": "8e6841b1-136c-43e2-b1c6-10da38c4c044"
     }
   ],
   "books": [
     {
       "id": "1",
-      "title": "W pustyni i w puszczy",
-      "author": "Henryk Sienkiewicz",
-      "description": "Przygody Stasia i Nel w Afryce.",
-      "year": 1912,
-      "availableCopies": 5,
-      "borrowedCopies": 0
+      "title": "Harry Potter i Kamień Filozoficzny",
+      "author": "J.K. Rowling",
+      "description": "Pierwsza część przygód młodego czarodzieja Harry'ego Pottera, który odkrywa swoje magiczne dziedzictwo i rozpoczyna naukę w Szkole Magii i Czarodziejstwa w Hogwarcie.",
+      "year": 1997,
+      "availableCopies": 7,
+      "borrowedCopies": 2,
+      "images": "Book_1.png"
     },
     {
       "id": "2",
-      "title": "Lalka",
-      "author": "Bolesław Prus",
-      "description": "Historia Stanisława Wokulskiego.",
-      "year": 1890,
-      "availableCopies": 3,
-      "borrowedCopies": 1
+      "title": "Wiedźmin: Ostatnie Życzenie",
+      "author": "Andrzej Sapkowski",
+      "description": "Zbiór opowiadań wprowadzający czytelnika w świat Geralta z Rivii, tytułowego wiedźmina – zabójcy potworów, który staje przed wieloma moralnymi dylematami.",
+      "year": 1993,
+      "availableCopies": 4,
+      "borrowedCopies": 1,
+      "images": "Book_2.png"
+    },
+    {
+      "id": "3",
+      "title": "Władca Pierścieni: Drużyna Pierścienia",
+      "author": "J.R.R. Tolkien",
+      "description": "Pierwszy tom epickiej trylogii, w której młody hobbit Frodo Baggins wyrusza na misję zniszczenia Pierścienia Władzy, by ocalić Śródziemie przed siłami zła.",
+      "year": 1954,
+      "availableCopies": 5,
+      "borrowedCopies": 0,
+       "images": "Book_3.png"
     }
   ],
   "rentals": [
