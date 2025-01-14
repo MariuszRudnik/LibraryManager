@@ -33,13 +33,11 @@ export const Register = () => {
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
 
-    //weryfikacja poprwności hasła
     if (passwordNameInput.value !== passwordNameInput2.value) {
       setDiffrentPassword(true);
     } else {
       setDiffrentPassword(false);
 
-      //weryfikacja czy podany email istnieje w bazie
       if (hasEmailInDataBase(data, emailNameInput.value)) {
         setEmailInDataBase(true);
       } else {
@@ -64,21 +62,37 @@ export const Register = () => {
   }, [isSuccess, navigate]);
 
   return (
-    <Container maxWidth="sm">
+    <Container
+      maxWidth={false} 
+      disableGutters 
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        minHeight: "100vh",
+        backgroundColor: "#adaaaa",
+        padding: "2rem",
+      }}
+    >
       <Box
         component="form"
         sx={{
+          width: "100%",
+          maxWidth: "500px",
+          padding: "2rem",
+          borderRadius: "8px",
+          boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
           display: "flex",
-          marginTop: "4rem",
           flexDirection: "column",
           alignItems: "center",
-          "& .MuiTextField-root": { m: 1, width: "100%" },
-          "& .MuiButton-root": { m: 1, width: "100%" },
+          border: "1px solid black",
+          backgroundColor: "white",
         }}
         autoComplete="off"
         onSubmit={handleSubmit}
       >
-        <Typography variant="h2" component="p">
+        <Typography variant="h4" component="h1" sx={{ marginBottom: "1.5rem" }}>
           Rejestracja
         </Typography>
         <TextField
@@ -87,6 +101,7 @@ export const Register = () => {
           label="Imię"
           variant="outlined"
           {...firstNameInput}
+          sx={{ marginBottom: "1rem" }}
         />
         <TextField
           required
@@ -94,6 +109,7 @@ export const Register = () => {
           label="Nazwisko"
           variant="outlined"
           {...lastNameInput}
+          sx={{ marginBottom: "1rem" }}
         />
         <TextField
           required
@@ -103,11 +119,10 @@ export const Register = () => {
           variant="outlined"
           error={emailInDataBase}
           helperText={
-            emailInDataBase
-              ? "Już istnieje użytkownik z takim adresem e-mail."
-              : ""
+            emailInDataBase ? "Już istnieje użytkownik z takim adresem e-mail." : ""
           }
           {...emailNameInput}
+          sx={{ marginBottom: "1rem" }}
         />
         <TextField
           required
@@ -116,6 +131,7 @@ export const Register = () => {
           type="password"
           variant="outlined"
           {...passwordNameInput}
+          sx={{ marginBottom: "1rem" }}
         />
         <TextField
           required
@@ -126,12 +142,31 @@ export const Register = () => {
           error={diffrentPassword}
           helperText={diffrentPassword ? "Hasło nie jest identyczne" : ""}
           {...passwordNameInput2}
+          sx={{ marginBottom: "1.5rem" }}
         />
-        <Button variant="contained" color="primary" type="submit">
+        <Button
+          variant="contained"
+          color="primary"
+          type="submit"
+          sx={{
+            marginBottom: "1rem",
+            width: "100%",
+            padding: "0.75rem",
+            fontSize: "1rem",
+          }}
+        >
           Załóż konto
         </Button>
         {isSuccess && (
-          <Alert icon={<CheckIcon fontSize="inherit" />} severity="success">
+          <Alert
+            icon={<CheckIcon fontSize="inherit" />}
+            severity="success"
+            sx={{
+              marginTop: "1rem",
+              width: "100%",
+              textAlign: "center",
+            }}
+          >
             Konto zostało założone
           </Alert>
         )}

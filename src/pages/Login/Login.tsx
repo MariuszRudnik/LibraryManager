@@ -27,8 +27,6 @@ export const Login = () => {
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
 
-    // ta funkcja sprawdza czy w bazie istnie użytkownik o podanym emailu i haśle
-    // zwraca obiekt użytkownika lub null
     const user = hasEmailAndPasswordInDataBase(
       data,
       emailInput.value,
@@ -50,21 +48,37 @@ export const Login = () => {
   }, [isSuccess, navigate]);
 
   return (
-    <Container maxWidth="sm">
+    <Container
+      maxWidth={false} 
+      disableGutters 
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        minHeight: "100vh",
+        backgroundColor: "#adaaaa", 
+        padding: "2rem",
+      }}
+    >
       <Box
         component="form"
         sx={{
+          width: "100%",
+          maxWidth: "500px",
+          padding: "2rem",
+          backgroundColor: "white",
+          borderRadius: "8px",
+          boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
           display: "flex",
-          marginTop: "4rem",
           flexDirection: "column",
           alignItems: "center",
-          "& .MuiTextField-root": { m: 1, width: "100%" },
-          "& .MuiButton-root": { m: 1, width: "100%" },
+          border: "1px solid black",
         }}
         autoComplete="off"
         onSubmit={handleSubmit}
       >
-        <Typography variant="h2" component="p">
+        <Typography variant="h4" component="h1" sx={{ marginBottom: "1.5rem" }}>
           Miło cię widzieć
         </Typography>
         <TextField
@@ -74,21 +88,41 @@ export const Login = () => {
           type="email"
           variant="outlined"
           {...emailInput}
+          sx={{ marginBottom: "1rem" }}
         />
         <TextField
           required
-          id="lastName"
+          id="password"
           label="Hasło"
           type="password"
           variant="outlined"
           {...passwordInput}
+          sx={{ marginBottom: "1.5rem" }}
         />
-
-        <Button variant="contained" color="primary" type="submit">
+        <Button
+          variant="contained"
+          color="primary"
+          type="submit"
+          sx={{
+            marginBottom: "1rem",
+            width: "100%",
+            padding: "0.75rem",
+            fontSize: "1rem",
+          }}
+        >
           Zaloguj się
         </Button>
         {error && (
-          <Alert severity="error">Nie prawidłowy login lub hasło </Alert>
+          <Alert
+            severity="error"
+            sx={{
+              width: "100%",
+              marginTop: "1rem",
+              textAlign: "center",
+            }}
+          >
+            Nieprawidłowy login lub hasło
+          </Alert>
         )}
       </Box>
     </Container>
