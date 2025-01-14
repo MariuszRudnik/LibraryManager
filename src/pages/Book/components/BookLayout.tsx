@@ -17,13 +17,14 @@ interface BookLayoutProps {
     book: Book;
 }
 function BookLayout({book}:BookLayoutProps) {
-    const {title, author, year, images} = book;
+    const {title, author, year, images, description} = book;
     const imagePath = `../books/${images}`;
     return (
         <div>
             <h1>{title}</h1>
             <p>{author}</p>
             <p>{year}</p>
+            <p>{description}</p>
             {images && (
                 <CardMedia
                     component="img"
