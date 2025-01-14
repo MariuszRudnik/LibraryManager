@@ -15,8 +15,8 @@ import { Route as DashboardImport } from './routes/dashboard'
 import { Route as IndexImport } from './routes/index'
 import { Route as RegisterIndexImport } from './routes/register/index'
 import { Route as LoginIndexImport } from './routes/login/index'
-import { Route as DashboardIndexImport } from './routes/dashboard/index'
 import { Route as BookIndexImport } from './routes/book/index'
+import { Route as DashboardOutletImport } from './routes/dashboard.outlet'
 import { Route as BookBookImport } from './routes/book/$book'
 
 // Create/Update Routes
@@ -45,16 +45,16 @@ const LoginIndexRoute = LoginIndexImport.update({
   getParentRoute: () => rootRoute,
 } as any)
 
-const DashboardIndexRoute = DashboardIndexImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => DashboardRoute,
-} as any)
-
 const BookIndexRoute = BookIndexImport.update({
   id: '/book/',
   path: '/book/',
   getParentRoute: () => rootRoute,
+} as any)
+
+const DashboardOutletRoute = DashboardOutletImport.update({
+  id: '/outlet',
+  path: '/outlet',
+  getParentRoute: () => DashboardRoute,
 } as any)
 
 const BookBookRoute = BookBookImport.update({
@@ -88,19 +88,19 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BookBookImport
       parentRoute: typeof rootRoute
     }
+    '/dashboard/outlet': {
+      id: '/dashboard/outlet'
+      path: '/outlet'
+      fullPath: '/dashboard/outlet'
+      preLoaderRoute: typeof DashboardOutletImport
+      parentRoute: typeof DashboardImport
+    }
     '/book/': {
       id: '/book/'
       path: '/book'
       fullPath: '/book'
       preLoaderRoute: typeof BookIndexImport
       parentRoute: typeof rootRoute
-    }
-    '/dashboard/': {
-      id: '/dashboard/'
-      path: '/'
-      fullPath: '/dashboard/'
-      preLoaderRoute: typeof DashboardIndexImport
-      parentRoute: typeof DashboardImport
     }
     '/login/': {
       id: '/login/'
@@ -122,11 +122,11 @@ declare module '@tanstack/react-router' {
 // Create and export the route tree
 
 interface DashboardRouteChildren {
-  DashboardIndexRoute: typeof DashboardIndexRoute
+  DashboardOutletRoute: typeof DashboardOutletRoute
 }
 
 const DashboardRouteChildren: DashboardRouteChildren = {
-  DashboardIndexRoute: DashboardIndexRoute,
+  DashboardOutletRoute: DashboardOutletRoute,
 }
 
 const DashboardRouteWithChildren = DashboardRoute._addFileChildren(
@@ -137,17 +137,18 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/dashboard': typeof DashboardRouteWithChildren
   '/book/$book': typeof BookBookRoute
+  '/dashboard/outlet': typeof DashboardOutletRoute
   '/book': typeof BookIndexRoute
-  '/dashboard/': typeof DashboardIndexRoute
   '/login': typeof LoginIndexRoute
   '/register': typeof RegisterIndexRoute
 }
 
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/dashboard': typeof DashboardRouteWithChildren
   '/book/$book': typeof BookBookRoute
+  '/dashboard/outlet': typeof DashboardOutletRoute
   '/book': typeof BookIndexRoute
-  '/dashboard': typeof DashboardIndexRoute
   '/login': typeof LoginIndexRoute
   '/register': typeof RegisterIndexRoute
 }
@@ -157,8 +158,8 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/dashboard': typeof DashboardRouteWithChildren
   '/book/$book': typeof BookBookRoute
+  '/dashboard/outlet': typeof DashboardOutletRoute
   '/book/': typeof BookIndexRoute
-  '/dashboard/': typeof DashboardIndexRoute
   '/login/': typeof LoginIndexRoute
   '/register/': typeof RegisterIndexRoute
 }
@@ -169,19 +170,26 @@ export interface FileRouteTypes {
     | '/'
     | '/dashboard'
     | '/book/$book'
+    | '/dashboard/outlet'
     | '/book'
-    | '/dashboard/'
     | '/login'
     | '/register'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/book/$book' | '/book' | '/dashboard' | '/login' | '/register'
+  to:
+    | '/'
+    | '/dashboard'
+    | '/book/$book'
+    | '/dashboard/outlet'
+    | '/book'
+    | '/login'
+    | '/register'
   id:
     | '__root__'
     | '/'
     | '/dashboard'
     | '/book/$book'
+    | '/dashboard/outlet'
     | '/book/'
-    | '/dashboard/'
     | '/login/'
     | '/register/'
   fileRoutesById: FileRoutesById
@@ -229,18 +237,18 @@ export const routeTree = rootRoute
     "/dashboard": {
       "filePath": "dashboard.tsx",
       "children": [
-        "/dashboard/"
+        "/dashboard/outlet"
       ]
     },
     "/book/$book": {
       "filePath": "book/$book.tsx"
     },
+    "/dashboard/outlet": {
+      "filePath": "dashboard.outlet.tsx",
+      "parent": "/dashboard"
+    },
     "/book/": {
       "filePath": "book/index.tsx"
-    },
-    "/dashboard/": {
-      "filePath": "dashboard/index.tsx",
-      "parent": "/dashboard"
     },
     "/login/": {
       "filePath": "login/index.tsx"
