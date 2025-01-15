@@ -14,6 +14,7 @@ import { useEffect, useState } from "react";
 import { useCreateLogMutation } from "../../mutations/useCreateLogMutation.ts";
 import { useNavigate } from "@tanstack/react-router";
 import { LogDto } from "../../types/index.ts";
+import { useUserStore } from "../../store/useUserStore.ts";
 
 export const Login = () => {
   const emailInput = useInput("");
@@ -23,6 +24,7 @@ export const Login = () => {
   const { data } = useSuspenseQuery(usersOptions);
   const { mutate, isSuccess } = useCreateLogMutation();
   const navigate = useNavigate();
+  const { login } = useUserStore();
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
@@ -39,7 +41,9 @@ export const Login = () => {
       action: "login",
       timestamp: new Date().toISOString(),
     };
-    mutate(logData);
+
+    login(user); // zapisuje info user w store
+    mutate(logData); //zapisuje w db.json info o logowaniu
   };
 
   useEffect(() => {
@@ -49,15 +53,15 @@ export const Login = () => {
 
   return (
     <Container
-      maxWidth={false} 
-      disableGutters 
+      maxWidth={false}
+      disableGutters
       sx={{
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
         minHeight: "100vh",
-        backgroundColor: "#adaaaa", 
+        backgroundColor: "#adaaaa",
         padding: "2rem",
       }}
     >

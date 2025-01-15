@@ -1,9 +1,13 @@
 import { AppBar, Box, Button, Toolbar, Typography } from "@mui/material";
 import { Link } from "@tanstack/react-router";
 import AutoStoriesIcon from "@mui/icons-material/AutoStories";
+import { useUserStore } from "../../store/useUserStore";
+import { InfoLogin } from "./InfoLogin";
+import { InfoUser } from "./InfoUser";
 // import styles from "./styles.module.scss";
 
 export const Navbar = () => {
+  const { user, isLoggedIn } = useUserStore();
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
@@ -23,28 +27,31 @@ export const Navbar = () => {
               >
                 <Button color="inherit">Strona główna</Button>
               </Link>
+              {user.role === "admin" && (
+                <Link
+                  to="/dashboard"
+                  style={{
+                    textDecoration: "none",
+                    color: "inherit",
+                  }}
+                >
+                  <Button color="inherit">dashboard</Button>
+                </Link>
+              )}
+              {user.role === "client" && (
+                <Link
+                  to="/"
+                  style={{
+                    textDecoration: "none",
+                    color: "inherit",
+                  }}
+                >
+                  <Button color="inherit">Profil</Button>
+                </Link>
+              )}
             </Box>
           </Box>
-          <Box>
-            <Link
-              to="/register"
-              style={{
-                textDecoration: "none",
-                color: "inherit",
-              }}
-            >
-              <Button color="inherit">Rejestracja</Button>
-            </Link>
-            <Link
-              to="/login"
-              style={{
-                textDecoration: "none",
-                color: "inherit",
-              }}
-            >
-              <Button color="inherit">Zaloguj się</Button>
-            </Link>
-          </Box>
+          <Box>{isLoggedIn ? <InfoUser /> : <InfoLogin />}</Box>
         </Toolbar>
       </AppBar>
     </Box>
