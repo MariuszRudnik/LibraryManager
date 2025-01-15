@@ -22,6 +22,7 @@ export default function DashboardLayoutBasic() {
         <Outlet />
         </Dashboard>
 
+
     </AppProvider>
   )
 }

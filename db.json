@@ -35,6 +35,15 @@
       "password": "xxx",
       "role": "client",
       "libraryCardCode": "8e6841b1-136c-43e2-b1c6-10da38c4c044"
+    },
+    {
+      "id": "e58f",
+      "firstName": "ADRIAN",
+      "lastName": "MAJCHER",
+      "email": "kot@lisa.pl",
+      "password": "123",
+      "role": "client",
+      "libraryCardCode": "45682827"
     }
   ],
   "books": [
@@ -66,7 +75,7 @@
       "year": 1954,
       "availableCopies": 5,
       "borrowedCopies": 0,
-       "images": "Book_3.png"
+      "images": "Book_3.png"
     }
   ],
   "rentals": [
@@ -93,16 +102,52 @@
       "action": "Borrowed book - ID: 2"
     },
     {
-      "id": "69e3",
-      "userId": "2",
+      "id": "6e96",
+      "userId": "e58f",
       "action": "login",
-      "timestamp": "2025-01-12T20:02:46.111Z"
+      "timestamp": "2025-01-15T18:42:13.342Z"
     },
     {
-      "id": "41c8",
+      "id": "a6e7",
       "userId": "2",
       "action": "login",
-      "timestamp": "2025-01-12T20:04:49.072Z"
+      "timestamp": "2025-01-15T18:43:28.100Z"
+    },
+    {
+      "id": "220e",
+      "userId": "2",
+      "action": "login",
+      "timestamp": "2025-01-15T19:04:15.342Z"
+    },
+    {
+      "id": "8157",
+      "userId": "2",
+      "action": "login",
+      "timestamp": "2025-01-15T19:43:01.695Z"
+    },
+    {
+      "id": "06df",
+      "userId": "2",
+      "action": "login",
+      "timestamp": "2025-01-15T19:47:25.678Z"
+    },
+    {
+      "id": "b606",
+      "userId": "2",
+      "action": "login",
+      "timestamp": "2025-01-15T19:57:04.354Z"
+    },
+    {
+      "id": "5acd",
+      "userId": "2",
+      "action": "login",
+      "timestamp": "2025-01-15T19:59:24.841Z"
+    },
+    {
+      "id": "4298",
+      "userId": "e58f",
+      "action": "login",
+      "timestamp": "2025-01-15T19:59:36.451Z"
     }
   ]
 }
