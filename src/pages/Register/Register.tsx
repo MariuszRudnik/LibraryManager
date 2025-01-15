@@ -9,13 +9,13 @@ import {
   Typography,
 } from "@mui/material";
 import { UserDto } from "../../types/index.ts";
-import { v4 as uuidv4 } from "uuid";
 import { useCreateUserMutation } from "../../mutations/useCreateUserMutation.ts";
 import { useSuspenseQuery } from "@tanstack/react-query";
 import { usersOptions } from "../../queries/users.ts";
 import { hasEmailInDataBase } from "../../utills/hasEmailInDataBase.ts";
 import { useNavigate } from "@tanstack/react-router";
 import CheckIcon from "@mui/icons-material/Check";
+import { generateRandomNumber } from "../../utills/generateRandomNumber.ts";
 
 export const Register = () => {
   const firstNameInput = useInput("");
@@ -47,7 +47,7 @@ export const Register = () => {
           email: emailNameInput.value,
           password: passwordNameInput.value,
           role: "client",
-          libraryCardCode: uuidv4(),
+          libraryCardCode: generateRandomNumber(),
         };
         mutate(formData);
       }
@@ -63,8 +63,8 @@ export const Register = () => {
 
   return (
     <Container
-      maxWidth={false} 
-      disableGutters 
+      maxWidth={false}
+      disableGutters
       sx={{
         display: "flex",
         flexDirection: "column",
@@ -119,7 +119,9 @@ export const Register = () => {
           variant="outlined"
           error={emailInDataBase}
           helperText={
-            emailInDataBase ? "Już istnieje użytkownik z takim adresem e-mail." : ""
+            emailInDataBase
+              ? "Już istnieje użytkownik z takim adresem e-mail."
+              : ""
           }
           {...emailNameInput}
           sx={{ marginBottom: "1rem" }}

@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, redirect } from "@tanstack/react-router";
 import * as React from "react";
 import { extendTheme, styled } from "@mui/material/styles";
 import DashboardIcon from "@mui/icons-material/Dashboard";
@@ -10,8 +10,17 @@ import { AppProvider, Navigation, Router } from "@toolpad/core/AppProvider";
 import { DashboardLayout } from "@toolpad/core/DashboardLayout";
 import { PageContainer } from "@toolpad/core/PageContainer";
 import Grid from "@mui/material/Grid2";
+import { getUserFromLocalStorage } from "../utills/getUserFromLocalStorage";
 
 export const Route = createFileRoute("/dashboard")({
+  beforeLoad: () => {
+    const user = getUserFromLocalStorage();
+    if (user?.role !== "admin") {
+      throw redirect({
+        to: "/",
+      });
+    }
+  },
   component: DashboardLayoutBasic,
 });
 
