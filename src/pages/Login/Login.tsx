@@ -24,7 +24,7 @@ export const Login = () => {
   const { data } = useSuspenseQuery(usersOptions);
   const { mutate, isSuccess } = useCreateLogMutation();
   const navigate = useNavigate();
-  const { setUserInLocalStore } = useUserStore();
+  const { login } = useUserStore();
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
@@ -42,8 +42,8 @@ export const Login = () => {
       timestamp: new Date().toISOString(),
     };
 
-    setUserInLocalStore(user);
-    mutate(logData);
+    login(user); // zapisuje info user w store
+    mutate(logData); //zapisuje w db.json info o logowaniu
   };
 
   useEffect(() => {

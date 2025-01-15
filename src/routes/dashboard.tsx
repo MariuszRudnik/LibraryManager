@@ -10,11 +10,12 @@ import { AppProvider, Navigation, Router } from "@toolpad/core/AppProvider";
 import { DashboardLayout } from "@toolpad/core/DashboardLayout";
 import { PageContainer } from "@toolpad/core/PageContainer";
 import Grid from "@mui/material/Grid2";
-import { getUserFromLocalStorage } from "../utills/getUserFromLocalStorage";
+import { getUserFromLocalStorage } from "../utills/userFromLocalStorage";
 
 export const Route = createFileRoute("/dashboard")({
   beforeLoad: () => {
     const user = getUserFromLocalStorage();
+    console.log(user?.role);
     if (user?.role !== "admin") {
       throw redirect({
         to: "/",

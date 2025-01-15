@@ -4,7 +4,9 @@ import { User } from "../types";
 
 type UserStore = {
   user: User;
-  setUserInLocalStore: (newUser: User) => void;
+  isLoggedIn: boolean;
+  login: (newUser: User) => void;
+  logout: () => void;
 };
 
 export const useUserStore = create<UserStore>()(
@@ -16,12 +18,27 @@ export const useUserStore = create<UserStore>()(
         lastName: "",
         email: "",
         password: "",
-        role: "client",
+        role: "",
         libraryCardCode: "",
       },
-      setUserInLocalStore: (newUser) =>
+      isLoggedIn: false,
+      login: (newUser) =>
         set({
+          isLoggedIn: true,
           user: newUser,
+        }),
+      logout: () =>
+        set({
+          isLoggedIn: false,
+          user: {
+            id: "",
+            firstName: "",
+            lastName: "",
+            email: "",
+            password: "",
+            role: "",
+            libraryCardCode: "",
+          },
         }),
     }),
     {
