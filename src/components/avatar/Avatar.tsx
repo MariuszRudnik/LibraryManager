@@ -4,17 +4,23 @@ import IconButton from "@mui/material/IconButton";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import AccountCircle from "@mui/icons-material/AccountCircle";
-import { Link } from "@tanstack/react-router";
+import { useNavigate } from "@tanstack/react-router";
 import { useUserStore } from "../../store/useUserStore";
 
 export const Avatar = () => {
   const { logout } = useUserStore();
+  const navigate = useNavigate();
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const handleMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
   };
   const handleClose = () => {
     setAnchorEl(null);
+  };
+
+  const handleLogout = () => {
+    logout();
+    navigate({ to: "/" });
   };
 
   return (
@@ -27,7 +33,7 @@ export const Avatar = () => {
         onClick={handleMenu}
         color="inherit"
       >
-        <AccountCircle />
+        <AccountCircle sx={{ fontSize: 40 }} />
       </IconButton>
       <Menu
         id="menu-appbar"
@@ -44,17 +50,9 @@ export const Avatar = () => {
         open={Boolean(anchorEl)}
         onClose={handleClose}
       >
-        <MenuItem onClick={handleClose}>Profil</MenuItem>
+        <MenuItem onClick={() => navigate({ to: "/profil" })}>Profil</MenuItem>
 
-        <Link
-          to="/"
-          style={{
-            textDecoration: "none",
-            color: "inherit",
-          }}
-        >
-          <MenuItem onClick={logout}>Wyloguj się</MenuItem>
-        </Link>
+        <MenuItem onClick={handleLogout}>Wyloguj się</MenuItem>
       </Menu>
     </>
   );
