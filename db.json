@@ -2,39 +2,21 @@
   "users": [
     {
       "id": "1",
+      "firstName": "Adam",
+      "lastName": "Nowak",
+      "email": "admin@admin.pl",
+      "password": "admin123",
+      "role": "admin",
+      "libraryCardCode": "99999999"
+    },
+    {
+      "id": "2",
       "firstName": "Jan",
       "lastName": "Kowalski",
       "email": "jan.kowalski@example.com",
       "password": "password123",
       "role": "client",
       "libraryCardCode": "123456789"
-    },
-    {
-      "id": "2",
-      "firstName": "Anna",
-      "lastName": "Nowak",
-      "email": "anna.nowak@example.com",
-      "password": "admin123",
-      "role": "admin",
-      "libraryCardCode": null
-    },
-    {
-      "id": "17f2",
-      "firstName": "xxx",
-      "lastName": "xxx",
-      "email": "xxx@so.pl",
-      "password": "aaaaa",
-      "role": "client",
-      "libraryCardCode": "aeb50543-02f8-400d-bf25-18e0c37c4763"
-    },
-    {
-      "id": "78d2",
-      "firstName": "xxxx",
-      "lastName": "xxxx",
-      "email": "xxx@w2.pl",
-      "password": "xxx",
-      "role": "client",
-      "libraryCardCode": "8e6841b1-136c-43e2-b1c6-10da38c4c044"
     },
     {
       "id": "e58f",
@@ -102,52 +84,70 @@
       "action": "Borrowed book - ID: 2"
     },
     {
-      "id": "6e96",
+      "id": "adad",
+      "userId": "1",
+      "action": "login",
+      "timestamp": "2025-01-15T22:50:56.468Z"
+    },
+    {
+      "id": "aad2",
+      "userId": "1",
+      "action": "login",
+      "timestamp": "2025-01-15T22:51:45.111Z"
+    },
+    {
+      "id": "0b95",
       "userId": "e58f",
       "action": "login",
-      "timestamp": "2025-01-15T18:42:13.342Z"
+      "timestamp": "2025-01-15T22:54:47.353Z"
     },
     {
-      "id": "a6e7",
-      "userId": "2",
+      "id": "f2f1",
+      "userId": "1",
       "action": "login",
-      "timestamp": "2025-01-15T18:43:28.100Z"
+      "timestamp": "2025-01-16T09:40:24.396Z"
     },
     {
-      "id": "220e",
-      "userId": "2",
+      "id": "9449",
+      "userId": "1",
       "action": "login",
-      "timestamp": "2025-01-15T19:04:15.342Z"
+      "timestamp": "2025-01-16T09:57:21.220Z"
     },
     {
-      "id": "8157",
-      "userId": "2",
+      "id": "4616",
+      "userId": "1",
       "action": "login",
-      "timestamp": "2025-01-15T19:43:01.695Z"
+      "timestamp": "2025-01-16T13:39:21.314Z"
     },
     {
-      "id": "06df",
-      "userId": "2",
+      "id": "9cb1",
+      "userId": "1",
       "action": "login",
-      "timestamp": "2025-01-15T19:47:25.678Z"
+      "timestamp": "2025-01-16T13:47:02.168Z"
     },
     {
-      "id": "b606",
-      "userId": "2",
+      "id": "7eb3",
+      "userId": "1",
       "action": "login",
-      "timestamp": "2025-01-15T19:57:04.354Z"
+      "timestamp": "2025-01-16T16:06:22.097Z"
     },
     {
-      "id": "5acd",
-      "userId": "2",
-      "action": "login",
-      "timestamp": "2025-01-15T19:59:24.841Z"
-    },
-    {
-      "id": "4298",
+      "id": "ade3",
       "userId": "e58f",
       "action": "login",
-      "timestamp": "2025-01-15T19:59:36.451Z"
+      "timestamp": "2025-01-16T20:10:12.219Z"
+    },
+    {
+      "id": "b101",
+      "userId": "1",
+      "action": "login",
+      "timestamp": "2025-01-16T20:10:52.264Z"
+    },
+    {
+      "id": "4c9d",
+      "userId": "e58f",
+      "action": "login",
+      "timestamp": "2025-01-16T20:14:25.783Z"
     }
   ]
 }

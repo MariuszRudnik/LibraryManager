@@ -1,27 +1,17 @@
 import { Button } from "@mui/material";
-import { Link } from "@tanstack/react-router";
+import { useNavigate } from "@tanstack/react-router";
 
 export const InfoLogin = () => {
+  const navigate = useNavigate();
   return (
     <>
-      <Link
-        to="/register"
-        style={{
-          textDecoration: "none",
-          color: "inherit",
-        }}
-      >
-        <Button color="inherit">Rejestracja</Button>
-      </Link>
-      <Link
-        to="/login"
-        style={{
-          textDecoration: "none",
-          color: "inherit",
-        }}
-      >
-        <Button color="inherit">Zaloguj się</Button>
-      </Link>
+      <Button color="inherit" onClick={() => navigate({ to: "/register" })}>
+        Rejestracja
+      </Button>
+
+      <Button color="inherit" onClick={() => navigate({ to: "/login" })}>
+        Zaloguj się
+      </Button>
     </>
   );
 };
