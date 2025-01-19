@@ -1,24 +1,12 @@
 import { CardMedia, Box, Typography, Container } from "@mui/material";
-
-interface Book {
-  id: string;
-  title: string;
-  author: string;
-  copies: number;
-  images: string;
-  availableCopies: number;
-  borrowedCopies: number;
-  description: string;
-  year: number;
-}
+import { Book } from "../../../types";
 
 interface BookLayoutProps {
   book: Book;
 }
 
 function BookLayout({ book }: BookLayoutProps) {
-  const { title, author, year, images, description } = book;
-  const imagePath = `../books/${images}`;
+  const { title, author, year, images, description, availableCopies } = book;
 
   return (
     <Container
@@ -55,17 +43,20 @@ function BookLayout({ book }: BookLayoutProps) {
         >
           {title}
         </Typography>
-        <Typography variant="subtitle1" sx={{ marginBottom: "1rem", color: "gray" }}>
+        <Typography
+          variant="subtitle1"
+          sx={{ marginBottom: "1rem", color: "gray" }}
+        >
           {author} &bull; {year}
         </Typography>
         {images && (
           <CardMedia
             component="img"
-            image={imagePath}
+            image={images}
             alt={`Okładka książki ${title}`}
             sx={{
-              maxHeight: 480, 
-              width: "100%", 
+              maxHeight: 480,
+              width: "100%",
               objectFit: "contain",
               borderRadius: "8px",
               marginBottom: "1.5rem",
@@ -74,6 +65,9 @@ function BookLayout({ book }: BookLayoutProps) {
         )}
         <Typography variant="body1" sx={{ color: "#333", lineHeight: 1.6 }}>
           {description}
+        </Typography>
+        <Typography variant="body1" sx={{ color: "#333", lineHeight: 1.6 }}>
+          Dostępych egzemplarzy jest {availableCopies}
         </Typography>
       </Box>
     </Container>

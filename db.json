@@ -37,7 +37,7 @@
       "year": 1997,
       "availableCopies": 7,
       "borrowedCopies": 2,
-      "images": "Book_1.png"
+      "images": "https://bonito.pl/cache/1/1b10b6a-harry-potter-i-kamie_800.webp"
     },
     {
       "id": "2",
@@ -47,7 +47,7 @@
       "year": 1993,
       "availableCopies": 4,
       "borrowedCopies": 1,
-      "images": "Book_2.png"
+      "images": "https://bonito.pl/cache/3/a836c40ae86d8d4a58c3af39a6b_800.webp"
     },
     {
       "id": "3",
@@ -57,7 +57,7 @@
       "year": 1954,
       "availableCopies": 5,
       "borrowedCopies": 0,
-      "images": "Book_3.png"
+      "images": "https://bonito.pl/cache/1/dfe6db7-wladca-pierscieni-dr_800.webp"
     }
   ],
   "rentals": [
@@ -148,6 +148,42 @@
       "userId": "e58f",
       "action": "login",
       "timestamp": "2025-01-16T20:14:25.783Z"
+    },
+    {
+      "id": "8d07",
+      "userId": "e58f",
+      "action": "login",
+      "timestamp": "2025-01-19T14:22:18.989Z"
+    },
+    {
+      "id": "ea7c",
+      "userId": "1",
+      "action": "login",
+      "timestamp": "2025-01-19T15:33:16.748Z"
+    },
+    {
+      "id": "ceb9",
+      "userId": "e58f",
+      "action": "login",
+      "timestamp": "2025-01-19T15:39:49.132Z"
+    },
+    {
+      "id": "3c49",
+      "userId": "1",
+      "action": "login",
+      "timestamp": "2025-01-19T15:40:19.061Z"
+    },
+    {
+      "id": "f927",
+      "userId": "1",
+      "action": "login",
+      "timestamp": "2025-01-19T15:46:24.692Z"
+    },
+    {
+      "id": "b440",
+      "userId": "1",
+      "action": "login",
+      "timestamp": "2025-01-19T15:59:06.273Z"
     }
   ]
 }
