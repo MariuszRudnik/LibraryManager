@@ -6,7 +6,7 @@ function HomePage() {
   const { data } = useSuspenseQuery(booksOptions);
 
   return (
-    <div style={{ minHeight: "100vh" }}>
+    <div>
       <BookList books={data} />
     </div>
   );

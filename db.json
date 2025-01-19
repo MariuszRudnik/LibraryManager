@@ -57,7 +57,7 @@
       "year": 1954,
       "availableCopies": 5,
       "borrowedCopies": 0,
-      "images": "https://bonito.pl/cache/1/dfe6db7-wladca-pierscieni-dr_800.webp"
+      "images": "https://bonito.pl/cache/1/c16f517-wladca-pierscieni-dr_800.webp"
     }
   ],
   "rentals": [
@@ -184,6 +184,18 @@
       "userId": "1",
       "action": "login",
       "timestamp": "2025-01-19T15:59:06.273Z"
+    },
+    {
+      "id": "5398",
+      "userId": "e58f",
+      "action": "login",
+      "timestamp": "2025-01-19T20:43:41.550Z"
+    },
+    {
+      "id": "ea2f",
+      "userId": "1",
+      "action": "login",
+      "timestamp": "2025-01-19T20:54:24.464Z"
     }
   ]
 }

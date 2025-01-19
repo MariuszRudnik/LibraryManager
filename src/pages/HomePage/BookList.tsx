@@ -8,14 +8,17 @@ import {
   Typography,
   Grid,
   Box,
+  Tooltip,
 } from "@mui/material";
 import { Book } from "../../types";
+import { useUserStore } from "../../store/useUserStore";
 
 type BookListProps = {
   books: Book[];
 };
 
 const BookList = ({ books }: BookListProps) => {
+  const { isLoggedIn } = useUserStore();
   return (
     <Box sx={{ display: "flex", justifyContent: "center", padding: 4 }}>
       <Grid
@@ -40,17 +43,31 @@ const BookList = ({ books }: BookListProps) => {
               }}
             >
               {book.images && (
-                <CardMedia
-                  component="img"
-                  image={book.images}
-                  alt={`Okładka książki ${book.title}`}
+                <Box
                   sx={{
-                    height: 480,
-                    objectFit: "cover",
-                    borderRadius: 1,
                     width: "100%",
+                    height: "420px",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    backgroundColor: "#1e1e1e",
+                    borderRadius: 1,
+                    overflow: "hidden",
                   }}
-                />
+                >
+                  <CardMedia
+                    component="img"
+                    image={book.images}
+                    alt={`Okładka książki ${book.title}`}
+                    sx={{
+                      // maxWidth: "100%",
+                      // maxHeight: "100%",
+                      // width: "",
+                      // height: "auto",
+                      objectFit: "cover",
+                    }}
+                  />
+                </Box>
               )}
               <CardContent>
                 <Typography variant="h6" gutterBottom>
@@ -64,14 +81,25 @@ const BookList = ({ books }: BookListProps) => {
                 </Typography>
               </CardContent>
               <CardActions>
-                <Button
-                  size="small"
-                  variant="contained"
-                  color="primary"
-                  component={Link}
-                >
-                  Wypożycz
-                </Button>
+                {isLoggedIn ? (
+                  <Button
+                    size="small"
+                    variant="contained"
+                    color="primary"
+                    component={Link}
+                  >
+                    Wypożycz
+                  </Button>
+                ) : (
+                  <Tooltip title="Musisz być zalogowany">
+                    <span>
+                      <Button size="small" variant="contained" color="primary">
+                        Wypożycz
+                      </Button>
+                    </span>
+                  </Tooltip>
+                )}
+
                 <Button
                   size="small"
                   variant="outlined"
@@ -80,15 +108,6 @@ const BookList = ({ books }: BookListProps) => {
                   to={`/book/${book.id}`}
                 >
                   Opis
-                </Button>
-                <Button
-                  size="small"
-                  variant="text"
-                  color="info"
-                  component={Link}
-                  to={`/books/${book.id}/edit`}
-                >
-                  Edytuj
                 </Button>
               </CardActions>
             </Card>
