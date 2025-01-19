@@ -90,7 +90,7 @@ export const Sidenav = () => {
           <ListItem disablePadding sx={{ display: "block" }}>
             <SingleItemButton
               text="Wszystkie książki"
-              onClick={() => navigate({ to: "/dashboard/AllBooks" })}
+              onClick={() => navigate({ to: "/dashboard/books" })}
               icon={<MenuBookIcon />}
               open={open}
               isActive={/AllBooks/.test(location.pathname)}

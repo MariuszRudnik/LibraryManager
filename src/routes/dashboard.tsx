@@ -1,11 +1,11 @@
 import { createFileRoute, redirect } from "@tanstack/react-router";
 import { getUserFromLocalStorage } from "../utills/getUserFromLocalStorage";
 import { Dashboard } from "../pages/Dashborad/Dashboard";
+import { NotFoundPage } from "../pages/NotFoundPage/NotFoundPage";
 
 export const Route = createFileRoute("/dashboard")({
   beforeLoad: () => {
     const user = getUserFromLocalStorage();
-    console.log(user?.role);
     if (user?.role !== "admin") {
       throw redirect({
         to: "/",
@@ -13,4 +13,5 @@ export const Route = createFileRoute("/dashboard")({
     }
   },
   component: Dashboard,
+  notFoundComponent: NotFoundPage,
 });

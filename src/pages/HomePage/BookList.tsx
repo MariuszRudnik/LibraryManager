@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "@tanstack/react-router";
 import {
   Button,
@@ -10,18 +9,13 @@ import {
   Grid,
   Box,
 } from "@mui/material";
+import { Book } from "../../types";
 
-interface BookListProps {
-  books: {
-    id: string;
-    title: string;
-    author: string;
-    copies: number;
-    images: string;
-  }[];
-}
+type BookListProps = {
+  books: Book[];
+};
 
-const BookList: React.FC<BookListProps> = ({ books }) => {
+const BookList = ({ books }: BookListProps) => {
   return (
     <Box sx={{ display: "flex", justifyContent: "center", padding: 4 }}>
       <Grid
@@ -48,7 +42,7 @@ const BookList: React.FC<BookListProps> = ({ books }) => {
               {book.images && (
                 <CardMedia
                   component="img"
-                  image={`books/${book.images}`}
+                  image={book.images}
                   alt={`Okładka książki ${book.title}`}
                   sx={{
                     height: 480,
@@ -66,7 +60,7 @@ const BookList: React.FC<BookListProps> = ({ books }) => {
                   {book.author}
                 </Typography>
                 <Typography variant="body2" color="gray">
-                  {book.copies} egzemplarzy dostępnych
+                  {book.availableCopies} egzemplarzy dostępnych
                 </Typography>
               </CardContent>
               <CardActions>
