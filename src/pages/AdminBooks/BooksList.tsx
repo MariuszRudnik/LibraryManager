@@ -10,54 +10,10 @@ import TableRow from "@mui/material/TableRow";
 import { booksOptions } from "../../queries/books";
 import { useSuspenseQuery } from "@tanstack/react-query";
 import { Book } from "../../types/index";
-
-interface Column {
-  id: keyof Data;
-  label: string;
-  minWidth?: number;
-  align?: "right" | "center";
-}
-
-const columns: readonly Column[] = [
-  { id: "title", label: "Tytuł", minWidth: 170 },
-  { id: "author", label: "Autor", minWidth: 100 },
-  {
-    id: "year",
-    label: "Rok",
-    minWidth: 50,
-    align: "center",
-  },
-  {
-    id: "availableCopies",
-    label: "Dos.",
-    minWidth: 50,
-    align: "center",
-  },
-  {
-    id: "borrowedCopies",
-    label: "Wyp.",
-    minWidth: 50,
-    align: "center",
-  },
-  {
-    id: "allBooks",
-    label: "Wszystkie",
-    minWidth: 50,
-    align: "center",
-  },
-  {
-    id: "img",
-    label: "Foto",
-    minWidth: 50,
-    align: "center",
-  },
-  {
-    id: "action",
-    label: "Akcje",
-    minWidth: 170,
-    align: "center",
-  },
-];
+import { Divider, Stack, Typography } from "@mui/material";
+import EditIcon from "@mui/icons-material/Edit";
+import DeleteIcon from "@mui/icons-material/Delete";
+import { blue, red } from "@mui/material/colors";
 
 interface Data {
   id: string;
@@ -68,13 +24,11 @@ interface Data {
   borrowedCopies: number;
   allBooks: number;
   img: boolean;
-  action: string;
 }
 
 const createData = (data: Book): Data => {
   return {
     ...data,
-    action: "kot",
     allBooks: data.availableCopies + data.borrowedCopies,
     img: !!data.images,
   };
@@ -90,6 +44,7 @@ export const BooksList = () => {
   data.forEach((book) => {
     return books.push(createData(book));
   });
+  console.log(books);
 
   const handleChangePage = (_: unknown, newPage: number) => {
     setPage(newPage);
@@ -104,19 +59,43 @@ export const BooksList = () => {
 
   return (
     <Paper sx={{ width: "100%", overflow: "hidden" }}>
+      <Typography
+        gutterBottom
+        variant="h5"
+        component="div"
+        sx={{ padding: "20px" }}
+      >
+        Wszystkie książki
+      </Typography>
+      <Divider />
       <TableContainer sx={{ maxHeight: 440 }}>
         <Table stickyHeader aria-label="sticky table">
           <TableHead>
             <TableRow>
-              {columns.map((column) => (
-                <TableCell
-                  key={column.id}
-                  align={column.align}
-                  style={{ minWidth: column.minWidth }}
-                >
-                  {column.label}
-                </TableCell>
-              ))}
+              <TableCell align="left" style={{ minWidth: "170px" }}>
+                Tytył
+              </TableCell>
+              <TableCell align="left" style={{ minWidth: "170px" }}>
+                Autor
+              </TableCell>
+              <TableCell align="left" style={{ minWidth: "50px" }}>
+                Rok
+              </TableCell>
+              <TableCell align="left" style={{ minWidth: "50px" }}>
+                Dos.
+              </TableCell>
+              <TableCell align="left" style={{ minWidth: "50px" }}>
+                Wyp.
+              </TableCell>
+              <TableCell align="left" style={{ minWidth: "50px" }}>
+                Wszy.
+              </TableCell>
+              <TableCell align="left" style={{ minWidth: "50px" }}>
+                Foto
+              </TableCell>
+              <TableCell align="left" style={{ minWidth: "50px" }}>
+                Akcje
+              </TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -125,18 +104,33 @@ export const BooksList = () => {
               .map((row) => {
                 return (
                   <TableRow hover role="checkbox" tabIndex={-1} key={row.id}>
-                    {columns.map((column) => {
-                      const value = row[column.id];
-                      return (
-                        <TableCell key={column.id} align={column.align}>
-                          {typeof value === "boolean"
-                            ? value
-                              ? "Tak"
-                              : "Nie"
-                            : value}
-                        </TableCell>
-                      );
-                    })}
+                    <TableCell align="left">{row.title}</TableCell>
+                    <TableCell align="left">{row.author}</TableCell>
+                    <TableCell align="left">{row.year}</TableCell>
+                    <TableCell align="left">{row.availableCopies}</TableCell>
+                    <TableCell align="left">{row.borrowedCopies}</TableCell>
+                    <TableCell align="left">{row.allBooks}</TableCell>
+                    <TableCell align="left">
+                      {row.img ? "Tak" : "Nie"}
+                    </TableCell>
+                    <TableCell align="left">
+                      <Stack spacing={2} direction="row">
+                        <EditIcon
+                          style={{
+                            fontSize: "20px",
+                            color: blue[500],
+                            cursor: "pointer",
+                          }}
+                        />
+                        <DeleteIcon
+                          style={{
+                            fontSize: "20px",
+                            color: red[800],
+                            cursor: "pointer",
+                          }}
+                        />
+                      </Stack>
+                    </TableCell>
                   </TableRow>
                 );
               })}
