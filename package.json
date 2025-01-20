@@ -23,6 +23,7 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "sass-embedded": "^1.83.1",
+    "sweetalert2": "^11.15.10",
     "uuid": "^9.0.1",
     "zustand": "^5.0.2"
   },

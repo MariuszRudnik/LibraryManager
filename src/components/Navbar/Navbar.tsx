@@ -39,7 +39,7 @@ export const Navbar = () => {
             {user.role === "admin" && (
               <Button
                 color="inherit"
-                onClick={() => navigate({ to: "/dashboard" })}
+                onClick={() => navigate({ to: "/dashboard/books" })}
                 sx={{
                   bgcolor: /dashboard/.test(location.pathname)
                     ? brown[700]

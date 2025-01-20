@@ -1,13 +1,13 @@
 import BookList from "./BookList";
 import { useSuspenseQuery } from "@tanstack/react-query";
-import { booksQuery } from "../../routes/-loader/booksLoader.tsx";
+import { booksOptions } from "../../queries/books.ts";
 
 function HomePage() {
-  const { data: books } = useSuspenseQuery(booksQuery());
+  const { data } = useSuspenseQuery(booksOptions);
 
   return (
-    <div style={{ minHeight: "100vh" }}>
-      <BookList books={books} />
+    <div>
+      <BookList books={data} />
     </div>
   );
 }
