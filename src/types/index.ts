@@ -21,10 +21,10 @@ export type Book = {
   id: string;
   title: string;
   author: string;
-  description: string;
   year: number;
   availableCopies: number;
   borrowedCopies: number;
   images: string;
+  description?: string;
 };
 export type BookDto = Omit<Book, "id">;
