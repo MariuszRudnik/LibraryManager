@@ -21,11 +21,12 @@ import {
 } from "@mui/material";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
-import { blue, brown, red } from "@mui/material/colors";
-import Swal from "sweetalert2";
+import { blue, red } from "@mui/material/colors";
+
+import { deleteBook } from "../../utills/deleteBook";
 import { useDeleteBookMutation } from "../../mutations/useDeleteBookMutation";
 
-interface BookRow extends Book {
+export interface BookRow extends Book {
   allBooks: number;
   img: boolean;
 }
@@ -48,6 +49,7 @@ export const BooksList = () => {
   const [rowsPerPage, setRowsPerPage] = useState(5);
 
   const books = createData(data);
+  const { mutate: mutateDelete } = useDeleteBookMutation();
 
   const filterData = (v: BookRow | null) => {
     if (v) {
@@ -59,8 +61,6 @@ export const BooksList = () => {
     }
   };
 
-  const { mutate } = useDeleteBookMutation();
-
   const handleChangePage = (_: unknown, newPage: number) => {
     setPage(newPage);
   };
@@ -70,34 +70,6 @@ export const BooksList = () => {
   ) => {
     setRowsPerPage(+event.target.value);
     setPage(0);
-  };
-
-  const deleteBook = (
-    id: string,
-    title: string,
-    availableCopies: number,
-    borrowedCopies: number,
-    allBooks: number
-  ) => {
-    Swal.fire({
-      title: "Jesteś pewien",
-      text: "Czy na pewno chcesz usunąć tę pozycję?",
-      icon: "warning",
-      showCancelButton: true,
-      cancelButtonText: "Nie",
-      cancelButtonColor: brown[500],
-      confirmButtonColor: red[600],
-      confirmButtonText: "Tak, usuń książkę",
-    }).then((result) => {
-      if (result.value) {
-        Swal.fire(title, "Ta książka została usunięta.", "success");
-        // mutate(id, {
-        //   onSuccess: () => {
-        //     Swal.fire(title, "Ta książka została usunięta.", "success");
-        //   },
-        // });
-      }
-    });
   };
 
   const displayedBooks = isFiltered ? filteredBooks : books;
@@ -198,15 +170,7 @@ export const BooksList = () => {
                             color: red[800],
                             cursor: "pointer",
                           }}
-                          onClick={() =>
-                            deleteBook(
-                              row.id,
-                              row.title,
-                              row.availableCopies,
-                              row.borrowedCopies,
-                              row.allBooks
-                            )
-                          }
+                          onClick={() => deleteBook(row, mutateDelete)}
                         />
                       </Stack>
                     </TableCell>
