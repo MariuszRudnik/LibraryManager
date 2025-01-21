@@ -15,7 +15,7 @@ import { useCreateLogMutation } from '../../mutations/useCreateLogMutation.ts';
 import { useNavigate } from '@tanstack/react-router';
 import { LogDto } from '../../types/index.ts';
 import { useUserStore } from '../../store/useUserStore.ts';
-import { AdminInfo } from './Admininfo.tsx';
+import { AdminInfo } from './AdminInfo.tsx';
 
 export const Login = () => {
   const emailInput = useInput('');
