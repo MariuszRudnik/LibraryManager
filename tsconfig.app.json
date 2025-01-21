@@ -6,7 +6,7 @@
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
-
+  "types": ["vitest/global"],
     /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
@@ -22,5 +22,8 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["src"]
+  "include": [
+    "src",
+    "node_modules/.pnpm/vitest@3.0.1_jsdom@26.0.0_sass-embedded@1.83.1_sass@1.83.1_tsx@4.19.2_yaml@2.6.1/node_modules/vitest/globals.d.ts"
+  ]
 }

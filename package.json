@@ -8,7 +8,9 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "json-server": "json-server --watch db.json --port 3001"
+    "json-server": "json-server --watch db.json --port 3001",
+    "test": "vitest",
+    "e2e": "playwright test --ui"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
@@ -24,13 +26,19 @@
     "react-dom": "^18.3.1",
     "sass-embedded": "^1.83.1",
     "uuid": "^9.0.1",
+    "vitest": "^3.0.1",
     "zustand": "^5.0.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",
+    "@playwright/test": "^1.49.1",
     "@tanstack/react-router": "^1.92.3",
     "@tanstack/router-devtools": "^1.92.3",
     "@tanstack/router-plugin": "^1.91.1",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.2.0",
+    "@testing-library/user-event": "^14.6.0",
+    "@types/node": "^22.10.7",
     "@types/react": "^18.3.18",
     "@types/react-dom": "^18.3.5",
     "@types/uuid": "^10.0.0",
@@ -42,6 +50,7 @@
     "eslint-plugin-react-refresh": "^0.4.16",
     "globals": "^15.14.0",
     "husky": "^8.0.0",
+    "jsdom": "^26.0.0",
     "lint-staged": "^15.2.11",
     "prettier": "^3.4.2",
     "typescript": "~5.6.2",

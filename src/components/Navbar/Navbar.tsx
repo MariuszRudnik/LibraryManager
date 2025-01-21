@@ -1,10 +1,10 @@
-import { AppBar, Box, Button, Toolbar, Typography } from "@mui/material";
-import { useLocation, useNavigate } from "@tanstack/react-router";
-import AutoStoriesIcon from "@mui/icons-material/AutoStories";
-import { useUserStore } from "../../store/useUserStore";
-import { InfoLogin } from "./InfoLogin";
-import { InfoUser } from "./InfoUser";
-import { brown } from "@mui/material/colors";
+import { AppBar, Box, Button, Toolbar, Typography } from '@mui/material';
+import { useLocation, useNavigate } from '@tanstack/react-router';
+import AutoStoriesIcon from '@mui/icons-material/AutoStories';
+import { useUserStore } from '../../store/useUserStore';
+import { InfoLogin } from './InfoLogin';
+import { InfoUser } from './InfoUser';
+import { brown } from '@mui/material/colors';
 // import styles from "./styles.module.scss";
 
 export const Navbar = () => {
@@ -14,47 +14,47 @@ export const Navbar = () => {
 
   return (
     <AppBar position="static">
-      <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
-        <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
-          <Typography variant="h6" component="div">
+      <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
+        <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+          <Typography data-testid="header" variant="h6" component="div">
             Biblioteka Frontowców
           </Typography>
           <AutoStoriesIcon fontSize="large" />
           <Box
             sx={{
-              display: "flex",
+              display: 'flex',
               gap: 1,
             }}
           >
             <Button
               color="inherit"
-              onClick={() => navigate({ to: "/" })}
+              onClick={() => navigate({ to: '/' })}
               sx={{
-                bgcolor: location.pathname === "/" ? brown[700] : "",
+                bgcolor: location.pathname === '/' ? brown[700] : '',
               }}
             >
               Strona główna
             </Button>
 
-            {user.role === "admin" && (
+            {user.role === 'admin' && (
               <Button
                 color="inherit"
-                onClick={() => navigate({ to: "/dashboard" })}
+                onClick={() => navigate({ to: '/dashboard' })}
                 sx={{
                   bgcolor: /dashboard/.test(location.pathname)
                     ? brown[700]
-                    : "",
+                    : '',
                 }}
               >
                 dashboard
               </Button>
             )}
-            {user.role === "client" && (
+            {user.role === 'client' && (
               <Button
                 color="inherit"
-                onClick={() => navigate({ to: "/profil" })}
+                onClick={() => navigate({ to: '/profil' })}
                 sx={{
-                  bgcolor: /profil/.test(location.pathname) ? brown[700] : "",
+                  bgcolor: /profil/.test(location.pathname) ? brown[700] : '',
                 }}
               >
                 Profil
