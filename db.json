@@ -277,6 +277,12 @@
       "userId": "2423",
       "action": "login",
       "timestamp": "2025-01-21T22:00:05.321Z"
+    },
+    {
+      "id": "2385",
+      "userId": "2423",
+      "action": "login",
+      "timestamp": "2025-01-22T19:54:52.196Z"
     }
   ]
 }
