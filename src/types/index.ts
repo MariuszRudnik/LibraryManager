@@ -4,10 +4,10 @@ export type User = {
   lastName: string;
   email: string;
   password: string;
-  role: "client" | "admin" | "";
+  role: 'client' | 'admin' | '';
   libraryCardCode: string;
 };
-export type UserDto = Omit<User, "id">;
+export type UserDto = Omit<User, 'id'>;
 
 export type Log = {
   id: string;
@@ -15,4 +15,4 @@ export type Log = {
   userId: string;
   action: string;
 };
-export type LogDto = Omit<Log, "id">;
+export type LogDto = Omit<Log, 'id'>;

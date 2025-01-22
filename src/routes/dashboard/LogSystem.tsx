@@ -1,6 +1,6 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute } from '@tanstack/react-router';
 
-export const Route = createFileRoute("/dashboard/LogSystem")({
+export const Route = createFileRoute('/dashboard/LogSystem')({
   component: RouteComponent,
 });
 

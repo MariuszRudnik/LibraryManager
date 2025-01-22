@@ -10,7 +10,8 @@
     "preview": "vite preview",
     "json-server": "json-server --watch db.json --port 3001",
     "test": "vitest",
-    "e2e": "playwright test --ui"
+    "e2e": "playwright test --ui",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",

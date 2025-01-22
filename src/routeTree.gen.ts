@@ -10,17 +10,17 @@
 
 // Import Routes
 
-import { Route as rootRoute } from './routes/__root'
-import { Route as ProfilImport } from './routes/profil'
-import { Route as DashboardImport } from './routes/dashboard'
-import { Route as IndexImport } from './routes/index'
-import { Route as RegisterIndexImport } from './routes/register/index'
-import { Route as LoginIndexImport } from './routes/login/index'
-import { Route as BookIndexImport } from './routes/book/index'
-import { Route as DashboardLogSystemImport } from './routes/dashboard/LogSystem'
-import { Route as DashboardAllBooksImport } from './routes/dashboard/AllBooks'
-import { Route as DashboardAddBookImport } from './routes/dashboard/AddBook'
-import { Route as BookBookImport } from './routes/book/$book'
+import { Route as rootRoute } from './routes/__root';
+import { Route as ProfilImport } from './routes/profil';
+import { Route as DashboardImport } from './routes/dashboard';
+import { Route as IndexImport } from './routes/index';
+import { Route as RegisterIndexImport } from './routes/register/index';
+import { Route as LoginIndexImport } from './routes/login/index';
+import { Route as BookIndexImport } from './routes/book/index';
+import { Route as DashboardLogSystemImport } from './routes/dashboard/LogSystem';
+import { Route as DashboardAllBooksImport } from './routes/dashboard/AllBooks';
+import { Route as DashboardAddBookImport } from './routes/dashboard/AddBook';
+import { Route as BookBookImport } from './routes/book/$book';
 
 // Create/Update Routes
 
@@ -28,199 +28,199 @@ const ProfilRoute = ProfilImport.update({
   id: '/profil',
   path: '/profil',
   getParentRoute: () => rootRoute,
-} as any)
+} as any);
 
 const DashboardRoute = DashboardImport.update({
   id: '/dashboard',
   path: '/dashboard',
   getParentRoute: () => rootRoute,
-} as any)
+} as any);
 
 const IndexRoute = IndexImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRoute,
-} as any)
+} as any);
 
 const RegisterIndexRoute = RegisterIndexImport.update({
   id: '/register/',
   path: '/register/',
   getParentRoute: () => rootRoute,
-} as any)
+} as any);
 
 const LoginIndexRoute = LoginIndexImport.update({
   id: '/login/',
   path: '/login/',
   getParentRoute: () => rootRoute,
-} as any)
+} as any);
 
 const BookIndexRoute = BookIndexImport.update({
   id: '/book/',
   path: '/book/',
   getParentRoute: () => rootRoute,
-} as any)
+} as any);
 
 const DashboardLogSystemRoute = DashboardLogSystemImport.update({
   id: '/LogSystem',
   path: '/LogSystem',
   getParentRoute: () => DashboardRoute,
-} as any)
+} as any);
 
 const DashboardAllBooksRoute = DashboardAllBooksImport.update({
   id: '/AllBooks',
   path: '/AllBooks',
   getParentRoute: () => DashboardRoute,
-} as any)
+} as any);
 
 const DashboardAddBookRoute = DashboardAddBookImport.update({
   id: '/AddBook',
   path: '/AddBook',
   getParentRoute: () => DashboardRoute,
-} as any)
+} as any);
 
 const BookBookRoute = BookBookImport.update({
   id: '/book/$book',
   path: '/book/$book',
   getParentRoute: () => rootRoute,
-} as any)
+} as any);
 
 // Populate the FileRoutesByPath interface
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
     '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexImport
-      parentRoute: typeof rootRoute
-    }
+      id: '/';
+      path: '/';
+      fullPath: '/';
+      preLoaderRoute: typeof IndexImport;
+      parentRoute: typeof rootRoute;
+    };
     '/dashboard': {
-      id: '/dashboard'
-      path: '/dashboard'
-      fullPath: '/dashboard'
-      preLoaderRoute: typeof DashboardImport
-      parentRoute: typeof rootRoute
-    }
+      id: '/dashboard';
+      path: '/dashboard';
+      fullPath: '/dashboard';
+      preLoaderRoute: typeof DashboardImport;
+      parentRoute: typeof rootRoute;
+    };
     '/profil': {
-      id: '/profil'
-      path: '/profil'
-      fullPath: '/profil'
-      preLoaderRoute: typeof ProfilImport
-      parentRoute: typeof rootRoute
-    }
+      id: '/profil';
+      path: '/profil';
+      fullPath: '/profil';
+      preLoaderRoute: typeof ProfilImport;
+      parentRoute: typeof rootRoute;
+    };
     '/book/$book': {
-      id: '/book/$book'
-      path: '/book/$book'
-      fullPath: '/book/$book'
-      preLoaderRoute: typeof BookBookImport
-      parentRoute: typeof rootRoute
-    }
+      id: '/book/$book';
+      path: '/book/$book';
+      fullPath: '/book/$book';
+      preLoaderRoute: typeof BookBookImport;
+      parentRoute: typeof rootRoute;
+    };
     '/dashboard/AddBook': {
-      id: '/dashboard/AddBook'
-      path: '/AddBook'
-      fullPath: '/dashboard/AddBook'
-      preLoaderRoute: typeof DashboardAddBookImport
-      parentRoute: typeof DashboardImport
-    }
+      id: '/dashboard/AddBook';
+      path: '/AddBook';
+      fullPath: '/dashboard/AddBook';
+      preLoaderRoute: typeof DashboardAddBookImport;
+      parentRoute: typeof DashboardImport;
+    };
     '/dashboard/AllBooks': {
-      id: '/dashboard/AllBooks'
-      path: '/AllBooks'
-      fullPath: '/dashboard/AllBooks'
-      preLoaderRoute: typeof DashboardAllBooksImport
-      parentRoute: typeof DashboardImport
-    }
+      id: '/dashboard/AllBooks';
+      path: '/AllBooks';
+      fullPath: '/dashboard/AllBooks';
+      preLoaderRoute: typeof DashboardAllBooksImport;
+      parentRoute: typeof DashboardImport;
+    };
     '/dashboard/LogSystem': {
-      id: '/dashboard/LogSystem'
-      path: '/LogSystem'
-      fullPath: '/dashboard/LogSystem'
-      preLoaderRoute: typeof DashboardLogSystemImport
-      parentRoute: typeof DashboardImport
-    }
+      id: '/dashboard/LogSystem';
+      path: '/LogSystem';
+      fullPath: '/dashboard/LogSystem';
+      preLoaderRoute: typeof DashboardLogSystemImport;
+      parentRoute: typeof DashboardImport;
+    };
     '/book/': {
-      id: '/book/'
-      path: '/book'
-      fullPath: '/book'
-      preLoaderRoute: typeof BookIndexImport
-      parentRoute: typeof rootRoute
-    }
+      id: '/book/';
+      path: '/book';
+      fullPath: '/book';
+      preLoaderRoute: typeof BookIndexImport;
+      parentRoute: typeof rootRoute;
+    };
     '/login/': {
-      id: '/login/'
-      path: '/login'
-      fullPath: '/login'
-      preLoaderRoute: typeof LoginIndexImport
-      parentRoute: typeof rootRoute
-    }
+      id: '/login/';
+      path: '/login';
+      fullPath: '/login';
+      preLoaderRoute: typeof LoginIndexImport;
+      parentRoute: typeof rootRoute;
+    };
     '/register/': {
-      id: '/register/'
-      path: '/register'
-      fullPath: '/register'
-      preLoaderRoute: typeof RegisterIndexImport
-      parentRoute: typeof rootRoute
-    }
+      id: '/register/';
+      path: '/register';
+      fullPath: '/register';
+      preLoaderRoute: typeof RegisterIndexImport;
+      parentRoute: typeof rootRoute;
+    };
   }
 }
 
 // Create and export the route tree
 
 interface DashboardRouteChildren {
-  DashboardAddBookRoute: typeof DashboardAddBookRoute
-  DashboardAllBooksRoute: typeof DashboardAllBooksRoute
-  DashboardLogSystemRoute: typeof DashboardLogSystemRoute
+  DashboardAddBookRoute: typeof DashboardAddBookRoute;
+  DashboardAllBooksRoute: typeof DashboardAllBooksRoute;
+  DashboardLogSystemRoute: typeof DashboardLogSystemRoute;
 }
 
 const DashboardRouteChildren: DashboardRouteChildren = {
   DashboardAddBookRoute: DashboardAddBookRoute,
   DashboardAllBooksRoute: DashboardAllBooksRoute,
   DashboardLogSystemRoute: DashboardLogSystemRoute,
-}
+};
 
 const DashboardRouteWithChildren = DashboardRoute._addFileChildren(
-  DashboardRouteChildren,
-)
+  DashboardRouteChildren
+);
 
 export interface FileRoutesByFullPath {
-  '/': typeof IndexRoute
-  '/dashboard': typeof DashboardRouteWithChildren
-  '/profil': typeof ProfilRoute
-  '/book/$book': typeof BookBookRoute
-  '/dashboard/AddBook': typeof DashboardAddBookRoute
-  '/dashboard/AllBooks': typeof DashboardAllBooksRoute
-  '/dashboard/LogSystem': typeof DashboardLogSystemRoute
-  '/book': typeof BookIndexRoute
-  '/login': typeof LoginIndexRoute
-  '/register': typeof RegisterIndexRoute
+  '/': typeof IndexRoute;
+  '/dashboard': typeof DashboardRouteWithChildren;
+  '/profil': typeof ProfilRoute;
+  '/book/$book': typeof BookBookRoute;
+  '/dashboard/AddBook': typeof DashboardAddBookRoute;
+  '/dashboard/AllBooks': typeof DashboardAllBooksRoute;
+  '/dashboard/LogSystem': typeof DashboardLogSystemRoute;
+  '/book': typeof BookIndexRoute;
+  '/login': typeof LoginIndexRoute;
+  '/register': typeof RegisterIndexRoute;
 }
 
 export interface FileRoutesByTo {
-  '/': typeof IndexRoute
-  '/dashboard': typeof DashboardRouteWithChildren
-  '/profil': typeof ProfilRoute
-  '/book/$book': typeof BookBookRoute
-  '/dashboard/AddBook': typeof DashboardAddBookRoute
-  '/dashboard/AllBooks': typeof DashboardAllBooksRoute
-  '/dashboard/LogSystem': typeof DashboardLogSystemRoute
-  '/book': typeof BookIndexRoute
-  '/login': typeof LoginIndexRoute
-  '/register': typeof RegisterIndexRoute
+  '/': typeof IndexRoute;
+  '/dashboard': typeof DashboardRouteWithChildren;
+  '/profil': typeof ProfilRoute;
+  '/book/$book': typeof BookBookRoute;
+  '/dashboard/AddBook': typeof DashboardAddBookRoute;
+  '/dashboard/AllBooks': typeof DashboardAllBooksRoute;
+  '/dashboard/LogSystem': typeof DashboardLogSystemRoute;
+  '/book': typeof BookIndexRoute;
+  '/login': typeof LoginIndexRoute;
+  '/register': typeof RegisterIndexRoute;
 }
 
 export interface FileRoutesById {
-  __root__: typeof rootRoute
-  '/': typeof IndexRoute
-  '/dashboard': typeof DashboardRouteWithChildren
-  '/profil': typeof ProfilRoute
-  '/book/$book': typeof BookBookRoute
-  '/dashboard/AddBook': typeof DashboardAddBookRoute
-  '/dashboard/AllBooks': typeof DashboardAllBooksRoute
-  '/dashboard/LogSystem': typeof DashboardLogSystemRoute
-  '/book/': typeof BookIndexRoute
-  '/login/': typeof LoginIndexRoute
-  '/register/': typeof RegisterIndexRoute
+  __root__: typeof rootRoute;
+  '/': typeof IndexRoute;
+  '/dashboard': typeof DashboardRouteWithChildren;
+  '/profil': typeof ProfilRoute;
+  '/book/$book': typeof BookBookRoute;
+  '/dashboard/AddBook': typeof DashboardAddBookRoute;
+  '/dashboard/AllBooks': typeof DashboardAllBooksRoute;
+  '/dashboard/LogSystem': typeof DashboardLogSystemRoute;
+  '/book/': typeof BookIndexRoute;
+  '/login/': typeof LoginIndexRoute;
+  '/register/': typeof RegisterIndexRoute;
 }
 
 export interface FileRouteTypes {
-  fileRoutesByFullPath: FileRoutesByFullPath
+  fileRoutesByFullPath: FileRoutesByFullPath;
   fullPaths:
     | '/'
     | '/dashboard'
@@ -231,8 +231,8 @@ export interface FileRouteTypes {
     | '/dashboard/LogSystem'
     | '/book'
     | '/login'
-    | '/register'
-  fileRoutesByTo: FileRoutesByTo
+    | '/register';
+  fileRoutesByTo: FileRoutesByTo;
   to:
     | '/'
     | '/dashboard'
@@ -243,7 +243,7 @@ export interface FileRouteTypes {
     | '/dashboard/LogSystem'
     | '/book'
     | '/login'
-    | '/register'
+    | '/register';
   id:
     | '__root__'
     | '/'
@@ -255,18 +255,18 @@ export interface FileRouteTypes {
     | '/dashboard/LogSystem'
     | '/book/'
     | '/login/'
-    | '/register/'
-  fileRoutesById: FileRoutesById
+    | '/register/';
+  fileRoutesById: FileRoutesById;
 }
 
 export interface RootRouteChildren {
-  IndexRoute: typeof IndexRoute
-  DashboardRoute: typeof DashboardRouteWithChildren
-  ProfilRoute: typeof ProfilRoute
-  BookBookRoute: typeof BookBookRoute
-  BookIndexRoute: typeof BookIndexRoute
-  LoginIndexRoute: typeof LoginIndexRoute
-  RegisterIndexRoute: typeof RegisterIndexRoute
+  IndexRoute: typeof IndexRoute;
+  DashboardRoute: typeof DashboardRouteWithChildren;
+  ProfilRoute: typeof ProfilRoute;
+  BookBookRoute: typeof BookBookRoute;
+  BookIndexRoute: typeof BookIndexRoute;
+  LoginIndexRoute: typeof LoginIndexRoute;
+  RegisterIndexRoute: typeof RegisterIndexRoute;
 }
 
 const rootRouteChildren: RootRouteChildren = {
@@ -277,11 +277,11 @@ const rootRouteChildren: RootRouteChildren = {
   BookIndexRoute: BookIndexRoute,
   LoginIndexRoute: LoginIndexRoute,
   RegisterIndexRoute: RegisterIndexRoute,
-}
+};
 
 export const routeTree = rootRoute
   ._addFileChildren(rootRouteChildren)
-  ._addFileTypes<FileRouteTypes>()
+  ._addFileTypes<FileRouteTypes>();
 
 /* ROUTE_MANIFEST_START
 {
