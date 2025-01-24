@@ -16,3 +16,15 @@ export type Log = {
   action: string;
 };
 export type LogDto = Omit<Log, "id">;
+
+export type Book = {
+  id: string;
+  title: string;
+  author: string;
+  year: number;
+  availableCopies: number;
+  borrowedCopies: number;
+  images: string;
+  description?: string;
+};
+export type BookDto = Omit<Book, "id">;

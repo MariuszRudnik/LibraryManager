@@ -1,8 +1,8 @@
-import { queryOptions } from '@tanstack/react-query';
-import {fetchBooks} from "../../queries/books.tsx";
+import { queryOptions } from "@tanstack/react-query";
+import { fetchBooks } from "../../queries/bookss.tsx";
 
-
-export const booksQuery = () => queryOptions({
-    queryKey: ['books'],
+export const booksQuery = () =>
+  queryOptions({
+    queryKey: ["books"],
     queryFn: fetchBooks,
-});
+  });

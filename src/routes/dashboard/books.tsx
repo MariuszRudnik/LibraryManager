@@ -1,11 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
-import HomePage from "../pages/HomePage/HomePage.tsx";
-import { booksOptions } from "../queries/books.ts";
+import { Books } from "../../pages/AdminBooks/Books";
+import { booksOptions } from "../../queries/books";
 
-export const Route = createFileRoute("/")({
+export const Route = createFileRoute("/dashboard/books")({
+  component: Books,
   loader: async (data) => {
     const { queryClient } = data.context;
     return queryClient.ensureQueryData(booksOptions);
   },
-  component: HomePage,
 });

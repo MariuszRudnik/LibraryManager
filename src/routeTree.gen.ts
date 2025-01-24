@@ -16,11 +16,12 @@ import { Route as DashboardImport } from './routes/dashboard'
 import { Route as IndexImport } from './routes/index'
 import { Route as RegisterIndexImport } from './routes/register/index'
 import { Route as LoginIndexImport } from './routes/login/index'
-import { Route as BookIndexImport } from './routes/book/index'
+import { Route as DashboardBooksImport } from './routes/dashboard/books'
 import { Route as DashboardLogSystemImport } from './routes/dashboard/LogSystem'
-import { Route as DashboardAllBooksImport } from './routes/dashboard/AllBooks'
 import { Route as DashboardAddBookImport } from './routes/dashboard/AddBook'
 import { Route as BookBookImport } from './routes/book/$book'
+import { Route as DashboardBooksAddImport } from './routes/dashboard/books.add'
+import { Route as DashboardBooksEditIdImport } from './routes/dashboard/books.edit.$id'
 
 // Create/Update Routes
 
@@ -54,21 +55,15 @@ const LoginIndexRoute = LoginIndexImport.update({
   getParentRoute: () => rootRoute,
 } as any)
 
-const BookIndexRoute = BookIndexImport.update({
-  id: '/book/',
-  path: '/book/',
-  getParentRoute: () => rootRoute,
+const DashboardBooksRoute = DashboardBooksImport.update({
+  id: '/books',
+  path: '/books',
+  getParentRoute: () => DashboardRoute,
 } as any)
 
 const DashboardLogSystemRoute = DashboardLogSystemImport.update({
   id: '/LogSystem',
   path: '/LogSystem',
-  getParentRoute: () => DashboardRoute,
-} as any)
-
-const DashboardAllBooksRoute = DashboardAllBooksImport.update({
-  id: '/AllBooks',
-  path: '/AllBooks',
   getParentRoute: () => DashboardRoute,
 } as any)
 
@@ -82,6 +77,18 @@ const BookBookRoute = BookBookImport.update({
   id: '/book/$book',
   path: '/book/$book',
   getParentRoute: () => rootRoute,
+} as any)
+
+const DashboardBooksAddRoute = DashboardBooksAddImport.update({
+  id: '/add',
+  path: '/add',
+  getParentRoute: () => DashboardBooksRoute,
+} as any)
+
+const DashboardBooksEditIdRoute = DashboardBooksEditIdImport.update({
+  id: '/edit/$id',
+  path: '/edit/$id',
+  getParentRoute: () => DashboardBooksRoute,
 } as any)
 
 // Populate the FileRoutesByPath interface
@@ -123,13 +130,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DashboardAddBookImport
       parentRoute: typeof DashboardImport
     }
-    '/dashboard/AllBooks': {
-      id: '/dashboard/AllBooks'
-      path: '/AllBooks'
-      fullPath: '/dashboard/AllBooks'
-      preLoaderRoute: typeof DashboardAllBooksImport
-      parentRoute: typeof DashboardImport
-    }
     '/dashboard/LogSystem': {
       id: '/dashboard/LogSystem'
       path: '/LogSystem'
@@ -137,12 +137,12 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DashboardLogSystemImport
       parentRoute: typeof DashboardImport
     }
-    '/book/': {
-      id: '/book/'
-      path: '/book'
-      fullPath: '/book'
-      preLoaderRoute: typeof BookIndexImport
-      parentRoute: typeof rootRoute
+    '/dashboard/books': {
+      id: '/dashboard/books'
+      path: '/books'
+      fullPath: '/dashboard/books'
+      preLoaderRoute: typeof DashboardBooksImport
+      parentRoute: typeof DashboardImport
     }
     '/login/': {
       id: '/login/'
@@ -158,21 +158,49 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof RegisterIndexImport
       parentRoute: typeof rootRoute
     }
+    '/dashboard/books/add': {
+      id: '/dashboard/books/add'
+      path: '/add'
+      fullPath: '/dashboard/books/add'
+      preLoaderRoute: typeof DashboardBooksAddImport
+      parentRoute: typeof DashboardBooksImport
+    }
+    '/dashboard/books/edit/$id': {
+      id: '/dashboard/books/edit/$id'
+      path: '/edit/$id'
+      fullPath: '/dashboard/books/edit/$id'
+      preLoaderRoute: typeof DashboardBooksEditIdImport
+      parentRoute: typeof DashboardBooksImport
+    }
   }
 }
 
 // Create and export the route tree
 
+interface DashboardBooksRouteChildren {
+  DashboardBooksAddRoute: typeof DashboardBooksAddRoute
+  DashboardBooksEditIdRoute: typeof DashboardBooksEditIdRoute
+}
+
+const DashboardBooksRouteChildren: DashboardBooksRouteChildren = {
+  DashboardBooksAddRoute: DashboardBooksAddRoute,
+  DashboardBooksEditIdRoute: DashboardBooksEditIdRoute,
+}
+
+const DashboardBooksRouteWithChildren = DashboardBooksRoute._addFileChildren(
+  DashboardBooksRouteChildren,
+)
+
 interface DashboardRouteChildren {
   DashboardAddBookRoute: typeof DashboardAddBookRoute
-  DashboardAllBooksRoute: typeof DashboardAllBooksRoute
   DashboardLogSystemRoute: typeof DashboardLogSystemRoute
+  DashboardBooksRoute: typeof DashboardBooksRouteWithChildren
 }
 
 const DashboardRouteChildren: DashboardRouteChildren = {
   DashboardAddBookRoute: DashboardAddBookRoute,
-  DashboardAllBooksRoute: DashboardAllBooksRoute,
   DashboardLogSystemRoute: DashboardLogSystemRoute,
+  DashboardBooksRoute: DashboardBooksRouteWithChildren,
 }
 
 const DashboardRouteWithChildren = DashboardRoute._addFileChildren(
@@ -185,11 +213,12 @@ export interface FileRoutesByFullPath {
   '/profil': typeof ProfilRoute
   '/book/$book': typeof BookBookRoute
   '/dashboard/AddBook': typeof DashboardAddBookRoute
-  '/dashboard/AllBooks': typeof DashboardAllBooksRoute
   '/dashboard/LogSystem': typeof DashboardLogSystemRoute
-  '/book': typeof BookIndexRoute
+  '/dashboard/books': typeof DashboardBooksRouteWithChildren
   '/login': typeof LoginIndexRoute
   '/register': typeof RegisterIndexRoute
+  '/dashboard/books/add': typeof DashboardBooksAddRoute
+  '/dashboard/books/edit/$id': typeof DashboardBooksEditIdRoute
 }
 
 export interface FileRoutesByTo {
@@ -198,11 +227,12 @@ export interface FileRoutesByTo {
   '/profil': typeof ProfilRoute
   '/book/$book': typeof BookBookRoute
   '/dashboard/AddBook': typeof DashboardAddBookRoute
-  '/dashboard/AllBooks': typeof DashboardAllBooksRoute
   '/dashboard/LogSystem': typeof DashboardLogSystemRoute
-  '/book': typeof BookIndexRoute
+  '/dashboard/books': typeof DashboardBooksRouteWithChildren
   '/login': typeof LoginIndexRoute
   '/register': typeof RegisterIndexRoute
+  '/dashboard/books/add': typeof DashboardBooksAddRoute
+  '/dashboard/books/edit/$id': typeof DashboardBooksEditIdRoute
 }
 
 export interface FileRoutesById {
@@ -212,11 +242,12 @@ export interface FileRoutesById {
   '/profil': typeof ProfilRoute
   '/book/$book': typeof BookBookRoute
   '/dashboard/AddBook': typeof DashboardAddBookRoute
-  '/dashboard/AllBooks': typeof DashboardAllBooksRoute
   '/dashboard/LogSystem': typeof DashboardLogSystemRoute
-  '/book/': typeof BookIndexRoute
+  '/dashboard/books': typeof DashboardBooksRouteWithChildren
   '/login/': typeof LoginIndexRoute
   '/register/': typeof RegisterIndexRoute
+  '/dashboard/books/add': typeof DashboardBooksAddRoute
+  '/dashboard/books/edit/$id': typeof DashboardBooksEditIdRoute
 }
 
 export interface FileRouteTypes {
@@ -227,11 +258,12 @@ export interface FileRouteTypes {
     | '/profil'
     | '/book/$book'
     | '/dashboard/AddBook'
-    | '/dashboard/AllBooks'
     | '/dashboard/LogSystem'
-    | '/book'
+    | '/dashboard/books'
     | '/login'
     | '/register'
+    | '/dashboard/books/add'
+    | '/dashboard/books/edit/$id'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -239,11 +271,12 @@ export interface FileRouteTypes {
     | '/profil'
     | '/book/$book'
     | '/dashboard/AddBook'
-    | '/dashboard/AllBooks'
     | '/dashboard/LogSystem'
-    | '/book'
+    | '/dashboard/books'
     | '/login'
     | '/register'
+    | '/dashboard/books/add'
+    | '/dashboard/books/edit/$id'
   id:
     | '__root__'
     | '/'
@@ -251,11 +284,12 @@ export interface FileRouteTypes {
     | '/profil'
     | '/book/$book'
     | '/dashboard/AddBook'
-    | '/dashboard/AllBooks'
     | '/dashboard/LogSystem'
-    | '/book/'
+    | '/dashboard/books'
     | '/login/'
     | '/register/'
+    | '/dashboard/books/add'
+    | '/dashboard/books/edit/$id'
   fileRoutesById: FileRoutesById
 }
 
@@ -264,7 +298,6 @@ export interface RootRouteChildren {
   DashboardRoute: typeof DashboardRouteWithChildren
   ProfilRoute: typeof ProfilRoute
   BookBookRoute: typeof BookBookRoute
-  BookIndexRoute: typeof BookIndexRoute
   LoginIndexRoute: typeof LoginIndexRoute
   RegisterIndexRoute: typeof RegisterIndexRoute
 }
@@ -274,7 +307,6 @@ const rootRouteChildren: RootRouteChildren = {
   DashboardRoute: DashboardRouteWithChildren,
   ProfilRoute: ProfilRoute,
   BookBookRoute: BookBookRoute,
-  BookIndexRoute: BookIndexRoute,
   LoginIndexRoute: LoginIndexRoute,
   RegisterIndexRoute: RegisterIndexRoute,
 }
@@ -293,7 +325,6 @@ export const routeTree = rootRoute
         "/dashboard",
         "/profil",
         "/book/$book",
-        "/book/",
         "/login/",
         "/register/"
       ]
@@ -305,8 +336,8 @@ export const routeTree = rootRoute
       "filePath": "dashboard.tsx",
       "children": [
         "/dashboard/AddBook",
-        "/dashboard/AllBooks",
-        "/dashboard/LogSystem"
+        "/dashboard/LogSystem",
+        "/dashboard/books"
       ]
     },
     "/profil": {
@@ -319,22 +350,31 @@ export const routeTree = rootRoute
       "filePath": "dashboard/AddBook.tsx",
       "parent": "/dashboard"
     },
-    "/dashboard/AllBooks": {
-      "filePath": "dashboard/AllBooks.tsx",
-      "parent": "/dashboard"
-    },
     "/dashboard/LogSystem": {
       "filePath": "dashboard/LogSystem.tsx",
       "parent": "/dashboard"
     },
-    "/book/": {
-      "filePath": "book/index.tsx"
+    "/dashboard/books": {
+      "filePath": "dashboard/books.tsx",
+      "parent": "/dashboard",
+      "children": [
+        "/dashboard/books/add",
+        "/dashboard/books/edit/$id"
+      ]
     },
     "/login/": {
       "filePath": "login/index.tsx"
     },
     "/register/": {
       "filePath": "register/index.tsx"
+    },
+    "/dashboard/books/add": {
+      "filePath": "dashboard/books.add.tsx",
+      "parent": "/dashboard/books"
+    },
+    "/dashboard/books/edit/$id": {
+      "filePath": "dashboard/books.edit.$id.tsx",
+      "parent": "/dashboard/books"
     }
   }
 }

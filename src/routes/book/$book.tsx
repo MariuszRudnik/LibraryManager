@@ -1,20 +1,21 @@
-import { createFileRoute } from '@tanstack/react-router'
-import { bookQuery } from './-loader/booksLooader.tsx'
-import Books from '../../pages/Book/Book.tsx'
+import { createFileRoute } from "@tanstack/react-router";
+import { bookOptions } from "../../queries/book.ts";
+import { Book } from "../../pages/Book/Book.tsx";
 
-export const Route = createFileRoute('/book/$book')({
+export const Route = createFileRoute("/book/$book")({
   loader: (data) => {
-    const { queryClient } = data.context
-    return queryClient.ensureQueryData(bookQuery(data.params.book))
+    const { queryClient } = data.context;
+    return queryClient.ensureQueryData(bookOptions(data.params.book));
   },
   component: RouteComponent,
-})
+});
 
 function RouteComponent() {
-  const { book } = Route.useParams()
+  const { book } = Route.useParams();
+
   return (
     <div>
-      <Books book={book} />
+      <Book book={book} />
     </div>
-  )
+  );
 }
