@@ -18,10 +18,17 @@ export const deleteBook = (
   }: BookRow,
   mutateDelete: {
     (
-      variables: string,
+      id: string,
       options?: MutateOptions<unknown, Error, string, unknown> | undefined
     ): void;
     (arg0: string, arg1: { onSuccess: () => void; onError: () => void }): void;
+  },
+  mutateBookCount: {
+    (
+      variables: Book,
+      options?: MutateOptions<unknown, Error, Book, unknown> | undefined
+    ): void;
+    (arg0: Book, arg1: { onSuccess: () => void; onError: () => void }): void;
   }
 ) => {
   const options = [];
@@ -69,8 +76,6 @@ export const deleteBook = (
       const numberOfBooksToDelete = parseInt(select.value);
 
       if (numberOfBooksToDelete === allBooks) {
-        // Jeśli liczba wybranych książek = liczbie wszystkich, używamy mutateDelete
-        console.log("całośc", id);
         mutateDelete(id, {
           onSuccess: () => {
             Swal.fire({
@@ -89,9 +94,7 @@ export const deleteBook = (
           },
         });
       } else {
-        // W przeciwnym razie używamy mutateUpdate z całym obiektem książki
-
-        const book: Book = {
+        const editCountBook: Book = {
           id,
           title,
           author,
@@ -101,8 +104,7 @@ export const deleteBook = (
           description,
           availableCopies: availableCopies - numberOfBooksToDelete,
         };
-        console.log(book);
-        mutateUpdate(book, {
+        mutateBookCount(editCountBook, {
           onSuccess: () => {
             Swal.fire({
               title: "Sukces",
