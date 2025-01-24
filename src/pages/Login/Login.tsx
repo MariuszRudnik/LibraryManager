@@ -15,6 +15,7 @@ import { useCreateLogMutation } from "../../mutations/useCreateLogMutation.ts";
 import { useNavigate } from "@tanstack/react-router";
 import { LogDto } from "../../types/index.ts";
 import { useUserStore } from "../../store/useUserStore.ts";
+import { AdminInfo } from "./Admininfo.tsx";
 
 export const Login = () => {
   const emailInput = useInput("");
@@ -116,6 +117,7 @@ export const Login = () => {
         >
           Zaloguj się
         </Button>
+
         {error && (
           <Alert
             severity="error"
@@ -129,6 +131,7 @@ export const Login = () => {
           </Alert>
         )}
       </Box>
+      <AdminInfo />
     </Container>
   );
 };

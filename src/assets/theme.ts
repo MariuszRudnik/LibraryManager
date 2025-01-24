@@ -6,5 +6,11 @@ export const theme = createTheme({
     primary: {
       main: brown[900],
     },
+    secondary: {
+      main: brown[50],
+    },
+    background: {
+      default: brown[50],
+    },
   },
 });
