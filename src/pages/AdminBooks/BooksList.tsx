@@ -17,6 +17,7 @@ import {
   Divider,
   Stack,
   TextField,
+  Tooltip,
   Typography,
 } from "@mui/material";
 import EditIcon from "@mui/icons-material/Edit";
@@ -25,6 +26,10 @@ import { blue, red } from "@mui/material/colors";
 
 import { deleteBook } from "../../utills/deleteBook";
 import { useDeleteBookMutation } from "../../mutations/useDeleteBookMutation";
+import { useEditBookCountMutation } from "../../mutations/useEditBookCountMutation";
+import { ModalBook } from "./Modal";
+import { Link } from "@tanstack/react-router";
+import { useBookStore } from "../../store/useBookStore";
 
 export interface BookRow extends Book {
   allBooks: number;
@@ -42,14 +47,23 @@ const createData = (data: Book[]) => {
 };
 
 export const BooksList = () => {
-  const { data } = useSuspenseQuery(booksOptions);
   const [filteredBooks, setFilteredBooks] = useState<BookRow[]>([]);
   const [isFiltered, setIsFiltered] = useState(false);
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(5);
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
 
+  const { data } = useSuspenseQuery(booksOptions);
   const books = createData(data);
   const { mutate: mutateDelete } = useDeleteBookMutation();
+  const { mutate: mutateBookCount } = useEditBookCountMutation();
+  const { editBook } = useBookStore();
+
+  const handleEditBook = (row: BookRow) => {
+    handleOpen();
+    editBook(row);
+  };
 
   const filterData = (v: BookRow | null) => {
     if (v) {
@@ -107,7 +121,13 @@ export const BooksList = () => {
           component="div"
           sx={{ flexGrow: 1 }}
         ></Typography>
-        <Button variant="contained">Add</Button>
+
+        <Link to="/dashboard/books/add">
+          <Button variant="contained" onClick={handleOpen}>
+            Dodaj Książke
+          </Button>
+        </Link>
+        <ModalBook open={open} setOpen={setOpen} />
       </Stack>
       <Box height={10} />
       <TableContainer sx={{ maxHeight: 440 }}>
@@ -157,21 +177,42 @@ export const BooksList = () => {
                     </TableCell>
                     <TableCell align="center">
                       <Stack direction="row" justifyContent="space-between">
-                        <EditIcon
-                          style={{
-                            fontSize: "20px",
-                            color: blue[500],
-                            cursor: "pointer",
-                          }}
-                        />
-                        <DeleteIcon
-                          style={{
-                            fontSize: "20px",
-                            color: red[800],
-                            cursor: "pointer",
-                          }}
-                          onClick={() => deleteBook(row, mutateDelete)}
-                        />
+                        <Tooltip title={"Edytuj"}>
+                          <Link
+                            to="/dashboard/books/edit/$id"
+                            params={{
+                              id: row.id,
+                            }}
+                          >
+                            <EditIcon
+                              style={{
+                                fontSize: "20px",
+                                color: blue[500],
+                                cursor: "pointer",
+                              }}
+                              onClick={() => handleEditBook(row)}
+                            />
+                          </Link>
+                        </Tooltip>
+
+                        <Tooltip
+                          title={
+                            row.availableCopies ? "Usuń" : "Nie można usunąć"
+                          }
+                        >
+                          <DeleteIcon
+                            style={{
+                              fontSize: "20px",
+                              color: red[800],
+                              cursor: "pointer",
+                              opacity: row.availableCopies ? 1 : 0.5,
+                            }}
+                            onClick={() =>
+                              row.availableCopies &&
+                              deleteBook(row, mutateDelete, mutateBookCount)
+                            }
+                          />
+                        </Tooltip>
                       </Stack>
                     </TableCell>
                   </TableRow>

@@ -43,11 +43,11 @@
       "id": "2",
       "title": "Wiedźmin: Ostatnie Życzenie",
       "author": "Andrzej Sapkowski",
-      "description": "Zbiór opowiadań wprowadzający czytelnika w świat Geralta z Rivii, tytułowego wiedźmina – zabójcy potworów, który staje przed wieloma moralnymi dylematami.",
+      "images": "https://bonito.pl/cache/3/a836c40ae86d8d4a58c3af39a6b_800.webp",
       "year": 1993,
-      "availableCopies": 4,
       "borrowedCopies": 1,
-      "images": "https://bonito.pl/cache/3/a836c40ae86d8d4a58c3af39a6b_800.webp"
+      "description": "Zbiór opowiadań wprowadzający czytelnika w świat Geralta z Rivii, tytułowego wiedźmina – zabójcy potworów, który staje przed wieloma moralnymi dylematami.",
+      "availableCopies": 0
     },
     {
       "id": "3",
@@ -60,24 +60,24 @@
       "images": "https://bonito.pl/cache/1/c16f517-wladca-pierscieni-dr_800.webp"
     },
     {
-      "id": "211111111sdfsdf1111111111111111",
-      "title": "111111111111111111",
-      "author": "Andrzej Sapkowski",
-      "description": "Zbiór opowiadań wprowadzający czytelnika w świat Geralta z Rivii, tytułowego wiedźmina – zabójcy potworów, który staje przed wieloma moralnymi dylematami.",
-      "year": 1993,
-      "availableCopies": 4,
-      "borrowedCopies": 1,
-      "images": "https://bonito.pl/cache/3/a836c40ae86d8d4a58c3af39a6b_800.webp"
+      "id": "4",
+      "title": "Nic mnie nie złamie.",
+      "author": "Goggins David",
+      "images": "https://ecsmedia.pl/cdn-cgi/image/format=webp,width=544,height=544,/c/nic-mnie-nie-zlamie-zapanuj-nad-swoim-umyslem-i-pokonaj-przeciwnosci-losu-b-iext172232004.jpg",
+      "year": 2023,
+      "borrowedCopies": 0,
+      "description": "David Goggins jest człowiekiem o żelaznej woli i inspiracją dla wszystkich. Samo słuchanie tego faceta sprawia, że chce się wbiec na jakąś górę. Jestem przekonany, że ludzie tacy jak on mogą zmieniać losy świata.",
+      "availableCopies": 9
     },
     {
       "id": "2111111111111111aasdasdsad111111111",
       "title": "111111111111111111",
       "author": "Andrzej Sapkowski",
-      "description": "Zbiór opowiadań wprowadzający czytelnika w świat Geralta z Rivii, tytułowego wiedźmina – zabójcy potworów, który staje przed wieloma moralnymi dylematami.",
+      "images": "https://bonito.pl/cache/3/a836c40ae86d8d4a58c3af39a6b_800.webp",
       "year": 1993,
-      "availableCopies": 4,
       "borrowedCopies": 1,
-      "images": "https://bonito.pl/cache/3/a836c40ae86d8d4a58c3af39a6b_800.webp"
+      "description": "Zbiór opowiadań wprowadzający czytelnika w świat Geralta z Rivii, tytułowego wiedźmina – zabójcy potworów, który staje przed wieloma moralnymi dylematami.",
+      "availableCopies": 0
     }
   ],
   "rentals": [
@@ -216,6 +216,24 @@
       "userId": "1",
       "action": "login",
       "timestamp": "2025-01-19T20:54:24.464Z"
+    },
+    {
+      "id": "9db7",
+      "userId": "1",
+      "action": "login",
+      "timestamp": "2025-01-24T13:37:51.535Z"
+    },
+    {
+      "id": "065e",
+      "userId": "1",
+      "action": "login",
+      "timestamp": "2025-01-24T19:15:01.240Z"
+    },
+    {
+      "id": "8c26",
+      "userId": "1",
+      "action": "login",
+      "timestamp": "2025-01-24T19:16:04.649Z"
     }
   ]
 }
