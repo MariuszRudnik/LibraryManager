@@ -14,7 +14,6 @@ function BookLayout({ book }: BookLayoutProps) {
       disableGutters
       sx={{
         display: "flex",
-        flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
         minHeight: "100vh",
@@ -24,51 +23,61 @@ function BookLayout({ book }: BookLayoutProps) {
     >
       <Box
         sx={{
-          maxWidth: "800px",
+          maxWidth: "1000px",
           width: "100%",
           backgroundColor: "white",
           borderRadius: "8px",
           boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
-          padding: "2rem",
           display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          textAlign: "center",
+          flexDirection: { xs: "column", md: "row" }, 
+          overflow: "hidden", 
         }}
       >
-        <Typography
-          variant="h4"
-          component="h1"
-          sx={{ marginBottom: "1rem", fontWeight: "bold" }}
+        {/* Sekcja opisu */}
+        <Box
+          sx={{
+            flex: 1,
+            padding: "2rem",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+          }}
         >
-          {title}
-        </Typography>
-        <Typography
-          variant="subtitle1"
-          sx={{ marginBottom: "1rem", color: "gray" }}
-        >
-          {author} &bull; {year}
-        </Typography>
+          <Typography
+            variant="h4"
+            component="h1"
+            sx={{ marginBottom: "1rem", fontWeight: "bold" }}
+          >
+            {title}
+          </Typography>
+          <Typography
+            variant="subtitle1"
+            sx={{ marginBottom: "1rem", color: "gray" }}
+          >
+            {author} &bull; {year}
+          </Typography>
+          <Typography variant="body1" sx={{ color: "#333", lineHeight: 1.6, marginBottom: "1rem" }}>
+            {description}
+          </Typography>
+          <Typography variant="body1" sx={{ color: "#333", lineHeight: 1.6 }}>
+            Dostępnych egzemplarzy: {availableCopies}
+          </Typography>
+        </Box>
+
+        {/* Sekcja obrazu */}
         {images && (
           <CardMedia
             component="img"
             image={images}
             alt={`Okładka książki ${title}`}
             sx={{
-              maxHeight: 480,
-              width: "100%",
-              objectFit: "contain",
-              borderRadius: "8px",
-              marginBottom: "1.5rem",
+              flex: 1,
+              width: { xs: "100%", md: "50%" }, 
+              objectFit: "cover", 
+              height: { xs: "auto", md: "100%" }, 
             }}
           />
         )}
-        <Typography variant="body1" sx={{ color: "#333", lineHeight: 1.6 }}>
-          {description}
-        </Typography>
-        <Typography variant="body1" sx={{ color: "#333", lineHeight: 1.6 }}>
-          Dostępych egzemplarzy jest {availableCopies}
-        </Typography>
       </Box>
     </Container>
   );
