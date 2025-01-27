@@ -1,4 +1,4 @@
-import { Sidenav } from "./Sidenav/Sidenav";
+import { Sidenav } from './Sidenav/Sidenav';
 
 export const Dashboard = () => {
   return (

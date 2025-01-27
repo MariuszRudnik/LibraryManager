@@ -3,9 +3,9 @@ import {
   ListItemIcon,
   ListItemText,
   SvgIconProps,
-} from "@mui/material";
-import { brown } from "@mui/material/colors";
-import { ReactElement } from "react";
+} from '@mui/material';
+import { brown } from '@mui/material/colors';
+import { ReactElement } from 'react';
 
 export type SingleItemButtonProps = {
   open: boolean;
@@ -29,14 +29,14 @@ export const SingleItemButton = ({
         {
           minHeight: 48,
           px: 2.5,
-          bgcolor: isActive ? brown[600] : "",
+          bgcolor: isActive ? brown[600] : '',
         },
         open
           ? {
-              justifyContent: "initial",
+              justifyContent: 'initial',
             }
           : {
-              justifyContent: "center",
+              justifyContent: 'center',
             },
       ]}
     >
@@ -44,14 +44,14 @@ export const SingleItemButton = ({
         sx={[
           {
             minWidth: 0,
-            justifyContent: "center",
+            justifyContent: 'center',
           },
           open
             ? {
                 mr: 3,
               }
             : {
-                mr: "auto",
+                mr: 'auto',
               },
         ]}
       >

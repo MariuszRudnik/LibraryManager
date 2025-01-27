@@ -26,6 +26,15 @@
       "password": "123",
       "role": "client",
       "libraryCardCode": "45682827"
+    },
+    {
+      "id": "98ab",
+      "firstName": "Jan",
+      "lastName": "Kowalski",
+      "email": "test@test.pl",
+      "password": "password123",
+      "role": "client",
+      "libraryCardCode": "43938474"
     }
   ],
   "books": [
@@ -246,6 +255,12 @@
       "userId": "1",
       "action": "login",
       "timestamp": "2025-01-25T19:40:25.251Z"
+    },
+    {
+      "id": "983d",
+      "userId": "1",
+      "action": "login",
+      "timestamp": "2025-01-27T22:39:05.525Z"
     }
   ]
 }

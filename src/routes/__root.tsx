@@ -1,13 +1,13 @@
-import React, { Suspense } from "react";
-import { Outlet, createRootRouteWithContext } from "@tanstack/react-router";
-import { QueryClient } from "@tanstack/react-query";
-import { Navbar } from "../components/Navbar";
-import { CssBaseline, ThemeProvider } from "@mui/material";
-import { theme } from "../assets/theme";
+import React, { Suspense } from 'react';
+import { Outlet, createRootRouteWithContext } from '@tanstack/react-router';
+import { QueryClient } from '@tanstack/react-query';
+import { Navbar } from '../components/Navbar';
+import { CssBaseline, ThemeProvider } from '@mui/material';
+import { theme } from '../assets/theme';
 
 const TanStackRouterDevtools = import.meta.env.DEV
   ? React.lazy(() =>
-      import("@tanstack/router-devtools").then((res) => ({
+      import('@tanstack/router-devtools').then((res) => ({
         default: res.TanStackRouterDevtools,
       }))
     )
