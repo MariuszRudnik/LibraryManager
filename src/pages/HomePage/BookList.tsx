@@ -20,15 +20,27 @@ type BookListProps = {
 const BookList = ({ books }: BookListProps) => {
   const { isLoggedIn } = useUserStore();
   return (
-    <Box sx={{ display: "flex", justifyContent: "center", padding: 4 }}>
+    <Box
+      data-testid="booklist"
+      id="book-list"
+      sx={{ display: 'flex', justifyContent: 'center', padding: 4 }}
+    >
       <Grid
+        data-testid="booklist2"
         container
         spacing={3}
         justifyContent="center"
         sx={{ maxWidth: 1200 }}
       >
         {books.map((book) => (
-          <Grid item xs={12} sm={6} md={4} key={book.id}>
+          <Grid
+            item
+            xs={12}
+            sm={6}
+            md={4}
+            key={book.id}
+            data-testid={`map-item-${book.id}`}
+          >
             <Card
               sx={{
                 height: 650,

@@ -87,6 +87,7 @@ export const Login = () => {
           Miło cię widzieć
         </Typography>
         <TextField
+          inputProps={{ 'data-testid': 'email-input' }}
           required
           id="email"
           label="Email"
@@ -97,6 +98,7 @@ export const Login = () => {
         />
         <TextField
           required
+          inputProps={{ 'data-testid': 'password-input' }}
           id="password"
           label="Hasło"
           type="password"
@@ -108,6 +110,7 @@ export const Login = () => {
           variant="contained"
           color="primary"
           type="submit"
+          data-testid="login-button"
           sx={{
             marginBottom: "1rem",
             width: "100%",
@@ -120,6 +123,7 @@ export const Login = () => {
 
         {error && (
           <Alert
+            data-testid="error-message"
             severity="error"
             sx={{
               width: "100%",

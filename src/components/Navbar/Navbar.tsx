@@ -14,9 +14,9 @@ export const Navbar = () => {
 
   return (
     <AppBar position="static">
-      <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
-        <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
-          <Typography variant="h6" component="div">
+      <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
+        <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+          <Typography data-testid="header" variant="h6" component="div">
             Biblioteka Frontowców
           </Typography>
           <AutoStoriesIcon fontSize="large" />
