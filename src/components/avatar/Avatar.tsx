@@ -1,11 +1,11 @@
-import * as React from "react";
+import * as React from 'react';
 
-import IconButton from "@mui/material/IconButton";
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
-import AccountCircle from "@mui/icons-material/AccountCircle";
-import { useNavigate } from "@tanstack/react-router";
-import { useUserStore } from "../../store/useUserStore";
+import IconButton from '@mui/material/IconButton';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import AccountCircle from '@mui/icons-material/AccountCircle';
+import { useNavigate } from '@tanstack/react-router';
+import { useUserStore } from '../../store/useUserStore';
 
 export const Avatar = () => {
   const { logout } = useUserStore();
@@ -20,7 +20,7 @@ export const Avatar = () => {
 
   const handleLogout = () => {
     logout();
-    navigate({ to: "/" });
+    navigate({ to: '/' });
   };
 
   return (
@@ -39,18 +39,18 @@ export const Avatar = () => {
         id="menu-appbar"
         anchorEl={anchorEl}
         anchorOrigin={{
-          vertical: "bottom",
-          horizontal: "right",
+          vertical: 'bottom',
+          horizontal: 'right',
         }}
         keepMounted
         transformOrigin={{
-          vertical: "top",
-          horizontal: "right",
+          vertical: 'top',
+          horizontal: 'right',
         }}
         open={Boolean(anchorEl)}
         onClose={handleClose}
       >
-        <MenuItem onClick={() => navigate({ to: "/profil" })}>Profil</MenuItem>
+        <MenuItem onClick={() => navigate({ to: '/profil' })}>Profil</MenuItem>
 
         <MenuItem onClick={handleLogout}>Wyloguj się</MenuItem>
       </Menu>

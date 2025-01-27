@@ -100,7 +100,12 @@ export const BooksList = () => {
       </Typography>
       <Divider />
       <Box height={10} />
-      <Stack direction="row" spacing={2} className="my-2 mb-2">
+      <Stack
+        direction="row"
+        justifyContent="space-between"
+        marginInline="1rem"
+        spacing={2}
+      >
         <Autocomplete
           disablePortal
           id="combo-box-demo"
@@ -116,11 +121,11 @@ export const BooksList = () => {
             />
           )}
         />
-        <Typography
+        {/* <Typography
           variant="h6"
           component="div"
           sx={{ flexGrow: 1 }}
-        ></Typography>
+        ></Typography> */}
 
         <Link to="/dashboard/books/add">
           <Button variant="contained" onClick={handleOpen}>

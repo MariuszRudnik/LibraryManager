@@ -1,8 +1,8 @@
-import * as React from "react";
-import IconButton from "@mui/material/IconButton";
-import Menu from "@mui/material/Menu";
-import { Badge, MenuItem } from "@mui/material";
-import MailIcon from "@mui/icons-material/Mail";
+import * as React from 'react';
+import IconButton from '@mui/material/IconButton';
+import Menu from '@mui/material/Menu';
+import { Badge, MenuItem } from '@mui/material';
+import MailIcon from '@mui/icons-material/Mail';
 
 export const Message = () => {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
@@ -13,7 +13,7 @@ export const Message = () => {
     setAnchorEl(null);
   };
 
-  const messages = ["Proszę oddać książke Harry Potter"];
+  const messages = ['Proszę oddać książke Harry Potter'];
 
   return (
     <>
@@ -27,8 +27,8 @@ export const Message = () => {
       >
         <Badge
           anchorOrigin={{
-            vertical: "top",
-            horizontal: "left",
+            vertical: 'top',
+            horizontal: 'left',
           }}
           color="info"
           badgeContent={messages.length}
@@ -41,13 +41,13 @@ export const Message = () => {
           id="menu-appbar"
           anchorEl={anchorEl}
           anchorOrigin={{
-            vertical: "bottom",
-            horizontal: "right",
+            vertical: 'bottom',
+            horizontal: 'right',
           }}
           keepMounted
           transformOrigin={{
-            vertical: "top",
-            horizontal: "right",
+            vertical: 'top',
+            horizontal: 'right',
           }}
           open={Boolean(anchorEl)}
           onClose={handleClose}
