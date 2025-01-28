@@ -26,10 +26,10 @@ import { blue, red } from '@mui/material/colors';
 
 import { deleteBook } from '../../utills/deleteBook';
 import { useDeleteBookMutation } from '../../mutations/useDeleteBookMutation';
-import { useEditBookCountMutation } from '../../mutations/useEditBookCountMutation';
 import { ModalBook } from './Modal';
 import { Link } from '@tanstack/react-router';
 import { useBookStore } from '../../store/useBookStore';
+import { useEditBookMutation } from '../../mutations/useEditBookMutation';
 
 export interface BookRow extends Book {
   allBooks: number;
@@ -57,7 +57,7 @@ export const BooksList = () => {
   const { data } = useSuspenseQuery(booksOptions);
   const books = createData(data);
   const { mutate: mutateDelete } = useDeleteBookMutation();
-  const { mutate: mutateBookCount } = useEditBookCountMutation();
+  const { mutate: mutateBookCount } = useEditBookMutation();
   const { editBook } = useBookStore();
 
   const handleEditBook = (row: BookRow) => {

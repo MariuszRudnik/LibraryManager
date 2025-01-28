@@ -14,7 +14,7 @@ function BooksAdd() {
   const titleInput = useInput('');
   const authorInput = useInput('');
   const yearInput = useInput('');
-  const countBookInput = useInput('');
+  const countBookInput = useInput(1);
   const descriptionInput = useInput('');
   const urlInput = useInput('');
   const { mutate } = useCreateBookMutation();
@@ -23,7 +23,7 @@ function BooksAdd() {
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
 
-    const addBook: BookDto = {
+    const addBookObj: BookDto = {
       title: titleInput.value,
       author: authorInput.value,
       year: Number(yearInput.value),
@@ -32,7 +32,7 @@ function BooksAdd() {
       availableCopies: Number(countBookInput.value),
       images: urlInput.value,
     };
-    mutate(addBook);
+    mutate(addBookObj);
     handleClose();
   };
 
@@ -44,9 +44,8 @@ function BooksAdd() {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        padding: '2rem 0',
         backgroundColor: '#adaaaa',
-        minHeight: 'calc(100vh - 96px)', // Zmniejszamy wysokość tła o 4% (2% z góry, 2% z dołu)
+        // minHeight: 'calc(70vh - 96px)', // Zmniejszamy wysokość tła o 4% (2% z góry, 2% z dołu)
       }}
     >
       <Box
@@ -54,7 +53,7 @@ function BooksAdd() {
           width: '100%',
           maxWidth: '800px',
           backgroundColor: 'white',
-          borderRadius: '8px',
+          // borderRadius: '8px',
           boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)',
           padding: '2rem',
         }}
@@ -120,9 +119,14 @@ function BooksAdd() {
             <TextField
               required
               id="countBook"
-              label="Ilość"
+              label="Ilość dostępnych egzemplarzy"
               type="number"
               variant="outlined"
+              slotProps={{
+                input: {
+                  inputProps: { min: 1 },
+                },
+              }}
               {...countBookInput}
               sx={{ flex: 1 }}
             />

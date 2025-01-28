@@ -79,94 +79,14 @@
       "availableCopies": 9
     },
     {
-      "id": "2111111111111111aasdasdsad111111111",
-      "title": "111111111111111111",
-      "author": "Andrzej Sapkowski",
-      "images": "https://bonito.pl/cache/3/a836c40ae86d8d4a58c3af39a6b_800.webp",
-      "year": 1993,
-      "borrowedCopies": 1,
-      "description": "Zbiór opowiadań wprowadzający czytelnika w świat Geralta z Rivii, tytułowego wiedźmina – zabójcy potworów, który staje przed wieloma moralnymi dylematami.",
-      "availableCopies": 0
-    },
-    {
       "id": "facd",
-      "title": "kot",
-      "author": "lisa",
-      "year": 2024,
-      "description": "super kot ",
+      "title": "Chłopki. Opowieść o naszych babkach",
+      "author": "Joanna Kuciel-Frydryszak",
+      "year": 2018,
+      "description": "Joanna Kuciel-Frydryszak daje wiejskim kobietom głos, by opowiedziały o swoim życiu: codziennym znoju, lękach i marzeniach. Ta mocna, głęboko dotykająca lektura pokazuje siłę kobiet, ich bezgraniczne oddanie rodzinie, ale też pragnienie zmiany i nierówną walkę o siebie w patriarchalnym społeczeństwie.",
       "borrowedCopies": 0,
-      "availableCopies": 1,
+      "availableCopies": 10,
       "images": "https://bonito.pl/zdjecia/6/73c4dd8-chlopki-opowiesc-o-n.webp"
-    },
-    {
-      "id": "0ea3",
-      "title": "sdfdsf",
-      "author": "sdf",
-      "year": 45,
-      "description": "erer",
-      "borrowedCopies": 0,
-      "availableCopies": 45,
-      "images": "https://bonito.pl/zdjecia/7/edabd9f-osiedle-marzen-wojci.webp"
-    },
-    {
-      "id": "89a7",
-      "title": "sdf",
-      "author": "sfd",
-      "year": 34,
-      "description": "44",
-      "borrowedCopies": 0,
-      "availableCopies": 4,
-      "images": "https://bonito.pl/zdjecia/6/73c4dd8-chlopki-opowiesc-o-n.webp"
-    },
-    {
-      "id": "34ca",
-      "title": "sdf",
-      "author": "sfd",
-      "year": 34,
-      "description": "44",
-      "borrowedCopies": 0,
-      "availableCopies": 4,
-      "images": "https://bonito.pl/zdjecia/6/73c4dd8-chlopki-opowiesc-o-n.webp"
-    },
-    {
-      "id": "0ebd",
-      "title": "sdf",
-      "author": "sfd",
-      "year": 34,
-      "description": "44",
-      "borrowedCopies": 0,
-      "availableCopies": 4,
-      "images": "https://bonito.pl/zdjecia/6/73c4dd8-chlopki-opowiesc-o-n.webp"
-    },
-    {
-      "id": "613a",
-      "title": "sdf",
-      "author": "sfd",
-      "year": 34,
-      "description": "44",
-      "borrowedCopies": 0,
-      "availableCopies": 4,
-      "images": "https://bonito.pl/zdjecia/6/73c4dd8-chlopki-opowiesc-o-n.webp"
-    },
-    {
-      "id": "68ad",
-      "title": "sd",
-      "author": "sd",
-      "year": 23,
-      "description": "wewe",
-      "borrowedCopies": 0,
-      "availableCopies": 23,
-      "images": "https://lh4.googleusercontent.com/proxy/AhWxOLCe5nfft8lLUG3EmPZp4Kp4sPPvwsrNMgxlW3Isoh4rRwpGiKdNKqdXhphcC1SEoVQJRnf-n8j6Kmv5dyYJl0a_Jp1xxswMGzm_nr7YA-nGgg3C"
-    },
-    {
-      "id": "6ea7",
-      "title": "sdfdsf",
-      "author": "sdf",
-      "year": 333,
-      "description": "erer",
-      "borrowedCopies": 0,
-      "availableCopies": 33,
-      "images": "https://bonito.pl/zdjecia/0/e8e9ce4-baba-na-keto-mazur-w.webp"
     },
     {
       "id": "0d82",
@@ -177,6 +97,16 @@
       "borrowedCopies": 0,
       "availableCopies": 2,
       "images": "https://bonito.pl/zdjecia/0/e8e9ce4-baba-na-keto-mazur-w.webp"
+    },
+    {
+      "id": "cd4e",
+      "title": "Wiedźmin. Rozdroże kruków",
+      "author": "Andrzej Sapkowski",
+      "year": 2024,
+      "description": "Tym razem arcymistrz polskiej fantasy cofa się do młodzieńczych lat Geralta, który stawia dopiero pierwsze kroki w wiedźmińskim fachu i musi sprostać licznym wyzwaniom. Uzbrojony w dwa runiczne miecze, zwalcza potwory, ratuje niewinne dziewice i pomaga nieszczęśliwym kochankom. Zawsze i wszędzie stara się przestrzegać niepisanego kodeksu, który przejął od swoich nauczycieli i mentorów. Jak to zwykle bywa, życie nie szczędzi mu rozczarowań - młodzieńczy idealizm raz po raz zderza się z rzeczywistością. Opowieść trwa. Historia nie kończy się nigdy...",
+      "borrowedCopies": 0,
+      "availableCopies": 1,
+      "images": "https://bonito.pl/zdjecia/6/6f52637-wiedzmin-tom-9-rozdr.webp"
     }
   ],
   "rentals": [
