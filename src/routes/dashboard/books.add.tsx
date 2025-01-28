@@ -1,25 +1,29 @@
-import { Box, Button, TextField, Typography, Container } from "@mui/material";
-import { createFileRoute } from "@tanstack/react-router";
-import { useInput } from "../../hooks/useInput";
-import { FormEvent } from "react";
-import { BookDto } from "../../types";
+import { Box, Button, TextField, Typography, Container } from '@mui/material';
+import { createFileRoute } from '@tanstack/react-router';
+import { useInput } from '../../hooks/useInput';
+import { FormEvent, useContext } from 'react';
+import { BookDto } from '../../types';
+import { useCreateBookMutation } from '../../mutations/useCreateBookMutation';
+import { ModalContext } from '../../context/ModalContext';
 
-export const Route = createFileRoute("/dashboard/books/add")({
-  component: RouteComponent,
+export const Route = createFileRoute('/dashboard/books/add')({
+  component: BooksAdd,
 });
 
-function RouteComponent() {
-  const titleInput = useInput("");
-  const authorInput = useInput("");
-  const yearInput = useInput("");
-  const countBookInput = useInput("");
-  const descriptionInput = useInput("");
-  const urlInput = useInput("");
+function BooksAdd() {
+  const titleInput = useInput('');
+  const authorInput = useInput('');
+  const yearInput = useInput('');
+  const countBookInput = useInput(1);
+  const descriptionInput = useInput('');
+  const urlInput = useInput('');
+  const { mutate } = useCreateBookMutation();
+  const { handleClose } = useContext(ModalContext);
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
 
-    const addBook: BookDto = {
+    const addBookObj: BookDto = {
       title: titleInput.value,
       author: authorInput.value,
       year: Number(yearInput.value),
@@ -28,8 +32,8 @@ function RouteComponent() {
       availableCopies: Number(countBookInput.value),
       images: urlInput.value,
     };
-
-    console.log(addBook);
+    mutate(addBookObj);
+    handleClose();
   };
 
   return (
@@ -37,28 +41,31 @@ function RouteComponent() {
       maxWidth={false}
       disableGutters
       sx={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        padding: "2rem 0",
-        backgroundColor: "#adaaaa",
-        minHeight: "calc(100vh - 96px)", // Zmniejszamy wysokość tła o 4% (2% z góry, 2% z dołu)
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#adaaaa',
+        // minHeight: 'calc(70vh - 96px)', // Zmniejszamy wysokość tła o 4% (2% z góry, 2% z dołu)
       }}
     >
       <Box
         sx={{
-          width: "100%",
-          maxWidth: "800px",
-          backgroundColor: "white",
-          borderRadius: "8px",
-          boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
-          padding: "2rem",
+          width: '100%',
+          maxWidth: '800px',
+          backgroundColor: 'white',
+          // borderRadius: '8px',
+          boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)',
+          padding: '2rem',
         }}
       >
         <Typography
           variant="h4"
           component="h1"
-          sx={{ marginBottom: "1.5rem", fontWeight: "bold", textAlign: "center" }}
+          sx={{
+            marginBottom: '1.5rem',
+            fontWeight: 'bold',
+            textAlign: 'center',
+          }}
         >
           Wprowadź książkę
         </Typography>
@@ -67,9 +74,9 @@ function RouteComponent() {
           component="form"
           onSubmit={handleSubmit}
           sx={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
           }}
         >
           <TextField
@@ -79,7 +86,7 @@ function RouteComponent() {
             type="text"
             variant="outlined"
             {...titleInput}
-            sx={{ marginBottom: "1rem", width: "100%" }}
+            sx={{ marginBottom: '1rem', width: '100%' }}
           />
           <TextField
             required
@@ -88,16 +95,16 @@ function RouteComponent() {
             type="text"
             variant="outlined"
             {...authorInput}
-            sx={{ marginBottom: "1rem", width: "100%" }}
+            sx={{ marginBottom: '1rem', width: '100%' }}
           />
 
           <Box
             sx={{
-              display: "flex",
-              flexDirection: { xs: "column", sm: "row" },
-              gap: "1rem",
-              width: "100%",
-              marginBottom: "1rem",
+              display: 'flex',
+              flexDirection: { xs: 'column', sm: 'row' },
+              gap: '1rem',
+              width: '100%',
+              marginBottom: '1rem',
             }}
           >
             <TextField
@@ -112,9 +119,14 @@ function RouteComponent() {
             <TextField
               required
               id="countBook"
-              label="Ilość"
+              label="Ilość dostępnych egzemplarzy"
               type="number"
               variant="outlined"
+              slotProps={{
+                input: {
+                  inputProps: { min: 1 },
+                },
+              }}
               {...countBookInput}
               sx={{ flex: 1 }}
             />
@@ -129,7 +141,7 @@ function RouteComponent() {
             multiline
             rows={3}
             {...descriptionInput}
-            sx={{ marginBottom: "1rem", width: "100%" }}
+            sx={{ marginBottom: '1rem', width: '100%' }}
           />
           <TextField
             required
@@ -138,7 +150,7 @@ function RouteComponent() {
             type="url"
             variant="outlined"
             {...urlInput}
-            sx={{ marginBottom: "1rem", width: "100%" }}
+            sx={{ marginBottom: '1rem', width: '100%' }}
           />
 
           <Button
@@ -146,9 +158,9 @@ function RouteComponent() {
             color="primary"
             type="submit"
             sx={{
-              width: "100%",
-              padding: "0.75rem",
-              fontSize: "1rem",
+              width: '100%',
+              padding: '0.75rem',
+              fontSize: '1rem',
             }}
           >
             Dodaj książkę

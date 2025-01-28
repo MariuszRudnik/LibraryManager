@@ -79,14 +79,34 @@
       "availableCopies": 9
     },
     {
-      "id": "2111111111111111aasdasdsad111111111",
-      "title": "111111111111111111",
+      "id": "facd",
+      "title": "Chłopki. Opowieść o naszych babkach",
+      "author": "Joanna Kuciel-Frydryszak",
+      "year": 2018,
+      "description": "Joanna Kuciel-Frydryszak daje wiejskim kobietom głos, by opowiedziały o swoim życiu: codziennym znoju, lękach i marzeniach. Ta mocna, głęboko dotykająca lektura pokazuje siłę kobiet, ich bezgraniczne oddanie rodzinie, ale też pragnienie zmiany i nierówną walkę o siebie w patriarchalnym społeczeństwie.",
+      "borrowedCopies": 0,
+      "availableCopies": 10,
+      "images": "https://bonito.pl/zdjecia/6/73c4dd8-chlopki-opowiesc-o-n.webp"
+    },
+    {
+      "id": "0d82",
+      "title": "Baba na keto",
+      "author": "Mazur Wiktoria",
+      "year": 2023,
+      "description": "Dieta keto może być kolorowa, różnorodna, a zarazem wykwintna!\n\nW tej wyjątkowej książce kucharskiej znajdziesz 101 przepisów na śniadania na słono i na słodko, obiady: sycące zupy, przepyszne dania główne, smaczne dodatki, a także atrakcyjne przekąski oraz niezwykłe desery.\n\nDzięki nieskomplikowanym instrukcjom z prostych składników wyczarujesz wspaniałe dania. Przepisom towarzyszą przepiękne zdjęcia, które sprawiają, że nabierzesz ochoty na przyrządzenie prezentowanych potraw w swojej kuchni.",
+      "borrowedCopies": 0,
+      "availableCopies": 20,
+      "images": "https://bonito.pl/zdjecia/0/e8e9ce4-baba-na-keto-mazur-w.webp"
+    },
+    {
+      "id": "cd4e",
+      "title": "Wiedźmin. Rozdroże kruków",
       "author": "Andrzej Sapkowski",
-      "images": "https://bonito.pl/cache/3/a836c40ae86d8d4a58c3af39a6b_800.webp",
-      "year": 1993,
-      "borrowedCopies": 1,
-      "description": "Zbiór opowiadań wprowadzający czytelnika w świat Geralta z Rivii, tytułowego wiedźmina – zabójcy potworów, który staje przed wieloma moralnymi dylematami.",
-      "availableCopies": 0
+      "year": 2024,
+      "description": "Tym razem arcymistrz polskiej fantasy cofa się do młodzieńczych lat Geralta, który stawia dopiero pierwsze kroki w wiedźmińskim fachu i musi sprostać licznym wyzwaniom. Uzbrojony w dwa runiczne miecze, zwalcza potwory, ratuje niewinne dziewice i pomaga nieszczęśliwym kochankom. Zawsze i wszędzie stara się przestrzegać niepisanego kodeksu, który przejął od swoich nauczycieli i mentorów. Jak to zwykle bywa, życie nie szczędzi mu rozczarowań - młodzieńczy idealizm raz po raz zderza się z rzeczywistością. Opowieść trwa. Historia nie kończy się nigdy...",
+      "borrowedCopies": 0,
+      "availableCopies": 1,
+      "images": "https://bonito.pl/zdjecia/6/6f52637-wiedzmin-tom-9-rozdr.webp"
     }
   ],
   "rentals": [
@@ -261,6 +281,12 @@
       "userId": "1",
       "action": "login",
       "timestamp": "2025-01-27T22:39:05.525Z"
+    },
+    {
+      "id": "d4e7",
+      "userId": "1",
+      "action": "login",
+      "timestamp": "2025-01-28T18:26:10.651Z"
     }
   ]
 }
