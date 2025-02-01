@@ -112,11 +112,51 @@
   "rentals": [
     {
       "id": "1",
-      "userId": 1,
-      "bookId": 2,
+      "userId": "1",
+      "bookId": "2",
       "borrowDate": "2025-01-01",
       "returnDate": null,
       "status": "borrowed"
+    },
+    {
+      "id": "2",
+      "userId": "e58f",
+      "bookId": "cd4e",
+      "borrowDate": "2025-12-01",
+      "returnDate": null,
+      "status": "borrowed"
+    },
+    {
+      "id": "3",
+      "userId": "e58f",
+      "bookId": "facd",
+      "borrowDate": "2025-01-13",
+      "returnDate": null,
+      "status": "borrowed"
+    },
+    {
+      "id": "5",
+      "userId": "e58f",
+      "bookId": "4",
+      "borrowDate": "2025-05-01",
+      "returnDate": null,
+      "status": "borrowed"
+    },
+    {
+      "id": "6",
+      "userId": "e58f",
+      "bookId": "1",
+      "borrowDate": "2025-01-01",
+      "returnDate": null,
+      "status": "borrowed"
+    },
+    {
+      "id": "6a0e",
+      "userId": "1",
+      "bookId": "facd",
+      "status": "borrowed",
+      "borrowDate": "2025-02-01T17:19:32.905Z",
+      "returnDate": null
     }
   ],
   "logs": [
@@ -323,6 +363,24 @@
       "userId": "e58f",
       "action": "login",
       "timestamp": "2025-02-01T13:41:05.359Z"
+    },
+    {
+      "id": "7b0b",
+      "userId": "1",
+      "action": "login",
+      "timestamp": "2025-02-01T16:54:20.605Z"
+    },
+    {
+      "id": "dcb0",
+      "userId": "e58f",
+      "action": "login",
+      "timestamp": "2025-02-01T16:55:54.281Z"
+    },
+    {
+      "id": "b9a6",
+      "userId": "1",
+      "action": "login",
+      "timestamp": "2025-02-01T17:03:27.756Z"
     }
   ]
 }

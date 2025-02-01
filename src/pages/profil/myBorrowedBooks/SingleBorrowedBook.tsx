@@ -5,28 +5,42 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import DoneIcon from '@mui/icons-material/Done';
 import { Button, Chip } from '@mui/material';
-import { brown } from '@mui/material/colors';
+import { brown, red } from '@mui/material/colors';
+import { RentalBook } from '../../../types';
+import { getDaysFromNow } from '../../../utills/getDaysBetweenLogs';
+import { booksOptions } from '../../../queries/books';
+import { useSuspenseQuery } from '@tanstack/react-query';
 
-export default function SingleBorrowedBook() {
+type SingleBorrowedBookProps = {
+  BorrowedBook: RentalBook;
+};
+
+export default function SingleBorrowedBook({
+  BorrowedBook,
+}: SingleBorrowedBookProps) {
+  const { text, isWarning } = getDaysFromNow(BorrowedBook.borrowDate);
+  const { data } = useSuspenseQuery(booksOptions);
+  const book = data.find((book) => book.id === BorrowedBook.bookId);
+
   return (
     <Card sx={{ display: 'flex', justifyContent: 'space-between' }}>
       <CardMedia
         component="img"
         sx={{ width: 120 }}
-        image="https://bonito.pl/cache/3/a836c40ae86d8d4a58c3af39a6b_800.webp"
-        alt="Live from space album cover"
+        image={book?.images}
+        alt={book?.title}
       />
       <Box sx={{ display: 'flex', flexDirection: 'column' }}>
         <CardContent sx={{ flex: '1 0 auto' }}>
           <Typography component="div" variant="h5">
-            Live From Space
+            {book?.title}
           </Typography>
           <Typography
             variant="subtitle1"
             component="div"
             sx={{ color: 'text.secondary' }}
           >
-            Mac Miller
+            {book?.author}
           </Typography>
         </CardContent>
       </Box>
@@ -47,9 +61,9 @@ export default function SingleBorrowedBook() {
           <Typography
             variant="subtitle1"
             component="div"
-            sx={{ color: 'text.secondary' }}
+            sx={{ color: isWarning ? red[800] : 'text.secondary' }}
           >
-            Za 5 dni
+            {text}
           </Typography>
         </Box>
         <Box>
@@ -61,7 +75,7 @@ export default function SingleBorrowedBook() {
             component="div"
             sx={{ color: 'text.secondary' }}
           >
-            2021-10-10
+            {BorrowedBook.borrowDate}
           </Typography>
         </Box>
       </Box>

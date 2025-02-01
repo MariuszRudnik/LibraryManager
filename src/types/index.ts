@@ -28,3 +28,13 @@ export type Book = {
   description: string;
 };
 export type BookDto = Omit<Book, 'id'>;
+
+export type RentalBook = {
+  id: string;
+  userId: string;
+  bookId: string;
+  borrowDate: string;
+  returnDate: null | string;
+  status: string;
+};
+export type RentalBookDto = Omit<RentalBook, 'id'>;
