@@ -287,6 +287,12 @@
       "userId": "1",
       "action": "login",
       "timestamp": "2025-01-28T18:26:10.651Z"
+    },
+    {
+      "id": "b5f9",
+      "userId": "e58f",
+      "action": "login",
+      "timestamp": "2025-02-01T11:27:32.416Z"
     }
   ]
 }

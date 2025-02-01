@@ -1,5 +1,6 @@
 import { CardMedia, Box, Typography, Container } from '@mui/material';
 import { Book } from '../../../types';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 interface BookLayoutProps {
   book: Book;
@@ -36,37 +37,58 @@ function BookLayout({ book }: BookLayoutProps) {
         {/* Sekcja opisu */}
         <Box
           sx={{
-            flex: 1,
-            padding: '2rem',
             display: 'flex',
             flexDirection: 'column',
-            justifyContent: 'center',
+            alignItems: 'flex-end',
           }}
         >
-          <Typography
-            variant="h4"
-            component="h1"
-            sx={{ marginBottom: '1rem', fontWeight: 'bold' }}
+          <Box
+            sx={{
+              flex: 1,
+              padding: '2rem',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+            }}
           >
-            {title}
-          </Typography>
-          <Typography
-            variant="subtitle1"
-            sx={{ marginBottom: '1rem', color: 'gray' }}
+            <Typography
+              variant="h4"
+              component="h1"
+              sx={{ marginBottom: '1rem', fontWeight: 'bold' }}
+            >
+              {title}
+            </Typography>
+            <Typography
+              variant="subtitle1"
+              sx={{ marginBottom: '1rem', color: 'gray' }}
+            >
+              {author} &bull; {year}
+            </Typography>
+            <Typography
+              variant="body1"
+              sx={{ color: '#333', lineHeight: 1.6, marginBottom: '1rem' }}
+            >
+              {description}
+            </Typography>
+            <Typography variant="body1" sx={{ color: '#333', lineHeight: 1.6 }}>
+              Dostępnych egzemplarzy: {availableCopies}
+            </Typography>
+          </Box>
+          <Box
+            sx={{
+              padding: '1rem',
+              cursor: 'pointer',
+              display: 'flex',
+              alignItems: 'center',
+            }}
+            onClick={() => window.history.back()}
           >
-            {author} &bull; {year}
-          </Typography>
-          <Typography
-            variant="body1"
-            sx={{ color: '#333', lineHeight: 1.6, marginBottom: '1rem' }}
-          >
-            {description}
-          </Typography>
-          <Typography variant="body1" sx={{ color: '#333', lineHeight: 1.6 }}>
-            Dostępnych egzemplarzy: {availableCopies}
-          </Typography>
+            <ArrowBackIcon sx={{ marginRight: '0.5rem' }} />
+            <Typography variant="body1" sx={{ color: '#333', lineHeight: 1.6 }}>
+              Powrót
+            </Typography>
+          </Box>
         </Box>
-
         {/* Sekcja obrazu */}
         {images && (
           <CardMedia
