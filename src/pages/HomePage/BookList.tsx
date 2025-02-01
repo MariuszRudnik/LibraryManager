@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import { Link } from '@tanstack/react-router';
 import {
   Button,
   Card,
@@ -9,16 +9,19 @@ import {
   Grid,
   Box,
   Tooltip,
-} from "@mui/material";
-import { Book } from "../../types";
-import { useUserStore } from "../../store/useUserStore";
+} from '@mui/material';
+import { Book } from '../../types';
+import { useUserStore } from '../../store/useUserStore';
+import { useCreateRentalBookMutation } from '../../mutations/useCreateRentalBookMutation';
 
 type BookListProps = {
   books: Book[];
 };
 
 const BookList = ({ books }: BookListProps) => {
-  const { isLoggedIn } = useUserStore();
+  const { mutate } = useCreateRentalBookMutation();
+  const { isLoggedIn, user } = useUserStore();
+
   return (
     <Box
       data-testid="booklist"
@@ -44,27 +47,27 @@ const BookList = ({ books }: BookListProps) => {
             <Card
               sx={{
                 height: 650,
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "space-between",
-                alignItems: "center",
-                backgroundColor: "#121212",
-                color: "white",
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                backgroundColor: '#121212',
+                color: 'white',
                 padding: 2,
-                textAlign: "center",
+                textAlign: 'center',
               }}
             >
               {book.images && (
                 <Box
                   sx={{
-                    width: "100%",
-                    height: "420px",
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    backgroundColor: "#1e1e1e",
+                    width: '100%',
+                    height: '420px',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    backgroundColor: '#1e1e1e',
                     borderRadius: 1,
-                    overflow: "hidden",
+                    overflow: 'hidden',
                   }}
                 >
                   <CardMedia
@@ -76,7 +79,7 @@ const BookList = ({ books }: BookListProps) => {
                       // maxHeight: "100%",
                       // width: "",
                       // height: "auto",
-                      objectFit: "cover",
+                      objectFit: 'cover',
                     }}
                   />
                 </Box>
@@ -98,7 +101,15 @@ const BookList = ({ books }: BookListProps) => {
                     size="small"
                     variant="contained"
                     color="primary"
-                    component={Link}
+                    onClick={() =>
+                      mutate({
+                        userId: user.id,
+                        bookId: book.id,
+                        status: 'borrowed',
+                        borrowDate: new Date().toISOString(),
+                        returnDate: null,
+                      })
+                    }
                   >
                     Wypożycz
                   </Button>

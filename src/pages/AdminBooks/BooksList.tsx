@@ -130,7 +130,7 @@ export const BooksList = () => {
         <ModalBook open={open} setOpen={setOpen} />
       </Stack>
       <Box height={10} />
-      <TableContainer sx={{ maxHeight: 440 }}>
+      <TableContainer sx={{ maxHeight: `calc(100vh - 350px)` }}>
         <Table stickyHeader aria-label="sticky table">
           <TableHead>
             <TableRow>
