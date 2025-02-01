@@ -1,6 +1,7 @@
-import { CardMedia, Box, Typography, Container } from '@mui/material';
+import { CardMedia, Box, Typography, Container, Button } from '@mui/material';
 import { Book } from '../../../types';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import { Link } from '@tanstack/react-router';
 
 interface BookLayoutProps {
   book: Book;
@@ -74,19 +75,38 @@ function BookLayout({ book }: BookLayoutProps) {
               Dostępnych egzemplarzy: {availableCopies}
             </Typography>
           </Box>
+
           <Box
             sx={{
-              padding: '1rem',
-              cursor: 'pointer',
               display: 'flex',
-              alignItems: 'center',
+              justifyContent: 'space-between',
+              margin: '1rem',
+              gap: '1rem',
             }}
-            onClick={() => window.history.back()}
           >
-            <ArrowBackIcon sx={{ marginRight: '0.5rem' }} />
-            <Typography variant="body1" sx={{ color: '#333', lineHeight: 1.6 }}>
-              Powrót
-            </Typography>
+            <Box
+              sx={{
+                padding: '1rem',
+                cursor: 'pointer',
+                display: 'flex',
+                alignItems: 'center',
+              }}
+              onClick={() => window.history.back()}
+            >
+              <ArrowBackIcon sx={{ marginRight: '0.5rem' }} />
+              <Typography variant="body1" sx={{ color: '#333', lineHeight: 1 }}>
+                Powrót
+              </Typography>
+            </Box>
+            <Button
+              size="medium"
+              variant="contained"
+              color="primary"
+              component={Link}
+              to="/"
+            >
+              Wypożycz
+            </Button>
           </Box>
         </Box>
         {/* Sekcja obrazu */}

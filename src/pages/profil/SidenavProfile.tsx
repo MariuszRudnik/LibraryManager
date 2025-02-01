@@ -8,12 +8,12 @@ import IconButton from '@mui/material/IconButton';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import ListItem from '@mui/material/ListItem';
+import SettingsIcon from '@mui/icons-material/Settings';
 import { Outlet, useLocation, useNavigate } from '@tanstack/react-router';
-import { SingleItemButton } from './SingleItemButton';
 import MenuBookIcon from '@mui/icons-material/MenuBook';
-import LoginIcon from '@mui/icons-material/Login';
-import LibraryBooksIcon from '@mui/icons-material/LibraryBooks';
+import SignalCellularAltIcon from '@mui/icons-material/SignalCellularAlt';
 import style from './styles.module.scss';
+import { SingleItemButton } from '../Dashborad/Sidenav/SingleItemButton';
 
 const drawerWidth = 240;
 
@@ -72,7 +72,7 @@ const Drawer = styled(MuiDrawer, {
   ],
 }));
 
-export const Sidenav = () => {
+export const SidenavProfile = () => {
   const [open, setOpen] = React.useState(true);
   const navigate = useNavigate();
   const location = useLocation();
@@ -89,25 +89,25 @@ export const Sidenav = () => {
         <List>
           <ListItem disablePadding sx={{ display: 'block' }}>
             <SingleItemButton
-              text="Wszystkie książki"
-              onClick={() => navigate({ to: '/dashboard/books' })}
+              text="Moje książki"
+              onClick={() => navigate({ to: '/profil/myBorrowedBooks' })}
               icon={<MenuBookIcon />}
               open={open}
-              isActive={/books/.test(location.pathname)}
+              isActive={/myBorrowedBooks/.test(location.pathname)}
             />
             <SingleItemButton
-              text="Wypożyczone książki"
-              onClick={() => navigate({ to: '/dashboard/borrowed-books' })}
-              icon={<LibraryBooksIcon />}
+              text="Statystyki"
+              onClick={() => navigate({ to: '/profil/userStatistics' })}
+              icon={<SignalCellularAltIcon />}
               open={open}
-              isActive={/borrowed-books/.test(location.pathname)}
+              isActive={/userStatistics/.test(location.pathname)}
             />
             <SingleItemButton
-              text="Logi systemowe"
-              onClick={() => navigate({ to: '/dashboard/LogSystem' })}
-              icon={<LoginIcon />}
+              text="Ustawienia"
+              onClick={() => navigate({ to: '/profil/userSettings' })}
+              icon={<SettingsIcon />}
               open={open}
-              isActive={/LogSystem/.test(location.pathname)}
+              isActive={/userSettings/.test(location.pathname)}
             />
           </ListItem>
         </List>

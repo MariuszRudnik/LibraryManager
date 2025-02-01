@@ -50,7 +50,9 @@ export const Avatar = () => {
         open={Boolean(anchorEl)}
         onClose={handleClose}
       >
-        <MenuItem onClick={() => navigate({ to: '/profil' })}>Profil</MenuItem>
+        <MenuItem onClick={() => navigate({ to: '/profil/myBorrowedBooks' })}>
+          Profil
+        </MenuItem>
 
         <MenuItem onClick={handleLogout}>Wyloguj się</MenuItem>
       </Menu>

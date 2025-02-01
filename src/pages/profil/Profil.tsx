@@ -1,3 +1,5 @@
+import { SidenavProfile } from './SidenavProfile';
+
 export const Profil = () => {
-  return <div>Profil</div>;
+  return <SidenavProfile />;
 };
