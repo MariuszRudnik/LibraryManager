@@ -4,10 +4,10 @@ export type User = {
   lastName: string;
   email: string;
   password: string;
-  role: "client" | "admin" | "";
+  role: 'client' | 'admin' | '';
   libraryCardCode: string;
 };
-export type UserDto = Omit<User, "id">;
+export type UserDto = Omit<User, 'id'>;
 
 export type Log = {
   id: string;
@@ -15,7 +15,7 @@ export type Log = {
   userId: string;
   action: string;
 };
-export type LogDto = Omit<Log, "id">;
+export type LogDto = Omit<Log, 'id'>;
 
 export type Book = {
   id: string;
@@ -25,6 +25,16 @@ export type Book = {
   availableCopies: number;
   borrowedCopies: number;
   images: string;
-  description?: string;
+  description: string;
 };
-export type BookDto = Omit<Book, "id">;
+export type BookDto = Omit<Book, 'id'>;
+
+export type RentalBook = {
+  id: string;
+  userId: string;
+  bookId: string;
+  borrowDate: string;
+  returnDate: null | string;
+  status: string;
+};
+export type RentalBookDto = Omit<RentalBook, 'id'>;

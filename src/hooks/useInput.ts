@@ -1,10 +1,17 @@
 import { ChangeEvent, useState } from 'react';
 
-export const useInput = (defaultValue: string) => {
-  const [value, setValue] = useState(defaultValue);
+type InputType = string | number;
+
+export const useInput = <T extends InputType>(defaultValue: T) => {
+  const [value, setValue] = useState<T>(defaultValue);
 
   const onChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setValue(e.target.value);
+    const newValue = e.target.value;
+    if (typeof defaultValue === 'number') {
+      setValue(Number(newValue) as T);
+    } else {
+      setValue(newValue as T);
+    }
   };
 
   return { value, onChange };

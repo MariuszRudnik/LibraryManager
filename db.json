@@ -42,10 +42,10 @@
       "id": "1",
       "title": "Harry Potter i Kamień Filozoficzny",
       "author": "J.K. Rowling",
-      "description": "Pierwsza część przygód młodego czarodzieja Harry'ego Pottera, który odkrywa swoje magiczne dziedzictwo i rozpoczyna naukę w Szkole Magii i Czarodziejstwa w Hogwarcie.",
       "year": 1997,
-      "availableCopies": 7,
-      "borrowedCopies": 2,
+      "description": "Pierwsza część przygód młodego czarodzieja Harry'ego Pottera, który odkrywa swoje magiczne dziedzictwo i rozpoczyna naukę w Szkole Magii i Czarodziejstwa w Hogwarcie.",
+      "borrowedCopies": 0,
+      "availableCopies": 9,
       "images": "https://bonito.pl/cache/1/1b10b6a-harry-potter-i-kamie_800.webp"
     },
     {
@@ -54,9 +54,9 @@
       "author": "Andrzej Sapkowski",
       "images": "https://bonito.pl/cache/3/a836c40ae86d8d4a58c3af39a6b_800.webp",
       "year": 1993,
-      "borrowedCopies": 1,
+      "borrowedCopies": 0,
       "description": "Zbiór opowiadań wprowadzający czytelnika w świat Geralta z Rivii, tytułowego wiedźmina – zabójcy potworów, który staje przed wieloma moralnymi dylematami.",
-      "availableCopies": 0
+      "availableCopies": 3
     },
     {
       "id": "3",
@@ -64,7 +64,7 @@
       "author": "J.R.R. Tolkien",
       "description": "Pierwszy tom epickiej trylogii, w której młody hobbit Frodo Baggins wyrusza na misję zniszczenia Pierścienia Władzy, by ocalić Śródziemie przed siłami zła.",
       "year": 1954,
-      "availableCopies": 5,
+      "availableCopies": 13,
       "borrowedCopies": 0,
       "images": "https://bonito.pl/cache/1/c16f517-wladca-pierscieni-dr_800.webp"
     },
@@ -72,31 +72,87 @@
       "id": "4",
       "title": "Nic mnie nie złamie.",
       "author": "Goggins David",
-      "images": "https://ecsmedia.pl/cdn-cgi/image/format=webp,width=544,height=544,/c/nic-mnie-nie-zlamie-zapanuj-nad-swoim-umyslem-i-pokonaj-przeciwnosci-losu-b-iext172232004.jpg",
       "year": 2023,
-      "borrowedCopies": 0,
       "description": "David Goggins jest człowiekiem o żelaznej woli i inspiracją dla wszystkich. Samo słuchanie tego faceta sprawia, że chce się wbiec na jakąś górę. Jestem przekonany, że ludzie tacy jak on mogą zmieniać losy świata.",
-      "availableCopies": 9
+      "borrowedCopies": 0,
+      "availableCopies": 11,
+      "images": "https://ecsmedia.pl/cdn-cgi/image/format=webp,width=544,height=544,/c/nic-mnie-nie-zlamie-zapanuj-nad-swoim-umyslem-i-pokonaj-przeciwnosci-losu-b-iext172232004.jpg"
     },
     {
-      "id": "2111111111111111aasdasdsad111111111",
-      "title": "111111111111111111",
+      "id": "facd",
+      "title": "Chłopki. Opowieść o naszych babkach",
+      "author": "Joanna Kuciel-Frydryszak",
+      "year": 2018,
+      "description": "Joanna Kuciel-Frydryszak daje wiejskim kobietom głos, by opowiedziały o swoim życiu: codziennym znoju, lękach i marzeniach. Ta mocna, głęboko dotykająca lektura pokazuje siłę kobiet, ich bezgraniczne oddanie rodzinie, ale też pragnienie zmiany i nierówną walkę o siebie w patriarchalnym społeczeństwie.",
+      "borrowedCopies": 0,
+      "availableCopies": 11,
+      "images": "https://bonito.pl/zdjecia/6/73c4dd8-chlopki-opowiesc-o-n.webp"
+    },
+    {
+      "id": "0d82",
+      "title": "Baba na keto",
+      "author": "Mazur Wiktoria",
+      "year": 2023,
+      "description": "Dieta keto może być kolorowa, różnorodna, a zarazem wykwintna!\n\nW tej wyjątkowej książce kucharskiej znajdziesz 101 przepisów na śniadania na słono i na słodko, obiady: sycące zupy, przepyszne dania główne, smaczne dodatki, a także atrakcyjne przekąski oraz niezwykłe desery.\n\nDzięki nieskomplikowanym instrukcjom z prostych składników wyczarujesz wspaniałe dania. Przepisom towarzyszą przepiękne zdjęcia, które sprawiają, że nabierzesz ochoty na przyrządzenie prezentowanych potraw w swojej kuchni.",
+      "borrowedCopies": 0,
+      "availableCopies": 28,
+      "images": "https://bonito.pl/zdjecia/0/e8e9ce4-baba-na-keto-mazur-w.webp"
+    },
+    {
+      "id": "cd4e",
+      "title": "Wiedźmin. Rozdroże kruków",
       "author": "Andrzej Sapkowski",
-      "images": "https://bonito.pl/cache/3/a836c40ae86d8d4a58c3af39a6b_800.webp",
-      "year": 1993,
-      "borrowedCopies": 1,
-      "description": "Zbiór opowiadań wprowadzający czytelnika w świat Geralta z Rivii, tytułowego wiedźmina – zabójcy potworów, który staje przed wieloma moralnymi dylematami.",
-      "availableCopies": 0
+      "year": 2024,
+      "description": "Tym razem arcymistrz polskiej fantasy cofa się do młodzieńczych lat Geralta, który stawia dopiero pierwsze kroki w wiedźmińskim fachu i musi sprostać licznym wyzwaniom. Uzbrojony w dwa runiczne miecze, zwalcza potwory, ratuje niewinne dziewice i pomaga nieszczęśliwym kochankom. Zawsze i wszędzie stara się przestrzegać niepisanego kodeksu, który przejął od swoich nauczycieli i mentorów. Jak to zwykle bywa, życie nie szczędzi mu rozczarowań - młodzieńczy idealizm raz po raz zderza się z rzeczywistością. Opowieść trwa. Historia nie kończy się nigdy...",
+      "borrowedCopies": 0,
+      "availableCopies": 2,
+      "images": "https://bonito.pl/zdjecia/6/6f52637-wiedzmin-tom-9-rozdr.webp"
+    },
+    {
+      "id": "3ea0",
+      "title": "Czysty kod. Podręcznik dobrego programisty",
+      "author": "Robert C. Martin",
+      "year": 2022,
+      "description": "Autor przedstawia zasady i dobre praktyki programistyczne, takie jak odpowiednie nazewnictwo, podział funkcji, unikanie nadmiernej złożoności oraz znaczenie testów jednostkowych. Książka zawiera liczne przykłady kodu oraz analizę zarówno dobrych, jak i złych praktyk, pomagając programistom rozwijać umiejętność pisania lepszego kodu",
+      "borrowedCopies": 0,
+      "availableCopies": 10,
+      "images": "https://bonito.pl/cache/2/e643719-czysty-kod-podreczni_800.webp"
+    },
+    {
+      "id": "1096",
+      "title": "JavaScript i jQuery",
+      "author": "Jon Duckett",
+      "year": 2023,
+      "description": "JavaScript to język, który w dużej mierze ukształtował współczesne strony WWW. Dzięki niemu możemy swobodnie korzystać z interaktywnych, wygodnych w użyciu oraz niezawodnych aplikacji internetowych. Pojawienie się JavaScriptu pozwoliło zastąpić tradycyjne aplikacje desktopowe nowymi, pracującymi w chmurze. Wokół języka powstało już wiele narzędzi i bibliotek. Jedną z najpopularniejszych jest jQuery.",
+      "borrowedCopies": 0,
+      "availableCopies": 100,
+      "images": "https://bonito.pl/cache/7/891566d0-javascript-i-jquery_800.webp"
     }
   ],
   "rentals": [
     {
-      "id": "1",
-      "userId": 1,
-      "bookId": 2,
-      "borrowDate": "2025-01-01",
-      "returnDate": null,
-      "status": "borrowed"
+      "id": "da0c",
+      "userId": "1",
+      "bookId": "1",
+      "status": "returned",
+      "borrowDate": "2025-02-04T17:14:36.902Z",
+      "returnDate": "2025-02-04T17:14:50.452Z"
+    },
+    {
+      "id": "1c48",
+      "userId": "1",
+      "bookId": "3",
+      "status": "returned",
+      "borrowDate": "2025-02-04T17:14:39.028Z",
+      "returnDate": "2025-02-04T17:14:52.854Z"
+    },
+    {
+      "id": "4957",
+      "userId": "1",
+      "bookId": "0d82",
+      "status": "returned",
+      "borrowDate": "2025-02-04T17:14:41.525Z",
+      "returnDate": "2025-02-04T17:14:48.147Z"
     }
   ],
   "logs": [
@@ -261,6 +317,108 @@
       "userId": "1",
       "action": "login",
       "timestamp": "2025-01-27T22:39:05.525Z"
+    },
+    {
+      "id": "d4e7",
+      "userId": "1",
+      "action": "login",
+      "timestamp": "2025-01-28T18:26:10.651Z"
+    },
+    {
+      "id": "b5f9",
+      "userId": "e58f",
+      "action": "login",
+      "timestamp": "2025-02-01T11:27:32.416Z"
+    },
+    {
+      "id": "5292",
+      "userId": "e58f",
+      "action": "login",
+      "timestamp": "2025-02-01T12:46:39.294Z"
+    },
+    {
+      "id": "f50d",
+      "userId": "e58f",
+      "action": "login",
+      "timestamp": "2025-02-01T12:51:27.431Z"
+    },
+    {
+      "id": "a8a4",
+      "userId": "1",
+      "action": "login",
+      "timestamp": "2025-02-01T13:06:28.314Z"
+    },
+    {
+      "id": "51f4",
+      "userId": "e58f",
+      "action": "login",
+      "timestamp": "2025-02-01T13:37:02.130Z"
+    },
+    {
+      "id": "f0b0",
+      "userId": "e58f",
+      "action": "login",
+      "timestamp": "2025-02-01T13:41:05.359Z"
+    },
+    {
+      "id": "7b0b",
+      "userId": "1",
+      "action": "login",
+      "timestamp": "2025-02-01T16:54:20.605Z"
+    },
+    {
+      "id": "dcb0",
+      "userId": "e58f",
+      "action": "login",
+      "timestamp": "2025-02-01T16:55:54.281Z"
+    },
+    {
+      "id": "b9a6",
+      "userId": "1",
+      "action": "login",
+      "timestamp": "2025-02-01T17:03:27.756Z"
+    },
+    {
+      "id": "63cb",
+      "userId": "e58f",
+      "action": "login",
+      "timestamp": "2025-02-04T13:14:58.317Z"
+    },
+    {
+      "id": "0620",
+      "userId": "1",
+      "action": "login",
+      "timestamp": "2025-02-04T13:17:39.882Z"
+    },
+    {
+      "id": "1c47",
+      "userId": "e58f",
+      "action": "login",
+      "timestamp": "2025-02-04T15:34:02.774Z"
+    },
+    {
+      "id": "1f08",
+      "userId": "1",
+      "action": "login",
+      "timestamp": "2025-02-04T15:45:42.248Z"
+    },
+    {
+      "id": "b9d0",
+      "userId": "e58f",
+      "action": "login",
+      "timestamp": "2025-02-04T16:47:16.497Z"
+    },
+    {
+      "id": "18ee",
+      "userId": "e58f",
+      "action": "login",
+      "timestamp": "2025-02-04T16:51:56.228Z"
+    },
+    {
+      "id": "892b",
+      "userId": "1",
+      "action": "login",
+      "timestamp": "2025-02-04T16:57:03.882Z"
     }
   ]
 }
