@@ -10,6 +10,10 @@ export const MyBorrowedBooks = () => {
     user: { id },
   } = useUserStore();
   const { data } = useSuspenseQuery(rentalBooksOptions(id));
+  const sortedData = [...data].sort(
+    (a, b) =>
+      new Date(b.borrowDate).getTime() - new Date(a.borrowDate).getTime()
+  );
 
   return (
     <Box
@@ -21,8 +25,8 @@ export const MyBorrowedBooks = () => {
         margin: '0 auto',
       }}
     >
-      {data.length > 0 ? (
-        data.map((BorrowedBook: RentalBook) => (
+      {sortedData.length > 0 ? (
+        sortedData.map((BorrowedBook: RentalBook) => (
           <SingleBorrowedBook
             key={BorrowedBook.id}
             BorrowedBook={BorrowedBook}

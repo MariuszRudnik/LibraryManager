@@ -13,6 +13,7 @@ import {
 import { Book } from '../../types';
 import { useUserStore } from '../../store/useUserStore';
 import { useCreateRentalBookMutation } from '../../mutations/useCreateRentalBookMutation';
+import Swal from 'sweetalert2';
 
 type BookListProps = {
   books: Book[];
@@ -21,6 +22,24 @@ type BookListProps = {
 const BookList = ({ books }: BookListProps) => {
   const { mutate } = useCreateRentalBookMutation();
   const { isLoggedIn, user } = useUserStore();
+
+  const handleRentalBook = (book: Book) => {
+    mutate({
+      userId: user.id,
+      bookId: book.id,
+      status: 'borrowed',
+      borrowDate: new Date().toISOString(),
+      returnDate: null,
+    });
+    Swal.fire({
+      title: book.title,
+      text: 'Książka została wypożyczona',
+      imageUrl: book.images,
+      imageWidth: 300,
+      imageHeight: 400,
+      imageAlt: 'Custom image',
+    });
+  };
 
   return (
     <Box
@@ -101,15 +120,7 @@ const BookList = ({ books }: BookListProps) => {
                     size="small"
                     variant="contained"
                     color="primary"
-                    onClick={() =>
-                      mutate({
-                        userId: user.id,
-                        bookId: book.id,
-                        status: 'borrowed',
-                        borrowDate: new Date().toISOString(),
-                        returnDate: null,
-                      })
-                    }
+                    onClick={() => handleRentalBook(book)}
                   >
                     Wypożycz
                   </Button>
