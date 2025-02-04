@@ -153,6 +153,22 @@
       "status": "returned",
       "borrowDate": "2025-02-04T17:14:41.525Z",
       "returnDate": "2025-02-04T17:14:48.147Z"
+    },
+    {
+      "id": "ea98",
+      "userId": "2",
+      "bookId": "1",
+      "status": "returned",
+      "borrowDate": "2025-02-04T22:59:06.286Z",
+      "returnDate": "2025-02-04T22:59:21.250Z"
+    },
+    {
+      "id": "3d81",
+      "userId": "2",
+      "bookId": "1",
+      "status": "returned",
+      "borrowDate": "2025-02-04T22:59:12.127Z",
+      "returnDate": "2025-02-04T22:59:18.164Z"
     }
   ],
   "logs": [
@@ -419,6 +435,42 @@
       "userId": "1",
       "action": "login",
       "timestamp": "2025-02-04T16:57:03.882Z"
+    },
+    {
+      "id": "6c0c",
+      "userId": "2",
+      "action": "login",
+      "timestamp": "2025-02-04T22:59:01.885Z"
+    },
+    {
+      "id": "5e71",
+      "userId": "2",
+      "action": "Borrowed book - ID: 1",
+      "timestamp": "2025-02-04T22:59:06.286Z"
+    },
+    {
+      "id": "15f7",
+      "userId": "2",
+      "action": "Borrowed book - ID: 1",
+      "timestamp": "2025-02-04T22:59:12.127Z"
+    },
+    {
+      "id": "8f75",
+      "userId": "2",
+      "action": "Returned book - ID: 1",
+      "timestamp": "2025-02-04T22:59:18.164Z"
+    },
+    {
+      "id": "9f6e",
+      "userId": "2",
+      "action": "Returned book - ID: 1",
+      "timestamp": "2025-02-04T22:59:21.250Z"
+    },
+    {
+      "id": "175d",
+      "userId": "2",
+      "action": "logged out",
+      "timestamp": "2025-02-04T22:59:24.183Z"
     }
   ]
 }
