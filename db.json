@@ -44,8 +44,8 @@
       "author": "J.K. Rowling",
       "year": 1997,
       "description": "Pierwsza część przygód młodego czarodzieja Harry'ego Pottera, który odkrywa swoje magiczne dziedzictwo i rozpoczyna naukę w Szkole Magii i Czarodziejstwa w Hogwarcie.",
-      "borrowedCopies": 0,
-      "availableCopies": 9,
+      "borrowedCopies": 1,
+      "availableCopies": 8,
       "images": "https://bonito.pl/cache/1/1b10b6a-harry-potter-i-kamie_800.webp"
     },
     {
@@ -153,6 +153,54 @@
       "status": "returned",
       "borrowDate": "2025-02-04T17:14:41.525Z",
       "returnDate": "2025-02-04T17:14:48.147Z"
+    },
+    {
+      "id": "bf50",
+      "userId": "2",
+      "bookId": "1",
+      "status": "borrowed",
+      "borrowDate": "2025-02-04T22:06:22.132Z",
+      "returnDate": null
+    },
+    {
+      "id": "a3cf",
+      "userId": "2",
+      "bookId": "1",
+      "status": "returned",
+      "borrowDate": "2025-02-04T22:09:26.261Z",
+      "returnDate": "2025-02-04T22:12:19.351Z"
+    },
+    {
+      "id": "da70",
+      "userId": "2",
+      "bookId": "1",
+      "status": "returned",
+      "borrowDate": "2025-02-04T22:10:19.273Z",
+      "returnDate": "2025-02-04T22:12:15.944Z"
+    },
+    {
+      "id": "d452",
+      "userId": "2",
+      "bookId": "1",
+      "status": "returned",
+      "borrowDate": "2025-02-04T22:13:42.219Z",
+      "returnDate": "2025-02-04T22:18:31.432Z"
+    },
+    {
+      "id": "a550",
+      "userId": "2",
+      "bookId": "1",
+      "status": "returned",
+      "borrowDate": "2025-02-04T22:14:43.922Z",
+      "returnDate": "2025-02-04T22:16:28.159Z"
+    },
+    {
+      "id": "ad45",
+      "userId": "2",
+      "bookId": "1",
+      "status": "returned",
+      "borrowDate": "2025-02-04T22:14:56.274Z",
+      "returnDate": "2025-02-04T22:15:30.836Z"
     }
   ],
   "logs": [
@@ -419,6 +467,48 @@
       "userId": "1",
       "action": "login",
       "timestamp": "2025-02-04T16:57:03.882Z"
+    },
+    {
+      "id": "1ad7",
+      "userId": "1",
+      "action": "login",
+      "timestamp": "2025-02-04T21:12:15.632Z"
+    },
+    {
+      "id": "8849",
+      "userId": "1",
+      "action": "login",
+      "timestamp": "2025-02-04T22:04:23.677Z"
+    },
+    {
+      "id": "e891",
+      "userId": "2",
+      "action": "login",
+      "timestamp": "2025-02-04T22:06:17.337Z"
+    },
+    {
+      "id": "2ea2",
+      "userId": "2",
+      "action": "Borrowed book - ID: 1",
+      "timestamp": "2025-02-04T22:14:43.923Z"
+    },
+    {
+      "id": "f48b",
+      "userId": "2",
+      "action": "Borrowed book - ID: 1",
+      "timestamp": "2025-02-04T22:14:56.275Z"
+    },
+    {
+      "id": "e441",
+      "userId": "2",
+      "action": "Returned book - ID: 1",
+      "timestamp": "2025-02-04T22:18:31.432Z"
+    },
+    {
+      "id": "23ad",
+      "userId": "2",
+      "action": "logged out",
+      "timestamp": "2025-02-04T22:21:05.403Z"
     }
   ]
 }
