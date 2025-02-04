@@ -6,13 +6,9 @@ import MenuItem from '@mui/material/MenuItem';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import { useNavigate } from '@tanstack/react-router';
 import { useUserStore } from '../../store/useUserStore';
-import { useCreateLogMutation } from '../../mutations/useCreateLogMutation';
-import { LogDto } from '../../types';
 
 export const Avatar = () => {
-  const { logout, user } = useUserStore();
-  const { mutate: SaveLog } = useCreateLogMutation();
-
+  const { logout } = useUserStore();
   const navigate = useNavigate();
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const handleMenu = (event: React.MouseEvent<HTMLElement>) => {
@@ -24,15 +20,6 @@ export const Avatar = () => {
 
   const handleLogout = () => {
     logout();
-
-    const logData: LogDto = {
-      userId: user.id,
-      action: `logged out`,
-      timestamp: new Date().toISOString(),
-    };
-
-    SaveLog(logData);
-
     navigate({ to: '/' });
   };
   const handleProfile = () => {

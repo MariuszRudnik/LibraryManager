@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 import DoneIcon from '@mui/icons-material/Done';
 import { Button, Chip } from '@mui/material';
 import { brown, red } from '@mui/material/colors';
-import { LogDto, RentalBook } from '../../../types';
+import { RentalBook } from '../../../types';
 import { getDaysFromNow } from '../../../utills/getDaysBetweenLogs';
 import { booksOptions } from '../../../queries/books';
 import { useSuspenseQuery } from '@tanstack/react-query';
@@ -14,8 +14,6 @@ import { formatDate } from '../../../utills/formatData';
 import { useEditRentalBookMutation } from '../../../mutations/useEditRentalBookMutation';
 import { useEditBookMutation } from '../../../mutations/useEditBookMutation';
 import Swal from 'sweetalert2';
-import { useCreateLogMutation } from '../../../mutations/useCreateLogMutation';
-import { useUserStore } from '../../../store/useUserStore';
 
 type SingleBorrowedBookProps = {
   BorrowedBook: RentalBook;
@@ -26,9 +24,7 @@ export default function SingleBorrowedBook({
 }: SingleBorrowedBookProps) {
   const { text, isWarning } = getDaysFromNow(BorrowedBook.borrowDate);
   const { data } = useSuspenseQuery(booksOptions);
-  const { mutate: SaveLog } = useCreateLogMutation();
   const book = data.find((book) => book.id === BorrowedBook.bookId);
-  const { user } = useUserStore();
 
   const { mutate: EditRentalBookMutation } = useEditRentalBookMutation();
   const { mutate: EditBookMutation } = useEditBookMutation();
@@ -58,14 +54,6 @@ export default function SingleBorrowedBook({
             availableCopies: book.availableCopies + 1,
             borrowedCopies: book.borrowedCopies - 1,
           });
-
-          const logData: LogDto = {
-            userId: user.id,
-            action: `Returned book - ID: ${book.id}`,
-            timestamp: new Date().toISOString(),
-          };
-
-          SaveLog(logData);
         }
         EditRentalBookMutation({
           ...BorrowedBook,
