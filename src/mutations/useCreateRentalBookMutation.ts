@@ -17,6 +17,10 @@ export const useCreateRentalBookMutation = () => {
         queryKey: ['rentalBook', body.userId],
         exact: true,
       });
+      queryClient.invalidateQueries({
+        queryKey: ['book', body.bookId],
+        exact: true,
+      });
     },
   });
 };

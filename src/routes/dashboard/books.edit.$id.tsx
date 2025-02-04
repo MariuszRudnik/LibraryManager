@@ -6,6 +6,7 @@ import { FormEvent, useContext } from 'react';
 import { Book } from '../../types';
 import { Box, Button, Container, TextField, Typography } from '@mui/material';
 import { useEditBookMutation } from '../../mutations/useEditBookMutation';
+import Swal from 'sweetalert2';
 
 export const Route = createFileRoute('/dashboard/books/edit/$id')({
   component: EditBook,
@@ -38,11 +39,18 @@ function EditBook() {
       availableCopies: countBookInput.value,
       images: urlInput.value,
     };
-    console.log(editBookObj);
 
     mutate(editBookObj);
 
     handleClose();
+
+    Swal.fire({
+      position: 'center',
+      icon: 'success',
+      title: 'Książka została zaktualizowana',
+      showConfirmButton: false,
+      timer: 2000,
+    });
   };
 
   return (

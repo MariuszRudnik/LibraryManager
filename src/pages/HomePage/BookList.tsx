@@ -13,14 +13,42 @@ import {
 import { Book } from '../../types';
 import { useUserStore } from '../../store/useUserStore';
 import { useCreateRentalBookMutation } from '../../mutations/useCreateRentalBookMutation';
+import Swal from 'sweetalert2';
+import { useEditBookMutation } from '../../mutations/useEditBookMutation';
 
 type BookListProps = {
   books: Book[];
 };
 
 const BookList = ({ books }: BookListProps) => {
-  const { mutate } = useCreateRentalBookMutation();
+  const { mutate: RentalBookMutation } = useCreateRentalBookMutation();
+  const { mutate: EditBookMutation } = useEditBookMutation();
   const { isLoggedIn, user } = useUserStore();
+
+  const handleRentalBook = (book: Book) => {
+    RentalBookMutation({
+      userId: user.id,
+      bookId: book.id,
+      status: 'borrowed',
+      borrowDate: new Date().toISOString(),
+      returnDate: null,
+    });
+
+    EditBookMutation({
+      ...book,
+      availableCopies: book.availableCopies - 1,
+      borrowedCopies: book.borrowedCopies + 1,
+    });
+
+    Swal.fire({
+      title: book.title,
+      text: 'Książka została wypożyczona',
+      imageUrl: book.images,
+      imageWidth: 300,
+      imageHeight: 400,
+      imageAlt: 'Custom image',
+    });
+  };
 
   return (
     <Box
@@ -101,15 +129,16 @@ const BookList = ({ books }: BookListProps) => {
                     size="small"
                     variant="contained"
                     color="primary"
-                    onClick={() =>
-                      mutate({
-                        userId: user.id,
-                        bookId: book.id,
-                        status: 'borrowed',
-                        borrowDate: new Date().toISOString(),
-                        returnDate: null,
-                      })
-                    }
+                    onClick={() => handleRentalBook(book)}
+                    disabled={book.availableCopies === 0}
+                    sx={{
+                      '&.Mui-disabled': {
+                        backgroundColor: 'rgba(100, 100, 100, 0.3)',
+                        color: 'rgba(255, 255, 255, 0.5)',
+                        opacity: 0.6,
+                        cursor: 'not-allowed',
+                      },
+                    }}
                   >
                     Wypożycz
                   </Button>

@@ -6,6 +6,6 @@ export const rentalBooksOptions = (id: string) =>
   queryOptions({
     queryKey: ['rentalBook', id],
     queryFn: async () => {
-      return apiCall<RentalBook[]>(`rentals?userId=${id}`);
+      return apiCall<RentalBook[]>(`rentals?userId=${id}&status=borrowed`);
     },
   });
