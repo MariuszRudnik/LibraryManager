@@ -74,23 +74,48 @@ export default function SingleBorrowedBook({
       <Box
         sx={{
           display: 'flex',
+          minWidth: 0,
         }}
       >
         <CardMedia
           component="img"
-          sx={{ width: 120 }}
+          sx={{ width: 120, flexShrink: 0 }}
           image={book?.images}
           alt={book?.title}
         />
-        <Box sx={{ display: 'flex' }}>
-          <CardContent sx={{ display: 'flex', flexDirection: 'column' }}>
-            <Typography component="div" variant="h5">
+        <Box sx={{ display: 'flex', minWidth: 0 }}>
+          <CardContent
+            sx={{
+              display: 'flex',
+              flexDirection: 'column',
+              padding: '12px',
+              gap: '4px',
+              minWidth: 0,
+              '&:last-child': {
+                paddingBottom: '12px',
+              },
+            }}
+          >
+            <Typography
+              component="div"
+              variant="h5"
+              sx={{
+                overflow: 'hidden',
+                textOverflow: 'ellipsis',
+                maxWidth: '400px',
+              }}
+            >
               {book?.title}
             </Typography>
             <Typography
               variant="subtitle1"
               component="div"
-              sx={{ color: 'text.secondary' }}
+              sx={{
+                color: 'text.secondary',
+                whiteSpace: 'nowrap',
+                overflow: 'hidden',
+                textOverflow: 'ellipsis',
+              }}
             >
               {book?.author}
             </Typography>
@@ -108,6 +133,8 @@ export default function SingleBorrowedBook({
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'space-around',
+            gap: '2rem',
+            flexShrink: 0,
           }}
         >
           <Box

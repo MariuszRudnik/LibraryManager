@@ -44,8 +44,8 @@
       "author": "J.K. Rowling",
       "year": 1997,
       "description": "Pierwsza część przygód młodego czarodzieja Harry'ego Pottera, który odkrywa swoje magiczne dziedzictwo i rozpoczyna naukę w Szkole Magii i Czarodziejstwa w Hogwarcie.",
-      "borrowedCopies": 0,
-      "availableCopies": 9,
+      "borrowedCopies": 1,
+      "availableCopies": 8,
       "images": "https://bonito.pl/cache/1/1b10b6a-harry-potter-i-kamie_800.webp"
     },
     {
@@ -114,8 +114,8 @@
       "author": "Robert C. Martin",
       "year": 2022,
       "description": "Autor przedstawia zasady i dobre praktyki programistyczne, takie jak odpowiednie nazewnictwo, podział funkcji, unikanie nadmiernej złożoności oraz znaczenie testów jednostkowych. Książka zawiera liczne przykłady kodu oraz analizę zarówno dobrych, jak i złych praktyk, pomagając programistom rozwijać umiejętność pisania lepszego kodu",
-      "borrowedCopies": 0,
-      "availableCopies": 10,
+      "borrowedCopies": 1,
+      "availableCopies": 9,
       "images": "https://bonito.pl/cache/2/e643719-czysty-kod-podreczni_800.webp"
     },
     {
@@ -124,8 +124,8 @@
       "author": "Jon Duckett",
       "year": 2023,
       "description": "JavaScript to język, który w dużej mierze ukształtował współczesne strony WWW. Dzięki niemu możemy swobodnie korzystać z interaktywnych, wygodnych w użyciu oraz niezawodnych aplikacji internetowych. Pojawienie się JavaScriptu pozwoliło zastąpić tradycyjne aplikacje desktopowe nowymi, pracującymi w chmurze. Wokół języka powstało już wiele narzędzi i bibliotek. Jedną z najpopularniejszych jest jQuery.",
-      "borrowedCopies": 0,
-      "availableCopies": 100,
+      "borrowedCopies": 1,
+      "availableCopies": 99,
       "images": "https://bonito.pl/cache/7/891566d0-javascript-i-jquery_800.webp"
     }
   ],
@@ -153,6 +153,38 @@
       "status": "returned",
       "borrowDate": "2025-02-04T17:14:41.525Z",
       "returnDate": "2025-02-04T17:14:48.147Z"
+    },
+    {
+      "id": "5f51",
+      "userId": "e58f",
+      "bookId": "1096",
+      "status": "borrowed",
+      "borrowDate": "2025-02-04T21:23:18.134Z",
+      "returnDate": null
+    },
+    {
+      "id": "6c0c",
+      "userId": "e58f",
+      "bookId": "3ea0",
+      "status": "borrowed",
+      "borrowDate": "2025-02-04T21:23:29.350Z",
+      "returnDate": null
+    },
+    {
+      "id": "c3e9",
+      "userId": "e58f",
+      "bookId": "cd4e",
+      "status": "returned",
+      "borrowDate": "2025-02-04T21:23:38.194Z",
+      "returnDate": "2025-02-04T21:46:55.848Z"
+    },
+    {
+      "id": "5513",
+      "userId": "e58f",
+      "bookId": "1",
+      "status": "borrowed",
+      "borrowDate": "2025-02-04T21:42:29.645Z",
+      "returnDate": null
     }
   ],
   "logs": [
@@ -419,6 +451,12 @@
       "userId": "1",
       "action": "login",
       "timestamp": "2025-02-04T16:57:03.882Z"
+    },
+    {
+      "id": "056a",
+      "userId": "e58f",
+      "action": "login",
+      "timestamp": "2025-02-04T17:34:19.267Z"
     }
   ]
 }
