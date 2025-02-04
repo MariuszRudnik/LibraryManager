@@ -22,6 +22,10 @@ export const Avatar = () => {
     logout();
     navigate({ to: '/' });
   };
+  const handleProfile = () => {
+    handleClose();
+    navigate({ to: '/profil/myBorrowedBooks' });
+  };
 
   return (
     <>
@@ -50,9 +54,7 @@ export const Avatar = () => {
         open={Boolean(anchorEl)}
         onClose={handleClose}
       >
-        <MenuItem onClick={() => navigate({ to: '/profil/myBorrowedBooks' })}>
-          Profil
-        </MenuItem>
+        <MenuItem onClick={handleProfile}>Profil</MenuItem>
 
         <MenuItem onClick={handleLogout}>Wyloguj się</MenuItem>
       </Menu>

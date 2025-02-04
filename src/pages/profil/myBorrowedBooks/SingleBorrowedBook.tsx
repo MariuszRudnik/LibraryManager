@@ -10,6 +10,10 @@ import { RentalBook } from '../../../types';
 import { getDaysFromNow } from '../../../utills/getDaysBetweenLogs';
 import { booksOptions } from '../../../queries/books';
 import { useSuspenseQuery } from '@tanstack/react-query';
+import { formatDate } from '../../../utills/formatData';
+import { useEditRentalBookMutation } from '../../../mutations/useEditRentalBookMutation';
+import { useEditBookMutation } from '../../../mutations/useEditBookMutation';
+import Swal from 'sweetalert2';
 
 type SingleBorrowedBookProps = {
   BorrowedBook: RentalBook;
@@ -21,6 +25,44 @@ export default function SingleBorrowedBook({
   const { text, isWarning } = getDaysFromNow(BorrowedBook.borrowDate);
   const { data } = useSuspenseQuery(booksOptions);
   const book = data.find((book) => book.id === BorrowedBook.bookId);
+
+  const { mutate: EditRentalBookMutation } = useEditRentalBookMutation();
+  const { mutate: EditBookMutation } = useEditBookMutation();
+
+  const handleEditRentalBook = () => {
+    Swal.fire({
+      title: 'Czy na pewno chcesz zwrócić książkę?',
+      text: book?.title,
+      icon: 'warning',
+      showCancelButton: true,
+      cancelButtonText: 'Anuluj',
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Tak, zwróć',
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          title: 'Dziękujemy za oddanie książki',
+          text: 'zapraszamy po kolejne lektury',
+          icon: 'success',
+          timer: 1500,
+        });
+        if (book) {
+          EditBookMutation({
+            ...book,
+            id: book.id,
+            availableCopies: book.availableCopies + 1,
+            borrowedCopies: book.borrowedCopies - 1,
+          });
+        }
+        EditRentalBookMutation({
+          ...BorrowedBook,
+          returnDate: new Date().toISOString(),
+          status: 'returned',
+        });
+      }
+    });
+  };
 
   return (
     <Card
@@ -82,7 +124,7 @@ export default function SingleBorrowedBook({
               {text}
             </Typography>
           </Box>
-          <Box>
+          <Box sx={{ textAlign: 'end' }}>
             <Typography variant="h5" component="div">
               Data Wypożyczenia
             </Typography>
@@ -91,7 +133,7 @@ export default function SingleBorrowedBook({
               component="div"
               sx={{ color: 'text.secondary' }}
             >
-              {BorrowedBook.borrowDate}
+              {formatDate(BorrowedBook.borrowDate)}
             </Typography>
           </Box>
         </Box>
@@ -122,7 +164,11 @@ export default function SingleBorrowedBook({
               icon={<DoneIcon />}
             />
           </Box>
-          <Button sx={{ background: brown[500] }} color="secondary">
+          <Button
+            sx={{ background: brown[500] }}
+            color="secondary"
+            onClick={handleEditRentalBook}
+          >
             Zwróć książkę
           </Button>
         </Box>

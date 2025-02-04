@@ -5,6 +5,7 @@ import { FormEvent, useContext } from 'react';
 import { BookDto } from '../../types';
 import { useCreateBookMutation } from '../../mutations/useCreateBookMutation';
 import { ModalContext } from '../../context/ModalContext';
+import Swal from 'sweetalert2';
 
 export const Route = createFileRoute('/dashboard/books/add')({
   component: BooksAdd,
@@ -34,6 +35,14 @@ function BooksAdd() {
     };
     mutate(addBookObj);
     handleClose();
+
+    Swal.fire({
+      position: 'center',
+      icon: 'success',
+      title: 'Ksiązka została dodana',
+      showConfirmButton: false,
+      timer: 2000,
+    });
   };
 
   return (

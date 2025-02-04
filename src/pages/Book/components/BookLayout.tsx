@@ -1,7 +1,10 @@
 import { CardMedia, Box, Typography, Container, Button } from '@mui/material';
 import { Book } from '../../../types';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import { Link } from '@tanstack/react-router';
+import Swal from 'sweetalert2';
+import { useCreateRentalBookMutation } from '../../../mutations/useCreateRentalBookMutation';
+import { useEditBookMutation } from '../../../mutations/useEditBookMutation';
+import { useUserStore } from '../../../store/useUserStore';
 
 interface BookLayoutProps {
   book: Book;
@@ -9,6 +12,34 @@ interface BookLayoutProps {
 
 function BookLayout({ book }: BookLayoutProps) {
   const { title, author, year, images, description, availableCopies } = book;
+  const { mutate: RentalBookMutation } = useCreateRentalBookMutation();
+  const { mutate: EditBookMutation } = useEditBookMutation();
+  const { user } = useUserStore();
+
+  const handleRentalBook = () => {
+    RentalBookMutation({
+      userId: user.id,
+      bookId: book.id,
+      status: 'borrowed',
+      borrowDate: new Date().toISOString(),
+      returnDate: null,
+    });
+
+    EditBookMutation({
+      ...book,
+      availableCopies: book.availableCopies - 1,
+      borrowedCopies: book.borrowedCopies + 1,
+    });
+
+    Swal.fire({
+      title: book.title,
+      text: 'Książka została wypożyczona',
+      imageUrl: book.images,
+      imageWidth: 300,
+      imageHeight: 400,
+      imageAlt: 'Custom image',
+    });
+  };
 
   return (
     <Container
@@ -102,8 +133,8 @@ function BookLayout({ book }: BookLayoutProps) {
               size="medium"
               variant="contained"
               color="primary"
-              component={Link}
-              to="/"
+              onClick={handleRentalBook}
+              disabled={availableCopies <= 0}
             >
               Wypożycz
             </Button>

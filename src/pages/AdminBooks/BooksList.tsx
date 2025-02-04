@@ -14,6 +14,7 @@ import {
   Autocomplete,
   Box,
   Button,
+  CardMedia,
   Divider,
   Stack,
   TextField,
@@ -50,7 +51,7 @@ export const BooksList = () => {
   const [filteredBooks, setFilteredBooks] = useState<BookRow[]>([]);
   const [isFiltered, setIsFiltered] = useState(false);
   const [page, setPage] = useState(0);
-  const [rowsPerPage, setRowsPerPage] = useState(5);
+  const [rowsPerPage, setRowsPerPage] = useState(10);
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
 
@@ -134,6 +135,10 @@ export const BooksList = () => {
         <Table stickyHeader aria-label="sticky table">
           <TableHead>
             <TableRow>
+              <TableCell
+                align="center"
+                style={{ minWidth: '40px' }}
+              ></TableCell>
               <TableCell align="left" style={{ minWidth: '170px' }}>
                 Tytuł
               </TableCell>
@@ -144,16 +149,13 @@ export const BooksList = () => {
                 Rok
               </TableCell>
               <TableCell align="center" style={{ minWidth: '50px' }}>
-                Dos.
+                Dostępne
               </TableCell>
               <TableCell align="center" style={{ minWidth: '50px' }}>
-                Wyp.
+                Wypożyczone
               </TableCell>
               <TableCell align="center" style={{ minWidth: '50px' }}>
-                Wszy.
-              </TableCell>
-              <TableCell align="center" style={{ minWidth: '50px' }}>
-                Foto
+                Wszytkie
               </TableCell>
               <TableCell align="center" style={{ minWidth: '50px' }}>
                 Akcje
@@ -166,15 +168,25 @@ export const BooksList = () => {
               .map((row) => {
                 return (
                   <TableRow hover role="checkbox" tabIndex={-1} key={row.id}>
+                    <TableCell
+                      align="center"
+                      sx={{
+                        padding: 0,
+                      }}
+                    >
+                      <CardMedia
+                        component="img"
+                        sx={{ width: 40 }}
+                        image={row.images}
+                        alt={row.title}
+                      />
+                    </TableCell>
                     <TableCell align="left">{row.title}</TableCell>
                     <TableCell align="left">{row.author}</TableCell>
                     <TableCell align="center">{row.year}</TableCell>
                     <TableCell align="center">{row.availableCopies}</TableCell>
                     <TableCell align="center">{row.borrowedCopies}</TableCell>
                     <TableCell align="center">{row.allBooks}</TableCell>
-                    <TableCell align="center">
-                      {row.img ? 'Tak' : 'Nie'}
-                    </TableCell>
                     <TableCell align="center">
                       <Stack direction="row" justifyContent="space-between">
                         <Tooltip title={'Edytuj'}>
