@@ -2,3 +2,31 @@
   position: relative;
   background-color: #795548;
 }
+.smallCounterCard {
+  display: flex;
+  flex-direction: column;
+  & > span:first-child {
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+  & > span:last-child {
+    font-size: 0.8rem;
+  }
+}
+.biggerCounterCard {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-around;
+  & > svg {
+    font-size: 2rem;
+  }
+  & > span:nth-child(2) {
+    margin-left: 1rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+  & > span:last-child {
+    font-size: 0.8rem;
+  }
+}

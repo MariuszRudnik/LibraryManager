@@ -71,6 +71,7 @@ const Drawer = styled(MuiDrawer, {
     },
   ],
 }));
+const boxHeight = Math.max(100, window.innerHeight - 65);
 
 export const SidenavProfile = () => {
   const [open, setOpen] = React.useState(true);
@@ -78,7 +79,7 @@ export const SidenavProfile = () => {
   const location = useLocation();
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{ display: 'flex', height: boxHeight }}>
       <Drawer variant="permanent" open={open} className={style.sidenav}>
         <DrawerHeader>
           <IconButton onClick={() => setOpen(!open)}>
