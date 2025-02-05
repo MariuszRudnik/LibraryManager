@@ -1,4 +1,4 @@
-import { Box } from '@mui/material';
+import { Box, Paper, Typography } from '@mui/material';
 import SingleBorrowedBook from './SingleBorrowedBook';
 import { useSuspenseQuery } from '@tanstack/react-query';
 import { rentalBooksOptions } from '../../../queries/rentalBooks';
@@ -33,7 +33,12 @@ export const MyBorrowedBooks = () => {
           />
         ))
       ) : (
-        <p>Nie masz jeszcze wypożyczonych książek.</p>
+        <Paper elevation={24} sx={{ padding: '1rem' }}>
+          <Typography variant="h4">Brak wypożyczonych książek</Typography>
+          <Typography variant="h6">
+            Nie masz aktualnie wypożyczonych książek
+          </Typography>
+        </Paper>
       )}
     </Box>
   );
