@@ -1,4 +1,4 @@
-import { Box, Grid, Paper } from '@mui/material';
+import { Box, Grid } from '@mui/material';
 import AssignmentTurnedInOutlinedIcon from '@mui/icons-material/AssignmentTurnedInOutlined';
 import AssignmentLateOutlinedIcon from '@mui/icons-material/AssignmentLateOutlined';
 import CalendarMonthOutlinedIcon from '@mui/icons-material/CalendarMonthOutlined';
@@ -9,7 +9,8 @@ import { HistoryCardBook } from './component/HistoryCardBook';
 import { useUserStore } from '../../../store/useUserStore';
 import { useSuspenseQuery } from '@tanstack/react-query';
 import { statisticRentalBooksOptions } from '../../../queries/statisticRentalBooks';
-import { formatStaticRentalBooks } from '../../../utills/FormatStaticRentalBooks';
+import { formatStaticRentalBooks } from '../../../utills/formatStaticRentalBooks';
+import { BarChart } from './component/BarChart';
 
 export const UserStatistics = () => {
   const {
@@ -22,6 +23,7 @@ export const UserStatistics = () => {
     borrowedBooks,
     BooksReturnedOnTime,
     BooksReturnedLate,
+    getMonthlyRentalStats,
   } = formatStaticRentalBooks(data);
 
   return (
@@ -51,17 +53,12 @@ export const UserStatistics = () => {
               </Grid>
             </Grid>
 
-            {/* Dolna część - duże okno */}
-            <Grid item xs sx={{ flexGrow: 1 }}>
-              <Paper sx={{ p: 2, height: '100%' }}>
-                Duże okno na dole po lewej
-              </Paper>
-            </Grid>
+            <BarChart data={getMonthlyRentalStats()} />
           </Grid>
         </Grid>
 
         {/* Prawa strona */}
-        <Grid item xs={4} sx={{ height: '100%' }}>
+        <Grid item xs={4} sx={{ height: '100%', overflowY: 'auto' }}>
           <Grid
             container
             spacing={2}

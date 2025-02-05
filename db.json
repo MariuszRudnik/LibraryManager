@@ -44,8 +44,8 @@
       "author": "J.K. Rowling",
       "year": 1997,
       "description": "Pierwsza część przygód młodego czarodzieja Harry'ego Pottera, który odkrywa swoje magiczne dziedzictwo i rozpoczyna naukę w Szkole Magii i Czarodziejstwa w Hogwarcie.",
-      "borrowedCopies": 1,
-      "availableCopies": 8,
+      "borrowedCopies": 0,
+      "availableCopies": 9,
       "images": "https://bonito.pl/cache/1/1b10b6a-harry-potter-i-kamie_800.webp"
     },
     {
@@ -74,8 +74,8 @@
       "author": "Goggins David",
       "year": 2023,
       "description": "David Goggins jest człowiekiem o żelaznej woli i inspiracją dla wszystkich. Samo słuchanie tego faceta sprawia, że chce się wbiec na jakąś górę. Jestem przekonany, że ludzie tacy jak on mogą zmieniać losy świata.",
-      "borrowedCopies": 0,
-      "availableCopies": 11,
+      "borrowedCopies": -1,
+      "availableCopies": 12,
       "images": "https://ecsmedia.pl/cdn-cgi/image/format=webp,width=544,height=544,/c/nic-mnie-nie-zlamie-zapanuj-nad-swoim-umyslem-i-pokonaj-przeciwnosci-losu-b-iext172232004.jpg"
     },
     {
@@ -94,8 +94,8 @@
       "author": "Mazur Wiktoria",
       "year": 2023,
       "description": "Dieta keto może być kolorowa, różnorodna, a zarazem wykwintna!\n\nW tej wyjątkowej książce kucharskiej znajdziesz 101 przepisów na śniadania na słono i na słodko, obiady: sycące zupy, przepyszne dania główne, smaczne dodatki, a także atrakcyjne przekąski oraz niezwykłe desery.\n\nDzięki nieskomplikowanym instrukcjom z prostych składników wyczarujesz wspaniałe dania. Przepisom towarzyszą przepiękne zdjęcia, które sprawiają, że nabierzesz ochoty na przyrządzenie prezentowanych potraw w swojej kuchni.",
-      "borrowedCopies": 0,
-      "availableCopies": 28,
+      "borrowedCopies": -1,
+      "availableCopies": 29,
       "images": "https://bonito.pl/zdjecia/0/e8e9ce4-baba-na-keto-mazur-w.webp"
     },
     {
@@ -114,8 +114,8 @@
       "author": "Robert C. Martin",
       "year": 2022,
       "description": "Autor przedstawia zasady i dobre praktyki programistyczne, takie jak odpowiednie nazewnictwo, podział funkcji, unikanie nadmiernej złożoności oraz znaczenie testów jednostkowych. Książka zawiera liczne przykłady kodu oraz analizę zarówno dobrych, jak i złych praktyk, pomagając programistom rozwijać umiejętność pisania lepszego kodu",
-      "borrowedCopies": 2,
-      "availableCopies": 8,
+      "borrowedCopies": 0,
+      "availableCopies": 10,
       "images": "https://bonito.pl/cache/2/e643719-czysty-kod-podreczni_800.webp"
     },
     {
@@ -124,8 +124,8 @@
       "author": "Jon Duckett",
       "year": 2023,
       "description": "JavaScript to język, który w dużej mierze ukształtował współczesne strony WWW. Dzięki niemu możemy swobodnie korzystać z interaktywnych, wygodnych w użyciu oraz niezawodnych aplikacji internetowych. Pojawienie się JavaScriptu pozwoliło zastąpić tradycyjne aplikacje desktopowe nowymi, pracującymi w chmurze. Wokół języka powstało już wiele narzędzi i bibliotek. Jedną z najpopularniejszych jest jQuery.",
-      "borrowedCopies": 1,
-      "availableCopies": 99,
+      "borrowedCopies": 0,
+      "availableCopies": 100,
       "images": "https://bonito.pl/cache/7/891566d0-javascript-i-jquery_800.webp"
     }
   ],
@@ -158,17 +158,17 @@
       "id": "5f51",
       "userId": "e58f",
       "bookId": "1096",
-      "status": "borrowed",
+      "status": "returned",
       "borrowDate": "2025-02-04T21:23:18.134Z",
-      "returnDate": null
+      "returnDate": "2025-02-05T21:29:03.213Z"
     },
     {
       "id": "6c0c",
       "userId": "e58f",
       "bookId": "3ea0",
-      "status": "borrowed",
+      "status": "returned",
       "borrowDate": "2025-02-04T21:23:29.350Z",
-      "returnDate": null
+      "returnDate": "2025-02-05T21:29:56.831Z"
     },
     {
       "id": "c3e9",
@@ -182,17 +182,113 @@
       "id": "5513",
       "userId": "e58f",
       "bookId": "1",
-      "status": "borrowed",
+      "status": "returned",
       "borrowDate": "2025-02-04T21:42:29.645Z",
-      "returnDate": null
+      "returnDate": "2025-02-05T21:29:20.674Z"
     },
     {
       "id": "ad0a",
       "userId": "1",
       "bookId": "3ea0",
-      "status": "borrowed",
+      "status": "returned",
       "borrowDate": "2025-02-05T11:47:14.482Z",
+      "returnDate": "2025-02-05T22:58:56.635Z"
+    },
+    {
+      "id": "dbeb",
+      "userId": "e58f",
+      "bookId": "2",
+      "status": "returned",
+      "borrowDate": "2025-02-05T21:30:24.383Z",
+      "returnDate": "2025-02-05T21:30:55.006Z"
+    },
+    {
+      "id": "b460",
+      "userId": "e58f",
+      "bookId": "1",
+      "status": "returned",
+      "borrowDate": "2025-02-05T21:30:26.375Z",
+      "returnDate": "2025-02-05T21:30:50.565Z"
+    },
+    {
+      "id": "7172",
+      "userId": "e58f",
+      "bookId": "3",
+      "status": "returned",
+      "borrowDate": "2025-02-05T21:30:28.422Z",
+      "returnDate": "2025-02-05T21:30:52.747Z"
+    },
+    {
+      "id": "c429",
+      "userId": "e58f",
+      "bookId": "0d82",
+      "status": "returned",
+      "borrowDate": "2025-01-05T21:30:31.661Z",
+      "returnDate": "2025-01-05T21:30:48.462Z"
+    },
+    {
+      "id": "280c",
+      "userId": "e58f",
+      "bookId": "facd",
+      "status": "returned",
+      "borrowDate": "2025-02-05T21:30:33.596Z",
+      "returnDate": "2025-02-05T21:30:42.325Z"
+    },
+    {
+      "id": "46a2",
+      "userId": "e58f",
+      "bookId": "4",
+      "status": "returned",
+      "borrowDate": "2025-02-05T21:30:35.115Z",
+      "returnDate": "2025-02-05T21:30:45.417Z"
+    },
+    {
+      "id": "7b52",
+      "userId": "e58f",
+      "bookId": "2",
+      "status": "returned",
+      "borrowDate": "2025-01-05T21:31:10.587Z",
+      "returnDate": "2025-01-05T21:34:21.986Z"
+    },
+    {
+      "id": "fd9e",
+      "userId": "e58f",
+      "bookId": "1",
+      "status": "borrowed",
+      "borrowDate": "2025-02-05T21:31:12.156Z",
       "returnDate": null
+    },
+    {
+      "id": "6be0",
+      "userId": "e58f",
+      "bookId": "2",
+      "status": "returned",
+      "borrowDate": "2025-02-05T21:31:13.848Z",
+      "returnDate": "2025-02-05T21:31:21.031Z"
+    },
+    {
+      "id": "9689",
+      "userId": "e58f",
+      "bookId": "2",
+      "status": "returned",
+      "borrowDate": "2025-01-05T21:31:15.492Z",
+      "returnDate": "2025-01-05T21:34:10.419Z"
+    },
+    {
+      "id": "4ac8",
+      "userId": "e58f",
+      "bookId": "0d82",
+      "status": "returned",
+      "borrowDate": "2025-02-05T22:21:35.287Z",
+      "returnDate": "2025-02-05T22:21:46.890Z"
+    },
+    {
+      "id": "653e",
+      "userId": "1",
+      "bookId": "4",
+      "status": "returned",
+      "borrowDate": "2025-01-05T22:59:25.302Z",
+      "returnDate": "2025-02-05T23:01:44.423Z"
     }
   ],
   "logs": [
@@ -471,6 +567,12 @@
       "userId": "e58f",
       "action": "login",
       "timestamp": "2025-02-05T15:45:43.097Z"
+    },
+    {
+      "id": "2973",
+      "userId": "1",
+      "action": "login",
+      "timestamp": "2025-02-05T22:47:38.448Z"
     }
   ]
 }

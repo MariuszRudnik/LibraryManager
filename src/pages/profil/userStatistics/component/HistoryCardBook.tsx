@@ -11,7 +11,9 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { brown } from '@mui/material/colors';
 import { RentalBook } from '../../../../types';
 import { formatDate } from '../../../../utills/formatData';
-import { formatStaticRentalBooks } from '../../../../utills/FormatStaticRentalBooks';
+import { formatStaticRentalBooks } from '../../../../utills/formatStaticRentalBooks';
+import { booksOptions } from '../../../../queries/books';
+import { useSuspenseQuery } from '@tanstack/react-query';
 
 export type HistoryCardBookProps = {
   history: RentalBook[];
@@ -25,16 +27,23 @@ export const HistoryCardBook = ({ history }: HistoryCardBookProps) => {
       setExpanded(isExpanded ? panel : false);
     };
   const { returnedBooks } = formatStaticRentalBooks(history);
+  const { data } = useSuspenseQuery(booksOptions);
 
-  //dodać pobieranie tytułu książki
+  const bookTitles = [...returnedBooks].reverse().map((rentedBook) => {
+    const book = data.find((book) => book.id === rentedBook.bookId);
+    return {
+      ...rentedBook,
+      title: book?.title || 'Nieznany tytuł',
+    };
+  });
 
   return (
     <Grid item xs sx={{ flexGrow: 1 }}>
-      <Paper sx={{ height: '100%' }}>
+      <Paper sx={{ height: '100%', maxHeight: 610, overflowY: 'auto' }}>
         <Typography variant="h5" padding={1} gutterBottom textAlign="center">
           Historia wypożyczeń
         </Typography>
-        {returnedBooks.map(({ id, returnDate }, index) => (
+        {bookTitles.map(({ id, returnDate, title }, index) => (
           <Accordion
             sx={{
               backgroundColor: index % 2 === 0 ? brown[300] : brown[200],
@@ -62,14 +71,15 @@ export const HistoryCardBook = ({ history }: HistoryCardBookProps) => {
                   whiteSpace: 'nowrap',
                 }}
               >
-                {/* {title} */}
-                kot
+                {title}
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
                 Data zwrotu:{' '}
-                {returnDate ? formatDate(returnDate) : 'Brak daty zwrotu'}
+                <span style={{ fontWeight: 'bold' }}>
+                  {returnDate ? formatDate(returnDate) : 'Brak daty zwrotu'}
+                </span>
               </Typography>
             </AccordionDetails>
           </Accordion>

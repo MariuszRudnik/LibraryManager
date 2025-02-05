@@ -40,11 +40,51 @@ export const formatStaticRentalBooks = (data: RentalBook[]) => {
     return returnDate > borrowPlusFourteenDays;
   }).length;
 
+  const getMonthlyRentalStats = (): (string | number)[][] => {
+    const months = [
+      'Styczeń',
+      'Luty',
+      'Marzec',
+      'Kwiecień',
+      'Maj',
+      'Czerwiec',
+      'Lipiec',
+      'Sierpień',
+      'Wrzesień',
+      'Październik',
+      'Listopad',
+      'Grudzień',
+    ];
+
+    // Inicjalizacja liczników dla każdego miesiąca
+    const stats: Record<string, number> = months.reduce(
+      (acc, month) => {
+        acc[month] = 0;
+        return acc;
+      },
+      {} as Record<string, number>
+    );
+
+    // Iteracja po wypożyczeniach i zliczanie ich według miesiąca
+    data.forEach(({ borrowDate }) => {
+      const date = new Date(borrowDate);
+      const monthName = months[date.getMonth()];
+      stats[monthName]++;
+    });
+
+    // Konwersja do wymaganej tablicy
+    return [
+      ['Rok', 'Miesiąc'],
+      ...months.map((month) => [month, stats[month]]),
+    ];
+  };
+
   return {
     borrowedBooks,
     returnedBooks,
     booksThisMonth,
     BooksReturnedOnTime,
     BooksReturnedLate,
+    getMonthlyRentalStats,
   };
 };
