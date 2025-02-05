@@ -1,17 +1,25 @@
 import { Grid, Paper } from '@mui/material';
 import styles from '../../styles.module.scss';
+import { brown, green, red } from '@mui/material/colors';
 
 export type SmallCounterCardProps = {
   count: number;
   title: string;
   icon: React.ReactNode;
+  variant?: 'green' | 'red';
 };
 
 export const SmallCounterCard = ({
   title,
   count,
   icon,
+  variant = 'green',
 }: SmallCounterCardProps) => {
+  const backgrounds = {
+    green: `linear-gradient(90deg, ${green[400]}, ${brown[600]})`,
+    red: `linear-gradient(90deg, ${red[400]}, ${brown[600]})`,
+  };
+
   return (
     <Grid item xs="auto">
       <Paper
@@ -21,6 +29,10 @@ export const SmallCounterCard = ({
           display: 'flex',
           alignItems: 'center',
           gap: '1rem',
+          backgroundImage: backgrounds[variant],
+          '& > svg': {
+            fontSize: '2rem',
+          },
         }}
       >
         {icon}

@@ -5,8 +5,25 @@ import CalendarMonthOutlinedIcon from '@mui/icons-material/CalendarMonthOutlined
 import CollectionsBookmarkOutlinedIcon from '@mui/icons-material/CollectionsBookmarkOutlined';
 import { SmallCounterCard } from './component/SmallCounterCard';
 import { BiggerCounterCard } from './component/BiggerCounterCard';
+import { HistoryCardBook } from './component/HistoryCardBook';
+import { useUserStore } from '../../../store/useUserStore';
+import { useSuspenseQuery } from '@tanstack/react-query';
+import { statisticRentalBooksOptions } from '../../../queries/statisticRentalBooks';
+import { formatStaticRentalBooks } from '../../../utills/FormatStaticRentalBooks';
 
 export const UserStatistics = () => {
+  const {
+    user: { id },
+  } = useUserStore();
+  const { data } = useSuspenseQuery(statisticRentalBooksOptions(id));
+
+  const {
+    booksThisMonth,
+    borrowedBooks,
+    BooksReturnedOnTime,
+    BooksReturnedLate,
+  } = formatStaticRentalBooks(data);
+
   return (
     <Box sx={{ flexGrow: 1, p: 2, height: 'calc(100vh - 100px)' }}>
       <Grid container spacing={2} sx={{ height: '100%' }}>
@@ -22,13 +39,14 @@ export const UserStatistics = () => {
               <Grid container spacing={2}>
                 <BiggerCounterCard
                   title="Książeki wypożyczonne w tym miesiącu"
-                  count={6}
+                  count={booksThisMonth}
                   icon={<CalendarMonthOutlinedIcon />}
                 />
                 <BiggerCounterCard
                   title="Aktualnie wypożyczone książki"
-                  count={8}
+                  count={borrowedBooks}
                   icon={<CollectionsBookmarkOutlinedIcon />}
+                  variant="yellow"
                 />
               </Grid>
             </Grid>
@@ -51,20 +69,17 @@ export const UserStatistics = () => {
           >
             <SmallCounterCard
               title="Ilość książek oddanych w terminie"
-              count={5}
+              count={BooksReturnedOnTime}
               icon={<AssignmentTurnedInOutlinedIcon />}
             />
             <SmallCounterCard
               title="Ilość książek oddanych po terminie"
-              count={5}
+              count={BooksReturnedLate}
               icon={<AssignmentLateOutlinedIcon />}
+              variant="red"
             />
 
-            <Grid item xs sx={{ flexGrow: 1 }}>
-              <Paper sx={{ p: 2, height: '100%' }}>
-                Pionowe okno na dole po prawej
-              </Paper>
-            </Grid>
+            <HistoryCardBook history={data} />
           </Grid>
         </Grid>
       </Grid>

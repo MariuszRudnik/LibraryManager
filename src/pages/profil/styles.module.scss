@@ -6,11 +6,11 @@
   display: flex;
   flex-direction: column;
   & > span:first-child {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-weight: bold;
   }
   & > span:last-child {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 }
 .biggerCounterCard {
@@ -19,14 +19,17 @@
   height: 100%;
   justify-content: space-around;
   & > svg {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
   & > span:nth-child(2) {
     margin-left: 1rem;
-    font-size: 1.3rem;
+    font-size: 2rem;
     font-weight: bold;
   }
   & > span:last-child {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
+}
+.gradient {
+  background: linear-gradient(45deg, #795548, #8d6e63);
 }
