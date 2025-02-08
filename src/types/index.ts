@@ -4,7 +4,7 @@ export type User = {
   lastName: string;
   email: string;
   password: string;
-  role: 'client' | 'admin' | '';
+  role: 'client' | 'admin' | 'DELETED';
   libraryCardCode: string;
 };
 export type UserDto = Omit<User, 'id'>;

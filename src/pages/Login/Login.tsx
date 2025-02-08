@@ -1,55 +1,72 @@
-import { useSuspenseQuery } from "@tanstack/react-query";
-import { useInput } from "../../hooks/useInput.ts";
+import { useQuery } from '@tanstack/react-query';
+import { useInput } from '../../hooks/useInput.ts';
 import {
   Alert,
   Box,
   Button,
+  CircularProgress,
   Container,
   TextField,
   Typography,
-} from "@mui/material";
-import { usersOptions } from "../../queries/users.ts";
-import { hasEmailAndPasswordInDataBase } from "../../utills/hasEmailAndPassworsInDataBase.ts";
-import { useEffect, useState } from "react";
-import { useCreateLogMutation } from "../../mutations/useCreateLogMutation.ts";
-import { useNavigate } from "@tanstack/react-router";
-import { LogDto } from "../../types/index.ts";
-import { useUserStore } from "../../store/useUserStore.ts";
-import { AdminInfo } from "./AdminInfo.tsx";
+} from '@mui/material';
+
+import { useEffect, useState } from 'react';
+
+import { useNavigate } from '@tanstack/react-router';
+import { LogDto } from '../../types/index.ts';
+import { useUserStore } from '../../store/useUserStore.ts';
+import { AdminInfo } from './AdminInfo.tsx';
+import { loginOptions } from '../../queries/login.ts';
+import { useCreateLogMutation } from '../../mutations/useCreateLogMutation.ts';
 
 export const Login = () => {
-  const emailInput = useInput("");
-  const passwordInput = useInput("");
+  const emailInput = useInput('');
+  const passwordInput = useInput('');
   const [error, setError] = useState(false);
 
-  const { data } = useSuspenseQuery(usersOptions);
-  const { mutate, isSuccess } = useCreateLogMutation();
+  const { refetch, isFetching, isError, isSuccess } = useQuery({
+    ...loginOptions({
+      email: emailInput.value,
+      password: passwordInput.value,
+    }),
+    enabled: false,
+    staleTime: 0,
+    retry: 2,
+  });
+
+  const { mutate } = useCreateLogMutation();
   const navigate = useNavigate();
   const { login } = useUserStore();
 
-  const handleSubmit = (event: React.FormEvent) => {
+  const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
 
-    const user = hasEmailAndPasswordInDataBase(
-      data,
-      emailInput.value,
-      passwordInput.value
-    );
-    if (user === null) return setError(true);
+    try {
+      const { data: user } = await refetch();
 
-    const logData: LogDto = {
-      userId: user.id,
-      action: "login",
-      timestamp: new Date().toISOString(),
-    };
+      if (!user) {
+        setError(true);
+        return;
+      }
 
-    login(user); // zapisuje info user w store
-    mutate(logData); //zapisuje w db.json info o logowaniu
+      const logData: LogDto = {
+        userId: user.id,
+        action: 'login',
+        timestamp: new Date().toISOString(),
+      };
+      console.log(isError);
+
+      login(user);
+      mutate(logData);
+    } catch (error) {
+      console.error('Błąd podczas logowania:', error);
+      setError(true);
+    }
   };
 
   useEffect(() => {
     if (!isSuccess) return;
-    navigate({ to: "/" });
+    navigate({ to: '/' });
   }, [isSuccess, navigate]);
 
   return (
@@ -57,33 +74,33 @@ export const Login = () => {
       maxWidth={false}
       disableGutters
       sx={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
-        minHeight: "100vh",
-        backgroundColor: "#adaaaa",
-        padding: "2rem",
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        minHeight: '100vh',
+        backgroundColor: '#adaaaa',
+        padding: '2rem',
       }}
     >
       <Box
         component="form"
         sx={{
-          width: "100%",
-          maxWidth: "500px",
-          padding: "2rem",
-          backgroundColor: "white",
-          borderRadius: "8px",
-          boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          border: "1px solid black",
+          width: '100%',
+          maxWidth: '500px',
+          padding: '2rem',
+          backgroundColor: 'white',
+          borderRadius: '8px',
+          boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          border: '1px solid black',
         }}
         autoComplete="off"
         onSubmit={handleSubmit}
       >
-        <Typography variant="h4" component="h1" sx={{ marginBottom: "1.5rem" }}>
+        <Typography variant="h4" component="h1" sx={{ marginBottom: '1.5rem' }}>
           Miło cię widzieć
         </Typography>
         <TextField
@@ -94,7 +111,7 @@ export const Login = () => {
           type="email"
           variant="outlined"
           {...emailInput}
-          sx={{ marginBottom: "1rem" }}
+          sx={{ marginBottom: '1rem' }}
         />
         <TextField
           required
@@ -104,7 +121,7 @@ export const Login = () => {
           type="password"
           variant="outlined"
           {...passwordInput}
-          sx={{ marginBottom: "1.5rem" }}
+          sx={{ marginBottom: '1.5rem' }}
         />
         <Button
           variant="contained"
@@ -112,13 +129,17 @@ export const Login = () => {
           type="submit"
           data-testid="login-button"
           sx={{
-            marginBottom: "1rem",
-            width: "100%",
-            padding: "0.75rem",
-            fontSize: "1rem",
+            marginBottom: '1rem',
+            width: '100%',
+            padding: '0.75rem',
+            fontSize: '1rem',
           }}
         >
-          Zaloguj się
+          {isFetching ? (
+            <CircularProgress color="secondary" size="1.8rem" />
+          ) : (
+            'Zaloguj się'
+          )}
         </Button>
 
         {error && (
@@ -126,9 +147,9 @@ export const Login = () => {
             data-testid="error-message"
             severity="error"
             sx={{
-              width: "100%",
-              marginTop: "1rem",
-              textAlign: "center",
+              width: '100%',
+              marginTop: '1rem',
+              textAlign: 'center',
             }}
           >
             Nieprawidłowy login lub hasło
