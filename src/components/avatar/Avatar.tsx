@@ -6,14 +6,18 @@ import MenuItem from '@mui/material/MenuItem';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import { useNavigate } from '@tanstack/react-router';
 import { useUserStore } from '../../store/useUserStore';
+import { useCreateLogMutation } from '../../mutations/useCreateLogMutation';
+import { LogDto } from '../../types';
 import { Divider, ListItemIcon } from '@mui/material';
 import Logout from '@mui/icons-material/Logout';
 import Settings from '@mui/icons-material/Settings';
 import SignalCellularAltIcon from '@mui/icons-material/SignalCellularAlt';
 import PersonIcon from '@mui/icons-material/Person';
 
+
 export const Avatar = () => {
-  const { logout } = useUserStore();
+  const { logout, user } = useUserStore();
+  const { mutate: SaveLog } = useCreateLogMutation();
   const navigate = useNavigate();
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const handleMenu = (event: React.MouseEvent<HTMLElement>) => {
@@ -25,6 +29,15 @@ export const Avatar = () => {
 
   const handleLogout = () => {
     logout();
+
+    const logData: LogDto = {
+      userId: user.id,
+      action: `logged out`,
+      timestamp: new Date().toISOString(),
+    };
+
+    SaveLog(logData);
+
     navigate({ to: '/' });
   };
   const handleProfile = () => {

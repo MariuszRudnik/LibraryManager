@@ -10,11 +10,12 @@ import {
   Box,
   Tooltip,
 } from '@mui/material';
-import { Book } from '../../types';
+import { Book, LogDto } from '../../types';
 import { useUserStore } from '../../store/useUserStore';
 import { useCreateRentalBookMutation } from '../../mutations/useCreateRentalBookMutation';
 import Swal from 'sweetalert2';
 import { useEditBookMutation } from '../../mutations/useEditBookMutation';
+import { useCreateLogMutation } from '../../mutations/useCreateLogMutation';
 
 type BookListProps = {
   books: Book[];
@@ -23,6 +24,7 @@ type BookListProps = {
 const BookList = ({ books }: BookListProps) => {
   const { mutate: RentalBookMutation } = useCreateRentalBookMutation();
   const { mutate: EditBookMutation } = useEditBookMutation();
+  const { mutate: SaveLog } = useCreateLogMutation();
   const { isLoggedIn, user } = useUserStore();
 
   const handleRentalBook = (book: Book) => {
@@ -33,6 +35,14 @@ const BookList = ({ books }: BookListProps) => {
       borrowDate: new Date().toISOString(),
       returnDate: null,
     });
+
+    const logData: LogDto = {
+      userId: user.id,
+      action: `Borrowed book - ID: ${book.id}`,
+      timestamp: new Date().toISOString(),
+    };
+
+    SaveLog(logData);
 
     EditBookMutation({
       ...book,

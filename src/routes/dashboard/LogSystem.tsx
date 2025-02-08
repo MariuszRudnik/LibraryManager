@@ -1,9 +1,11 @@
 import { createFileRoute } from '@tanstack/react-router';
+import { AdminLogs } from '../../pages/AdminLogs/AdminLogs';
+import { logs } from '../../queries/logs';
 
 export const Route = createFileRoute('/dashboard/LogSystem')({
-  component: RouteComponent,
+  component: AdminLogs,
+  loader: async (data) => {
+    const { queryClient } = data.context;
+    return queryClient.ensureQueryData(logs);
+  },
 });
-
-function RouteComponent() {
-  return <div>Tu będą lista wszystkich logów systemowych</div>;
-}
