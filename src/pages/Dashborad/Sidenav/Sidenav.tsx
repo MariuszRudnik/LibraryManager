@@ -71,6 +71,7 @@ const Drawer = styled(MuiDrawer, {
     },
   ],
 }));
+const boxHeight = Math.max(100, window.innerHeight - 65);
 
 export const Sidenav = () => {
   const [open, setOpen] = React.useState(true);
@@ -78,7 +79,7 @@ export const Sidenav = () => {
   const location = useLocation();
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{ display: 'flex', height: boxHeight }}>
       <Drawer variant="permanent" open={open} className={style.sidenav}>
         <DrawerHeader>
           <IconButton onClick={() => setOpen(!open)}>
@@ -93,14 +94,14 @@ export const Sidenav = () => {
               onClick={() => navigate({ to: '/dashboard/books' })}
               icon={<MenuBookIcon />}
               open={open}
-              isActive={/books/.test(location.pathname)}
+              isActive={/dashboard\/books/.test(location.pathname)}
             />
             <SingleItemButton
               text="Wypożyczone książki"
               onClick={() => navigate({ to: '/dashboard/borrowed-books' })}
               icon={<LibraryBooksIcon />}
               open={open}
-              isActive={/borrowed-books/.test(location.pathname)}
+              isActive={/dashboard\/borrowed-books/.test(location.pathname)}
             />
             <SingleItemButton
               text="Logi systemowe"

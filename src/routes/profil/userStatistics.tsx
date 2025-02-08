@@ -1,9 +1,7 @@
-import { createFileRoute } from '@tanstack/react-router'
+import { createFileRoute } from '@tanstack/react-router';
+// import { UserStatistics } from '../../pages/profil/userStatistics/UserStatistics';
+import { UserStatistics } from '../../pages/profil/userStatistics/UserStatistics';
 
 export const Route = createFileRoute('/profil/userStatistics')({
-  component: RouteComponent,
-})
-
-function RouteComponent() {
-  return <div>Hello "/profil/userStatistics"!</div>
-}
+  component: UserStatistics,
+});

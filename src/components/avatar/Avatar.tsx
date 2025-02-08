@@ -8,6 +8,12 @@ import { useNavigate } from '@tanstack/react-router';
 import { useUserStore } from '../../store/useUserStore';
 import { useCreateLogMutation } from '../../mutations/useCreateLogMutation';
 import { LogDto } from '../../types';
+import { Divider, ListItemIcon } from '@mui/material';
+import Logout from '@mui/icons-material/Logout';
+import Settings from '@mui/icons-material/Settings';
+import SignalCellularAltIcon from '@mui/icons-material/SignalCellularAlt';
+import PersonIcon from '@mui/icons-material/Person';
+
 
 export const Avatar = () => {
   const { logout, user } = useUserStore();
@@ -38,6 +44,14 @@ export const Avatar = () => {
     handleClose();
     navigate({ to: '/profil/myBorrowedBooks' });
   };
+  const handleSettings = () => {
+    handleClose();
+    navigate({ to: '/profil/userSettings' });
+  };
+  const handleStatistics = () => {
+    handleClose();
+    navigate({ to: '/profil/userStatistics' });
+  };
 
   return (
     <>
@@ -66,9 +80,33 @@ export const Avatar = () => {
         open={Boolean(anchorEl)}
         onClose={handleClose}
       >
-        <MenuItem onClick={handleProfile}>Profil</MenuItem>
+        <MenuItem onClick={handleProfile}>
+          <ListItemIcon>
+            <PersonIcon fontSize="small" />
+          </ListItemIcon>
+          Profil
+        </MenuItem>
 
-        <MenuItem onClick={handleLogout}>Wyloguj się</MenuItem>
+        <Divider />
+        <MenuItem onClick={handleStatistics}>
+          <ListItemIcon>
+            <SignalCellularAltIcon fontSize="small" />
+          </ListItemIcon>
+          Statystyki
+        </MenuItem>
+        <MenuItem onClick={handleSettings}>
+          <ListItemIcon>
+            <Settings fontSize="small" />
+          </ListItemIcon>
+          Ustawienia
+        </MenuItem>
+
+        <MenuItem onClick={handleLogout}>
+          <ListItemIcon>
+            <Logout fontSize="small" />
+          </ListItemIcon>
+          Wyloguj się
+        </MenuItem>
       </Menu>
     </>
   );

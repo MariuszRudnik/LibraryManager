@@ -25,6 +25,7 @@
     "json-server": "1.0.0-beta.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-google-charts": "^5.2.1",
     "sass-embedded": "^1.83.1",
     "sweetalert2": "^11.15.10",
     "uuid": "^9.0.1",
