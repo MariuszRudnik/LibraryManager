@@ -84,8 +84,8 @@
       "author": "Joanna Kuciel-Frydryszak",
       "year": 2018,
       "description": "Joanna Kuciel-Frydryszak daje wiejskim kobietom głos, by opowiedziały o swoim życiu: codziennym znoju, lękach i marzeniach. Ta mocna, głęboko dotykająca lektura pokazuje siłę kobiet, ich bezgraniczne oddanie rodzinie, ale też pragnienie zmiany i nierówną walkę o siebie w patriarchalnym społeczeństwie.",
-      "borrowedCopies": 1,
-      "availableCopies": 10,
+      "borrowedCopies": 0,
+      "availableCopies": 11,
       "images": "https://bonito.pl/zdjecia/6/73c4dd8-chlopki-opowiesc-o-n.webp"
     },
     {
@@ -104,8 +104,8 @@
       "author": "Andrzej Sapkowski",
       "year": 2024,
       "description": "Tym razem arcymistrz polskiej fantasy cofa się do młodzieńczych lat Geralta, który stawia dopiero pierwsze kroki w wiedźmińskim fachu i musi sprostać licznym wyzwaniom. Uzbrojony w dwa runiczne miecze, zwalcza potwory, ratuje niewinne dziewice i pomaga nieszczęśliwym kochankom. Zawsze i wszędzie stara się przestrzegać niepisanego kodeksu, który przejął od swoich nauczycieli i mentorów. Jak to zwykle bywa, życie nie szczędzi mu rozczarowań - młodzieńczy idealizm raz po raz zderza się z rzeczywistością. Opowieść trwa. Historia nie kończy się nigdy...",
-      "borrowedCopies": 1,
-      "availableCopies": 1,
+      "borrowedCopies": 0,
+      "availableCopies": 2,
       "images": "https://bonito.pl/zdjecia/6/6f52637-wiedzmin-tom-9-rozdr.webp"
     },
     {
@@ -198,9 +198,9 @@
       "id": "b0ec",
       "userId": "e58f",
       "bookId": "facd",
-      "status": "borrowed",
+      "status": "returned",
       "borrowDate": "2025-02-09T13:42:24.918Z",
-      "returnDate": null
+      "returnDate": "2025-02-09T13:52:27.954Z"
     },
     {
       "id": "d4df",
@@ -238,9 +238,9 @@
       "id": "3e6d",
       "userId": "e58f",
       "bookId": "cd4e",
-      "status": "borrowed",
+      "status": "returned",
       "borrowDate": "2025-02-09T13:42:36.066Z",
-      "returnDate": null
+      "returnDate": "2025-02-09T13:52:23.705Z"
     },
     {
       "id": "1170",
@@ -1181,6 +1181,88 @@
       "userId": "1",
       "action": "Returned book - ID: 1096",
       "timestamp": "2025-02-09T13:47:02.082Z"
+    },
+    {
+      "id": "b333",
+      "userId": "1",
+      "action": "logged out",
+      "timestamp": "2025-02-09T13:51:57.469Z"
+    },
+    {
+      "id": "3bbd",
+      "userId": "e58f",
+      "action": "login",
+      "timestamp": "2025-02-09T13:52:07.889Z"
+    },
+    {
+      "id": "03c1",
+      "userId": "e58f",
+      "action": "Returned book - ID: cd4e",
+      "timestamp": "2025-02-09T13:52:23.704Z"
+    },
+    {
+      "id": "5f99",
+      "userId": "e58f",
+      "action": "Returned book - ID: facd",
+      "timestamp": "2025-02-09T13:52:27.954Z"
+    },
+    {
+      "id": "cc6d",
+      "action": "login",
+      "timestamp": "2025-02-09T14:15:57.007Z"
+    },
+    {
+      "id": "2aaa",
+      "action": "logged out",
+      "timestamp": "2025-02-09T14:17:22.299Z"
+    },
+    {
+      "id": "20c5",
+      "userId": "1c3f",
+      "action": "login",
+      "timestamp": "2025-02-09T14:17:31.615Z"
+    },
+    {
+      "id": "d1e3",
+      "userId": "c76d",
+      "action": "login",
+      "timestamp": "2025-02-09T14:18:11.700Z"
+    },
+    {
+      "id": "634b",
+      "userId": "e58f",
+      "action": "login",
+      "timestamp": "2025-02-09T14:26:29.489Z"
+    },
+    {
+      "id": "19fb",
+      "userId": "0ee0",
+      "action": "login",
+      "timestamp": "2025-02-09T14:27:39.292Z"
+    },
+    {
+      "id": "3455",
+      "userId": "0ee0",
+      "action": "logged out",
+      "timestamp": "2025-02-09T14:28:24.512Z"
+    },
+    {
+      "id": "6880",
+      "userId": "0ee0",
+      "action": "login",
+      "timestamp": "2025-02-09T14:28:35.107Z"
+    },
+    {
+      "id": "3ed9",
+      "userId": "0ee0",
+      "action": "logged out",
+      "timestamp": "2025-02-09T14:29:21.572Z"
+    },
+    {
+      "id": "fb03",
+      "userId": "e58f",
+      "action": "login",
+      "timestamp": "2025-02-09T14:29:32.006Z"
     }
   ]
 }
