@@ -9,23 +9,20 @@ interface LoginCredentials {
 
 export const loginOptions = (credentials: LoginCredentials) =>
   queryOptions({
-    queryKey: ['login-user', credentials],
+    queryKey: ['login-user'],
     queryFn: async () => {
-      const [adminUsers, clientUsers] = await Promise.all([
-        apiCall<User[]>(
-          `users?email=${credentials.email}&password=${credentials.password}&role=admin`
-        ),
-        apiCall<User[]>(
-          `users?email=${credentials.email}&password=${credentials.password}&role=client`
-        ),
-      ]);
+      try {
+        const users = await apiCall<User[]>(
+          `users?email=${credentials.email}&password=${credentials.password}`
+        );
 
-      const allUsers = [...adminUsers, ...clientUsers];
+        if (!users || users.length === 0 || users[0].role === 'DELETED') {
+          throw new Error('Nieprawidłowy login lub hasło');
+        }
 
-      if (allUsers.length === 0) {
-        throw new Error('User not found');
+        return users[0];
+      } catch (error) {
+        throw new Error(`Login failed ${error}`);
       }
-
-      return allUsers[0];
     },
   });

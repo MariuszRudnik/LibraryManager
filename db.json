@@ -44,8 +44,8 @@
       "author": "J.K. Rowling",
       "year": 1997,
       "description": "Pierwsza część przygód młodego czarodzieja Harry'ego Pottera, który odkrywa swoje magiczne dziedzictwo i rozpoczyna naukę w Szkole Magii i Czarodziejstwa w Hogwarcie.",
-      "borrowedCopies": 0,
-      "availableCopies": 9,
+      "borrowedCopies": 1,
+      "availableCopies": 8,
       "images": "https://bonito.pl/cache/1/1b10b6a-harry-potter-i-kamie_800.webp"
     },
     {
@@ -64,8 +64,8 @@
       "author": "J.R.R. Tolkien",
       "description": "Pierwszy tom epickiej trylogii, w której młody hobbit Frodo Baggins wyrusza na misję zniszczenia Pierścienia Władzy, by ocalić Śródziemie przed siłami zła.",
       "year": 1954,
-      "availableCopies": 13,
-      "borrowedCopies": 0,
+      "availableCopies": 12,
+      "borrowedCopies": 1,
       "images": "https://bonito.pl/cache/1/c16f517-wladca-pierscieni-dr_800.webp"
     },
     {
@@ -84,8 +84,8 @@
       "author": "Joanna Kuciel-Frydryszak",
       "year": 2018,
       "description": "Joanna Kuciel-Frydryszak daje wiejskim kobietom głos, by opowiedziały o swoim życiu: codziennym znoju, lękach i marzeniach. Ta mocna, głęboko dotykająca lektura pokazuje siłę kobiet, ich bezgraniczne oddanie rodzinie, ale też pragnienie zmiany i nierówną walkę o siebie w patriarchalnym społeczeństwie.",
-      "borrowedCopies": 0,
-      "availableCopies": 11,
+      "borrowedCopies": 1,
+      "availableCopies": 10,
       "images": "https://bonito.pl/zdjecia/6/73c4dd8-chlopki-opowiesc-o-n.webp"
     },
     {
@@ -104,8 +104,8 @@
       "author": "Andrzej Sapkowski",
       "year": 2024,
       "description": "Tym razem arcymistrz polskiej fantasy cofa się do młodzieńczych lat Geralta, który stawia dopiero pierwsze kroki w wiedźmińskim fachu i musi sprostać licznym wyzwaniom. Uzbrojony w dwa runiczne miecze, zwalcza potwory, ratuje niewinne dziewice i pomaga nieszczęśliwym kochankom. Zawsze i wszędzie stara się przestrzegać niepisanego kodeksu, który przejął od swoich nauczycieli i mentorów. Jak to zwykle bywa, życie nie szczędzi mu rozczarowań - młodzieńczy idealizm raz po raz zderza się z rzeczywistością. Opowieść trwa. Historia nie kończy się nigdy...",
-      "borrowedCopies": 0,
-      "availableCopies": 2,
+      "borrowedCopies": 1,
+      "availableCopies": 1,
       "images": "https://bonito.pl/zdjecia/6/6f52637-wiedzmin-tom-9-rozdr.webp"
     },
     {
@@ -114,8 +114,8 @@
       "author": "Robert C. Martin",
       "year": 2022,
       "description": "Autor przedstawia zasady i dobre praktyki programistyczne, takie jak odpowiednie nazewnictwo, podział funkcji, unikanie nadmiernej złożoności oraz znaczenie testów jednostkowych. Książka zawiera liczne przykłady kodu oraz analizę zarówno dobrych, jak i złych praktyk, pomagając programistom rozwijać umiejętność pisania lepszego kodu",
-      "borrowedCopies": 0,
-      "availableCopies": 10,
+      "borrowedCopies": 1,
+      "availableCopies": 9,
       "images": "https://bonito.pl/cache/2/e643719-czysty-kod-podreczni_800.webp"
     },
     {
@@ -124,8 +124,8 @@
       "author": "Jon Duckett",
       "year": 2023,
       "description": "JavaScript to język, który w dużej mierze ukształtował współczesne strony WWW. Dzięki niemu możemy swobodnie korzystać z interaktywnych, wygodnych w użyciu oraz niezawodnych aplikacji internetowych. Pojawienie się JavaScriptu pozwoliło zastąpić tradycyjne aplikacje desktopowe nowymi, pracującymi w chmurze. Wokół języka powstało już wiele narzędzi i bibliotek. Jedną z najpopularniejszych jest jQuery.",
-      "borrowedCopies": 0,
-      "availableCopies": 100,
+      "borrowedCopies": 1,
+      "availableCopies": 99,
       "images": "https://bonito.pl/cache/7/891566d0-javascript-i-jquery_800.webp"
     }
   ],
@@ -183,8 +183,120 @@
       "userId": "1",
       "bookId": "4",
       "status": "returned",
-      "borrowDate": "2025-02-08T21:04:09.225Z",
-      "returnDate": "2025-02-08T21:07:41.358Z"
+      "borrowDate": "2025-01-08T21:04:09.225Z",
+      "returnDate": "2025-01-08T21:07:41.358Z"
+    },
+    {
+      "id": "32a1",
+      "userId": "e58f",
+      "bookId": "1",
+      "status": "returned",
+      "borrowDate": "2025-02-09T13:42:21.499Z",
+      "returnDate": "2025-02-09T13:42:54.810Z"
+    },
+    {
+      "id": "b0ec",
+      "userId": "e58f",
+      "bookId": "facd",
+      "status": "borrowed",
+      "borrowDate": "2025-02-09T13:42:24.918Z",
+      "returnDate": null
+    },
+    {
+      "id": "d4df",
+      "userId": "e58f",
+      "bookId": "0d82",
+      "status": "returned",
+      "borrowDate": "2025-02-09T13:42:26.718Z",
+      "returnDate": "2025-02-09T13:42:48.027Z"
+    },
+    {
+      "id": "0ab9",
+      "userId": "e58f",
+      "bookId": "4",
+      "status": "returned",
+      "borrowDate": "2025-01-09T13:42:29.868Z",
+      "returnDate": "2025-01-09T13:43:02.038Z"
+    },
+    {
+      "id": "837b",
+      "userId": "e58f",
+      "bookId": "3ea0",
+      "status": "returned",
+      "borrowDate": "2025-01-09T13:42:32.377Z",
+      "returnDate": "2025-02-09T13:42:58.892Z"
+    },
+    {
+      "id": "79bb",
+      "userId": "e58f",
+      "bookId": "1096",
+      "status": "returned",
+      "borrowDate": "2025-01-09T13:42:34.043Z",
+      "returnDate": "2025-01-09T13:42:45.250Z"
+    },
+    {
+      "id": "3e6d",
+      "userId": "e58f",
+      "bookId": "cd4e",
+      "status": "borrowed",
+      "borrowDate": "2025-02-09T13:42:36.066Z",
+      "returnDate": null
+    },
+    {
+      "id": "1170",
+      "userId": "1",
+      "bookId": "1",
+      "status": "borrowed",
+      "borrowDate": "2025-02-09T13:45:45.472Z",
+      "returnDate": null
+    },
+    {
+      "id": "383d",
+      "userId": "1",
+      "bookId": "3",
+      "status": "borrowed",
+      "borrowDate": "2025-02-09T13:45:47.216Z",
+      "returnDate": null
+    },
+    {
+      "id": "f808",
+      "userId": "1",
+      "bookId": "0d82",
+      "status": "returned",
+      "borrowDate": "2025-01-09T13:45:49.354Z",
+      "returnDate": "2025-01-09T13:46:56.629Z"
+    },
+    {
+      "id": "0877",
+      "userId": "1",
+      "bookId": "1096",
+      "status": "returned",
+      "borrowDate": "2025-01-09T13:45:51.593Z",
+      "returnDate": "2025-02-09T13:47:02.083Z"
+    },
+    {
+      "id": "599b",
+      "userId": "1",
+      "bookId": "3ea0",
+      "status": "borrowed",
+      "borrowDate": "2025-02-09T13:45:53.348Z",
+      "returnDate": null
+    },
+    {
+      "id": "61cc",
+      "userId": "1",
+      "bookId": "4",
+      "status": "returned",
+      "borrowDate": "2025-01-09T13:45:55.148Z",
+      "returnDate": "2025-01-09T13:46:54.055Z"
+    },
+    {
+      "id": "dece",
+      "userId": "1",
+      "bookId": "1096",
+      "status": "borrowed",
+      "borrowDate": "2025-02-09T13:45:58.534Z",
+      "returnDate": null
     }
   ],
   "logs": [
@@ -763,6 +875,312 @@
       "userId": "e58f",
       "action": "logged out",
       "timestamp": "2025-02-08T23:44:46.492Z"
+    },
+    {
+      "id": "2dc9",
+      "userId": "e58f",
+      "action": "logged out",
+      "timestamp": "2025-02-09T09:32:03.727Z"
+    },
+    {
+      "id": "d058",
+      "userId": "e58f",
+      "action": "login",
+      "timestamp": "2025-02-09T09:36:39.177Z"
+    },
+    {
+      "id": "9b9a",
+      "userId": "e58f",
+      "action": "logged out",
+      "timestamp": "2025-02-09T09:36:43.041Z"
+    },
+    {
+      "id": "95fb",
+      "userId": "e58f",
+      "action": "login",
+      "timestamp": "2025-02-09T09:42:02.278Z"
+    },
+    {
+      "id": "983d",
+      "userId": "e58f",
+      "action": "logged out",
+      "timestamp": "2025-02-09T09:42:24.264Z"
+    },
+    {
+      "id": "5810",
+      "userId": "e58f",
+      "action": "logged out",
+      "timestamp": "2025-02-09T10:01:16.672Z"
+    },
+    {
+      "id": "e340",
+      "userId": "e58f",
+      "action": "logged out",
+      "timestamp": "2025-02-09T10:27:37.688Z"
+    },
+    {
+      "id": "c0d2",
+      "userId": "e58f",
+      "action": "logged out",
+      "timestamp": "2025-02-09T10:29:20.942Z"
+    },
+    {
+      "id": "57e2",
+      "userId": "1",
+      "action": "logged out",
+      "timestamp": "2025-02-09T10:39:23.190Z"
+    },
+    {
+      "id": "db28",
+      "userId": "1",
+      "action": "logged out",
+      "timestamp": "2025-02-09T10:40:36.765Z"
+    },
+    {
+      "id": "3fa3",
+      "userId": "e58f",
+      "action": "logged out",
+      "timestamp": "2025-02-09T10:43:54.373Z"
+    },
+    {
+      "id": "28b6",
+      "userId": "e58f",
+      "action": "logged out",
+      "timestamp": "2025-02-09T10:44:46.697Z"
+    },
+    {
+      "id": "6660",
+      "userId": "e58f",
+      "action": "logged out",
+      "timestamp": "2025-02-09T10:50:06.333Z"
+    },
+    {
+      "id": "0352",
+      "userId": "e58f",
+      "action": "logged out",
+      "timestamp": "2025-02-09T11:02:53.372Z"
+    },
+    {
+      "id": "e4b3",
+      "userId": "e58f",
+      "action": "logged out",
+      "timestamp": "2025-02-09T11:03:10.720Z"
+    },
+    {
+      "id": "2496",
+      "userId": "e58f",
+      "action": "logged out",
+      "timestamp": "2025-02-09T11:03:38.442Z"
+    },
+    {
+      "id": "49c7",
+      "userId": "e58f",
+      "action": "logged out",
+      "timestamp": "2025-02-09T12:14:58.333Z"
+    },
+    {
+      "id": "230b",
+      "userId": "e58f",
+      "action": "logged out",
+      "timestamp": "2025-02-09T12:16:11.829Z"
+    },
+    {
+      "id": "386c",
+      "userId": "e58f",
+      "action": "logged out",
+      "timestamp": "2025-02-09T12:17:13.942Z"
+    },
+    {
+      "id": "48c3",
+      "userId": "e58f",
+      "action": "login",
+      "timestamp": "2025-02-09T12:40:37.723Z"
+    },
+    {
+      "id": "6758",
+      "userId": "e58f",
+      "action": "logged out",
+      "timestamp": "2025-02-09T12:40:41.425Z"
+    },
+    {
+      "id": "f70f",
+      "userId": "e58f",
+      "action": "login",
+      "timestamp": "2025-02-09T12:41:06.532Z"
+    },
+    {
+      "id": "a9dd",
+      "userId": "e58f",
+      "action": "logged out",
+      "timestamp": "2025-02-09T13:30:06.511Z"
+    },
+    {
+      "id": "6018",
+      "userId": "1",
+      "action": "login",
+      "timestamp": "2025-02-09T13:31:28.394Z"
+    },
+    {
+      "id": "ea1f",
+      "userId": "1",
+      "action": "logged out",
+      "timestamp": "2025-02-09T13:31:32.078Z"
+    },
+    {
+      "id": "ea11",
+      "userId": "e58f",
+      "action": "login",
+      "timestamp": "2025-02-09T13:31:53.713Z"
+    },
+    {
+      "id": "4328",
+      "userId": "e58f",
+      "action": "login",
+      "timestamp": "2025-02-09T13:40:51.109Z"
+    },
+    {
+      "id": "d0b3",
+      "userId": "e58f",
+      "action": "Borrowed book - ID: 1",
+      "timestamp": "2025-02-09T13:42:21.500Z"
+    },
+    {
+      "id": "4fca",
+      "userId": "e58f",
+      "action": "Borrowed book - ID: facd",
+      "timestamp": "2025-02-09T13:42:24.918Z"
+    },
+    {
+      "id": "aac3",
+      "userId": "e58f",
+      "action": "Borrowed book - ID: 0d82",
+      "timestamp": "2025-02-09T13:42:26.718Z"
+    },
+    {
+      "id": "f61b",
+      "userId": "e58f",
+      "action": "Borrowed book - ID: 4",
+      "timestamp": "2025-02-09T13:42:29.868Z"
+    },
+    {
+      "id": "3178",
+      "userId": "e58f",
+      "action": "Borrowed book - ID: 3ea0",
+      "timestamp": "2025-02-09T13:42:32.377Z"
+    },
+    {
+      "id": "5cd3",
+      "userId": "e58f",
+      "action": "Borrowed book - ID: 1096",
+      "timestamp": "2025-02-09T13:42:34.043Z"
+    },
+    {
+      "id": "a94c",
+      "userId": "e58f",
+      "action": "Borrowed book - ID: cd4e",
+      "timestamp": "2025-02-09T13:42:36.066Z"
+    },
+    {
+      "id": "e8f4",
+      "userId": "e58f",
+      "action": "Returned book - ID: 1096",
+      "timestamp": "2025-02-09T13:42:45.250Z"
+    },
+    {
+      "id": "f979",
+      "userId": "e58f",
+      "action": "Returned book - ID: 0d82",
+      "timestamp": "2025-02-09T13:42:48.027Z"
+    },
+    {
+      "id": "0ba4",
+      "userId": "e58f",
+      "action": "Returned book - ID: 1",
+      "timestamp": "2025-02-09T13:42:54.809Z"
+    },
+    {
+      "id": "67a4",
+      "userId": "e58f",
+      "action": "Returned book - ID: 3ea0",
+      "timestamp": "2025-02-09T13:42:58.892Z"
+    },
+    {
+      "id": "f63a",
+      "userId": "e58f",
+      "action": "Returned book - ID: 4",
+      "timestamp": "2025-02-09T13:43:02.038Z"
+    },
+    {
+      "id": "7dfb",
+      "userId": "e58f",
+      "action": "logged out",
+      "timestamp": "2025-02-09T13:44:50.820Z"
+    },
+    {
+      "id": "30f9",
+      "userId": "1",
+      "action": "login",
+      "timestamp": "2025-02-09T13:45:01.034Z"
+    },
+    {
+      "id": "81f2",
+      "userId": "1",
+      "action": "Borrowed book - ID: 1",
+      "timestamp": "2025-02-09T13:45:45.474Z"
+    },
+    {
+      "id": "0f7f",
+      "userId": "1",
+      "action": "Borrowed book - ID: 3",
+      "timestamp": "2025-02-09T13:45:47.217Z"
+    },
+    {
+      "id": "11d4",
+      "userId": "1",
+      "action": "Borrowed book - ID: 0d82",
+      "timestamp": "2025-02-09T13:45:49.354Z"
+    },
+    {
+      "id": "37c0",
+      "userId": "1",
+      "action": "Borrowed book - ID: 1096",
+      "timestamp": "2025-02-09T13:45:51.593Z"
+    },
+    {
+      "id": "4207",
+      "userId": "1",
+      "action": "Borrowed book - ID: 3ea0",
+      "timestamp": "2025-02-09T13:45:53.348Z"
+    },
+    {
+      "id": "634c",
+      "userId": "1",
+      "action": "Borrowed book - ID: 4",
+      "timestamp": "2025-02-09T13:45:55.148Z"
+    },
+    {
+      "id": "8f95",
+      "userId": "1",
+      "action": "Borrowed book - ID: 1096",
+      "timestamp": "2025-02-09T13:45:58.534Z"
+    },
+    {
+      "id": "6018",
+      "userId": "1",
+      "action": "Returned book - ID: 4",
+      "timestamp": "2025-02-09T13:46:54.055Z"
+    },
+    {
+      "id": "d5b0",
+      "userId": "1",
+      "action": "Returned book - ID: 0d82",
+      "timestamp": "2025-02-09T13:46:56.629Z"
+    },
+    {
+      "id": "822f",
+      "userId": "1",
+      "action": "Returned book - ID: 1096",
+      "timestamp": "2025-02-09T13:47:02.082Z"
     }
   ]
 }

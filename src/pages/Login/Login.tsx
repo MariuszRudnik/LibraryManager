@@ -5,6 +5,7 @@ import {
   Box,
   Button,
   CircularProgress,
+  Collapse,
   Container,
   TextField,
   Typography,
@@ -23,23 +24,25 @@ export const Login = () => {
   const emailInput = useInput('');
   const passwordInput = useInput('');
   const [error, setError] = useState(false);
+  const { mutate } = useCreateLogMutation();
+  const navigate = useNavigate();
+  const { login } = useUserStore();
 
-  const { refetch, isFetching, isError, isSuccess } = useQuery({
+  const { isFetching, isSuccess, refetch } = useQuery({
     ...loginOptions({
       email: emailInput.value,
       password: passwordInput.value,
     }),
     enabled: false,
-    staleTime: 0,
-    retry: 2,
+    staleTime: Infinity,
+    retry: false,
+    gcTime: 0,
+    refetchOnWindowFocus: false,
   });
-
-  const { mutate } = useCreateLogMutation();
-  const navigate = useNavigate();
-  const { login } = useUserStore();
 
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
+    setError(false);
 
     try {
       const { data: user } = await refetch();
@@ -54,7 +57,6 @@ export const Login = () => {
         action: 'login',
         timestamp: new Date().toISOString(),
       };
-      console.log(isError);
 
       login(user);
       mutate(logData);
@@ -142,7 +144,8 @@ export const Login = () => {
           )}
         </Button>
 
-        {error && (
+        {/* {error && ( */}
+        <Collapse in={error} unmountOnExit timeout={500}>
           <Alert
             data-testid="error-message"
             severity="error"
@@ -154,7 +157,8 @@ export const Login = () => {
           >
             Nieprawidłowy login lub hasło
           </Alert>
-        )}
+        </Collapse>
+        {/* )} */}
       </Box>
       <AdminInfo />
     </Container>
