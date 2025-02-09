@@ -15,12 +15,13 @@ export const loginOptions = (credentials: LoginCredentials) =>
         const users = await apiCall<User[]>(
           `users?email=${credentials.email}&password=${credentials.password}`
         );
+        const user = users.filter((user) => user.role !== 'DELETED');
 
-        if (!users || users.length === 0 || users[0].role === 'DELETED') {
+        if (!user || user.length === 0) {
           throw new Error('Nieprawidłowy login lub hasło');
         }
 
-        return users[0];
+        return user[0];
       } catch (error) {
         throw new Error(`Login failed ${error}`);
       }
