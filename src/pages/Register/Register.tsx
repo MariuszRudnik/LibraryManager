@@ -30,10 +30,6 @@ export const Register = () => {
   const { data } = useSuspenseQuery(usersOptions);
   const navigate = useNavigate();
 
-  useEffect(() => {
-    console.log(diffrentPassword);
-  }, [diffrentPassword]);
-
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
     console.log('Password:', passwordNameInput.value);
