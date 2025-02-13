@@ -44,8 +44,8 @@
       "author": "J.K. Rowling",
       "year": 1997,
       "description": "Pierwsza część przygód młodego czarodzieja Harry'ego Pottera, który odkrywa swoje magiczne dziedzictwo i rozpoczyna naukę w Szkole Magii i Czarodziejstwa w Hogwarcie.",
-      "borrowedCopies": 0,
-      "availableCopies": 9,
+      "borrowedCopies": 1,
+      "availableCopies": 8,
       "images": "https://bonito.pl/cache/1/1b10b6a-harry-potter-i-kamie_800.webp"
     },
     {
@@ -64,8 +64,8 @@
       "author": "J.R.R. Tolkien",
       "description": "Pierwszy tom epickiej trylogii, w której młody hobbit Frodo Baggins wyrusza na misję zniszczenia Pierścienia Władzy, by ocalić Śródziemie przed siłami zła.",
       "year": 1954,
-      "availableCopies": 13,
-      "borrowedCopies": 0,
+      "availableCopies": 12,
+      "borrowedCopies": 1,
       "images": "https://bonito.pl/cache/1/c16f517-wladca-pierscieni-dr_800.webp"
     },
     {
@@ -74,8 +74,8 @@
       "author": "Goggins David",
       "year": 2023,
       "description": "David Goggins jest człowiekiem o żelaznej woli i inspiracją dla wszystkich. Samo słuchanie tego faceta sprawia, że chce się wbiec na jakąś górę. Jestem przekonany, że ludzie tacy jak on mogą zmieniać losy świata.",
-      "borrowedCopies": -1,
-      "availableCopies": 12,
+      "borrowedCopies": 1,
+      "availableCopies": 10,
       "images": "https://ecsmedia.pl/cdn-cgi/image/format=webp,width=544,height=544,/c/nic-mnie-nie-zlamie-zapanuj-nad-swoim-umyslem-i-pokonaj-przeciwnosci-losu-b-iext172232004.jpg"
     },
     {
@@ -94,8 +94,8 @@
       "author": "Mazur Wiktoria",
       "year": 2023,
       "description": "Dieta keto może być kolorowa, różnorodna, a zarazem wykwintna!\n\nW tej wyjątkowej książce kucharskiej znajdziesz 101 przepisów na śniadania na słono i na słodko, obiady: sycące zupy, przepyszne dania główne, smaczne dodatki, a także atrakcyjne przekąski oraz niezwykłe desery.\n\nDzięki nieskomplikowanym instrukcjom z prostych składników wyczarujesz wspaniałe dania. Przepisom towarzyszą przepiękne zdjęcia, które sprawiają, że nabierzesz ochoty na przyrządzenie prezentowanych potraw w swojej kuchni.",
-      "borrowedCopies": -1,
-      "availableCopies": 29,
+      "borrowedCopies": 0,
+      "availableCopies": 28,
       "images": "https://bonito.pl/zdjecia/0/e8e9ce4-baba-na-keto-mazur-w.webp"
     },
     {
@@ -104,8 +104,8 @@
       "author": "Andrzej Sapkowski",
       "year": 2024,
       "description": "Tym razem arcymistrz polskiej fantasy cofa się do młodzieńczych lat Geralta, który stawia dopiero pierwsze kroki w wiedźmińskim fachu i musi sprostać licznym wyzwaniom. Uzbrojony w dwa runiczne miecze, zwalcza potwory, ratuje niewinne dziewice i pomaga nieszczęśliwym kochankom. Zawsze i wszędzie stara się przestrzegać niepisanego kodeksu, który przejął od swoich nauczycieli i mentorów. Jak to zwykle bywa, życie nie szczędzi mu rozczarowań - młodzieńczy idealizm raz po raz zderza się z rzeczywistością. Opowieść trwa. Historia nie kończy się nigdy...",
-      "borrowedCopies": 0,
-      "availableCopies": 2,
+      "borrowedCopies": 1,
+      "availableCopies": 1,
       "images": "https://bonito.pl/zdjecia/6/6f52637-wiedzmin-tom-9-rozdr.webp"
     },
     {
@@ -114,8 +114,8 @@
       "author": "Robert C. Martin",
       "year": 2022,
       "description": "Autor przedstawia zasady i dobre praktyki programistyczne, takie jak odpowiednie nazewnictwo, podział funkcji, unikanie nadmiernej złożoności oraz znaczenie testów jednostkowych. Książka zawiera liczne przykłady kodu oraz analizę zarówno dobrych, jak i złych praktyk, pomagając programistom rozwijać umiejętność pisania lepszego kodu",
-      "borrowedCopies": 0,
-      "availableCopies": 10,
+      "borrowedCopies": 2,
+      "availableCopies": 8,
       "images": "https://bonito.pl/cache/2/e643719-czysty-kod-podreczni_800.webp"
     },
     {
@@ -124,8 +124,8 @@
       "author": "Jon Duckett",
       "year": 2023,
       "description": "JavaScript to język, który w dużej mierze ukształtował współczesne strony WWW. Dzięki niemu możemy swobodnie korzystać z interaktywnych, wygodnych w użyciu oraz niezawodnych aplikacji internetowych. Pojawienie się JavaScriptu pozwoliło zastąpić tradycyjne aplikacje desktopowe nowymi, pracującymi w chmurze. Wokół języka powstało już wiele narzędzi i bibliotek. Jedną z najpopularniejszych jest jQuery.",
-      "borrowedCopies": 0,
-      "availableCopies": 100,
+      "borrowedCopies": 1,
+      "availableCopies": 99,
       "images": "https://bonito.pl/cache/7/891566d0-javascript-i-jquery_800.webp"
     }
   ],
@@ -154,140 +154,173 @@
       "borrowDate": "2025-02-04T17:14:41.525Z",
       "returnDate": "2025-02-04T17:14:48.147Z"
     },
-      "id": "5f51",
-      "userId": "e58f",
-      "bookId": "1096",
-      "status": "returned",
-      "borrowDate": "2025-02-04T21:23:18.134Z",
-      "returnDate": "2025-02-05T21:29:03.213Z"
-    },
     {
-      "id": "6c0c",
-      "userId": "e58f",
-      "bookId": "3ea0",
-      "status": "returned",
-      "borrowDate": "2025-02-04T21:23:29.350Z",
-      "returnDate": "2025-02-05T21:29:56.831Z"
-    },
-    {
-      "id": "c3e9",
-      "userId": "e58f",
-      "bookId": "cd4e",
-      "status": "returned",
-      "borrowDate": "2025-02-04T21:23:38.194Z",
-      "returnDate": "2025-02-04T21:46:55.848Z"
-    },
-    {
-      "id": "5513",
-      "userId": "e58f",
+      "id": "ea98",
+      "userId": "2",
       "bookId": "1",
       "status": "returned",
-      "borrowDate": "2025-02-04T21:42:29.645Z",
-      "returnDate": "2025-02-05T21:29:20.674Z"
+      "borrowDate": "2025-02-04T22:59:06.286Z",
+      "returnDate": "2025-02-04T22:59:21.250Z"
     },
     {
-      "id": "ad0a",
+      "id": "3d81",
+      "userId": "2",
+      "bookId": "1",
+      "status": "returned",
+      "borrowDate": "2025-02-04T22:59:12.127Z",
+      "returnDate": "2025-02-04T22:59:18.164Z"
+    },
+    {
+      "id": "4621",
       "userId": "1",
-      "bookId": "3ea0",
+      "bookId": "1",
       "status": "returned",
-      "borrowDate": "2025-02-05T11:47:14.482Z",
-      "returnDate": "2025-02-05T22:58:56.635Z"
+      "borrowDate": "2025-02-08T15:01:53.153Z",
+      "returnDate": "2025-02-08T21:03:30.650Z"
     },
     {
-      "id": "dbeb",
-      "userId": "e58f",
-      "bookId": "2",
+      "id": "d109",
+      "userId": "1",
+      "bookId": "4",
       "status": "returned",
-      "borrowDate": "2025-02-05T21:30:24.383Z",
-      "returnDate": "2025-02-05T21:30:55.006Z"
+      "borrowDate": "2025-01-08T21:04:09.225Z",
+      "returnDate": "2025-01-08T21:07:41.358Z"
     },
     {
-      "id": "b460",
+      "id": "32a1",
       "userId": "e58f",
       "bookId": "1",
       "status": "returned",
-      "borrowDate": "2025-02-05T21:30:26.375Z",
-      "returnDate": "2025-02-05T21:30:50.565Z"
+      "borrowDate": "2025-02-09T13:42:21.499Z",
+      "returnDate": "2025-02-09T13:42:54.810Z"
     },
     {
-      "id": "7172",
-      "userId": "e58f",
-      "bookId": "3",
-      "status": "returned",
-      "borrowDate": "2025-02-05T21:30:28.422Z",
-      "returnDate": "2025-02-05T21:30:52.747Z"
-    },
-    {
-      "id": "c429",
-      "userId": "e58f",
-      "bookId": "0d82",
-      "status": "returned",
-      "borrowDate": "2025-01-05T21:30:31.661Z",
-      "returnDate": "2025-01-05T21:30:48.462Z"
-    },
-    {
-      "id": "280c",
+      "id": "b0ec",
       "userId": "e58f",
       "bookId": "facd",
       "status": "returned",
-      "borrowDate": "2025-02-05T21:30:33.596Z",
-      "returnDate": "2025-02-05T21:30:42.325Z"
+      "borrowDate": "2025-02-09T13:42:24.918Z",
+      "returnDate": "2025-02-09T13:52:27.954Z"
     },
     {
-      "id": "46a2",
-      "userId": "e58f",
-      "bookId": "4",
-      "status": "returned",
-      "borrowDate": "2025-02-05T21:30:35.115Z",
-      "returnDate": "2025-02-05T21:30:45.417Z"
-    },
-    {
-      "id": "7b52",
-      "userId": "e58f",
-      "bookId": "2",
-      "status": "returned",
-      "borrowDate": "2025-01-05T21:31:10.587Z",
-      "returnDate": "2025-01-05T21:34:21.986Z"
-    },
-    {
-      "id": "fd9e",
-      "userId": "e58f",
-      "bookId": "1",
-      "status": "borrowed",
-      "borrowDate": "2025-02-05T21:31:12.156Z",
-      "returnDate": null
-    },
-    {
-      "id": "6be0",
-      "userId": "e58f",
-      "bookId": "2",
-      "status": "returned",
-      "borrowDate": "2025-02-05T21:31:13.848Z",
-      "returnDate": "2025-02-05T21:31:21.031Z"
-    },
-    {
-      "id": "9689",
-      "userId": "e58f",
-      "bookId": "2",
-      "status": "returned",
-      "borrowDate": "2025-01-05T21:31:15.492Z",
-      "returnDate": "2025-01-05T21:34:10.419Z"
-    },
-    {
-      "id": "4ac8",
+      "id": "d4df",
       "userId": "e58f",
       "bookId": "0d82",
       "status": "returned",
-      "borrowDate": "2025-02-05T22:21:35.287Z",
-      "returnDate": "2025-02-05T22:21:46.890Z"
+      "borrowDate": "2025-02-09T13:42:26.718Z",
+      "returnDate": "2025-02-09T13:42:48.027Z"
     },
     {
-      "id": "653e",
+      "id": "0ab9",
+      "userId": "e58f",
+      "bookId": "4",
+      "status": "returned",
+      "borrowDate": "2025-01-09T13:42:29.868Z",
+      "returnDate": "2025-01-09T13:43:02.038Z"
+    },
+    {
+      "id": "837b",
+      "userId": "e58f",
+      "bookId": "3ea0",
+      "status": "returned",
+      "borrowDate": "2025-01-09T13:42:32.377Z",
+      "returnDate": "2025-02-09T13:42:58.892Z"
+    },
+    {
+      "id": "79bb",
+      "userId": "e58f",
+      "bookId": "1096",
+      "status": "returned",
+      "borrowDate": "2025-01-09T13:42:34.043Z",
+      "returnDate": "2025-01-09T13:42:45.250Z"
+    },
+    {
+      "id": "3e6d",
+      "userId": "e58f",
+      "bookId": "cd4e",
+      "status": "returned",
+      "borrowDate": "2025-02-09T13:42:36.066Z",
+      "returnDate": "2025-02-09T13:52:23.705Z"
+    },
+    {
+      "id": "1170",
+      "userId": "1",
+      "bookId": "1",
+      "status": "borrowed",
+      "borrowDate": "2025-01-07T13:45:45.472Z",
+      "returnDate": null
+    },
+    {
+      "id": "383d",
+      "userId": "1",
+      "bookId": "3",
+      "status": "borrowed",
+      "borrowDate": "2025-02-09T13:45:47.216Z",
+      "returnDate": null
+    },
+    {
+      "id": "f808",
+      "userId": "1",
+      "bookId": "0d82",
+      "status": "returned",
+      "borrowDate": "2025-01-09T13:45:49.354Z",
+      "returnDate": "2025-01-09T13:46:56.629Z"
+    },
+    {
+      "id": "0877",
+      "userId": "1",
+      "bookId": "1096",
+      "status": "returned",
+      "borrowDate": "2025-01-09T13:45:51.593Z",
+      "returnDate": "2025-02-09T13:47:02.083Z"
+    },
+    {
+      "id": "599b",
+      "userId": "1",
+      "bookId": "3ea0",
+      "status": "borrowed",
+      "borrowDate": "2025-02-09T13:45:53.348Z",
+      "returnDate": null
+    },
+    {
+      "id": "61cc",
       "userId": "1",
       "bookId": "4",
       "status": "returned",
-      "borrowDate": "2025-01-05T22:59:25.302Z",
-      "returnDate": "2025-02-05T23:01:44.423Z"
+      "borrowDate": "2025-01-09T13:45:55.148Z",
+      "returnDate": "2025-01-09T13:46:54.055Z"
+    },
+    {
+      "id": "dece",
+      "userId": "1",
+      "bookId": "1096",
+      "status": "borrowed",
+      "borrowDate": "2025-02-09T13:45:58.534Z",
+      "returnDate": null
+    },
+    {
+      "id": "421f",
+      "userId": "e58f",
+      "bookId": "4",
+      "status": "borrowed",
+      "borrowDate": "2025-02-13T21:54:42.403Z",
+      "returnDate": null
+    },
+    {
+      "id": "3c45",
+      "userId": "e58f",
+      "bookId": "3ea0",
+      "status": "borrowed",
+      "borrowDate": "2025-02-13T21:54:46.769Z",
+      "returnDate": null
+    },
+    {
+      "id": "b10d",
+      "userId": "e58f",
+      "bookId": "cd4e",
+      "status": "borrowed",
+      "borrowDate": "2025-02-13T21:54:50.132Z",
+      "returnDate": null
     }
   ],
   "logs": [
@@ -352,244 +385,144 @@
       "timestamp": "2025-01-16T16:06:22.097Z"
     },
     {
-      "id": "ade3",
+      "id": "6758",
       "userId": "e58f",
-      "action": "login",
-      "timestamp": "2025-01-16T20:10:12.219Z"
-    },
-    {
-      "id": "b101",
-      "userId": "1",
-      "action": "login",
-      "timestamp": "2025-01-16T20:10:52.264Z"
-    },
-    {
-      "id": "4c9d",
-      "userId": "e58f",
-      "action": "login",
-      "timestamp": "2025-01-16T20:14:25.783Z"
-    },
-    {
-      "id": "8d07",
-      "userId": "e58f",
-      "action": "login",
-      "timestamp": "2025-01-19T14:22:18.989Z"
-    },
-    {
-      "id": "ea7c",
-      "userId": "1",
-      "action": "login",
-      "timestamp": "2025-01-19T15:33:16.748Z"
-    },
-    {
-      "id": "ceb9",
-      "userId": "e58f",
-      "action": "login",
-      "timestamp": "2025-01-19T15:39:49.132Z"
-    },
-    {
-      "id": "3c49",
-      "userId": "1",
-      "action": "login",
-      "timestamp": "2025-01-19T15:40:19.061Z"
-    },
-    {
-      "id": "f927",
-      "userId": "1",
-      "action": "login",
-      "timestamp": "2025-01-19T15:46:24.692Z"
-    },
-    {
-      "id": "b440",
-      "userId": "1",
-      "action": "login",
-      "timestamp": "2025-01-19T15:59:06.273Z"
-    },
-    {
-      "id": "5398",
-      "userId": "e58f",
-      "action": "login",
-      "timestamp": "2025-01-19T20:43:41.550Z"
-    },
-    {
-      "id": "ea2f",
-      "userId": "1",
-      "action": "login",
-      "timestamp": "2025-01-19T20:54:24.464Z"
-    },
-    {
-      "id": "9db7",
-      "userId": "1",
-      "action": "login",
-      "timestamp": "2025-01-24T13:37:51.535Z"
-    },
-    {
-      "id": "065e",
-      "userId": "1",
-      "action": "login",
-      "timestamp": "2025-01-24T19:15:01.240Z"
-    },
-    {
-      "id": "8c26",
-      "userId": "1",
-      "action": "login",
-      "timestamp": "2025-01-24T19:16:04.649Z"
-    },
-    {
-      "id": "8b6a",
-      "userId": "e58f",
-      "action": "login",
-      "timestamp": "2025-01-25T14:08:13.915Z"
-    },
-    {
-      "id": "134a",
-      "userId": "1",
-      "action": "login",
-      "timestamp": "2025-01-25T19:40:25.251Z"
-    },
-    {
-      "id": "983d",
-      "userId": "1",
-      "action": "login",
-      "timestamp": "2025-01-27T22:39:05.525Z"
-    },
-    {
-      "id": "d4e7",
-      "userId": "1",
-      "action": "login",
-      "timestamp": "2025-01-28T18:26:10.651Z"
-    },
-    {
-      "id": "b5f9",
-      "userId": "e58f",
-      "action": "login",
-      "timestamp": "2025-02-01T11:27:32.416Z"
-    },
-    {
-      "id": "5292",
-      "userId": "e58f",
-      "action": "login",
-      "timestamp": "2025-02-01T12:46:39.294Z"
-    },
-    {
-      "id": "f50d",
-      "userId": "e58f",
-      "action": "login",
-      "timestamp": "2025-02-01T12:51:27.431Z"
-    },
-    {
-      "id": "a8a4",
-      "userId": "1",
-      "action": "login",
-      "timestamp": "2025-02-01T13:06:28.314Z"
-    },
-    {
-      "id": "51f4",
-      "userId": "e58f",
-      "action": "login",
-      "timestamp": "2025-02-01T13:37:02.130Z"
-    },
-    {
-      "id": "f0b0",
-      "userId": "e58f",
-      "action": "login",
-      "timestamp": "2025-02-01T13:41:05.359Z"
-    },
-    {
-      "id": "7b0b",
-      "userId": "1",
-      "action": "login",
-      "timestamp": "2025-02-01T16:54:20.605Z"
-    },
-    {
-      "id": "dcb0",
-      "userId": "e58f",
-      "action": "login",
-      "timestamp": "2025-02-01T16:55:54.281Z"
-    },
-    {
-      "id": "b9a6",
-      "userId": "1",
-      "action": "login",
-      "timestamp": "2025-02-01T17:03:27.756Z"
-    },
-    {
-      "id": "63cb",
-      "userId": "e58f",
-      "action": "login",
-      "timestamp": "2025-02-04T13:14:58.317Z"
-    },
-    {
-      "id": "0620",
-      "userId": "1",
-      "action": "login",
-      "timestamp": "2025-02-04T13:17:39.882Z"
-    },
-    {
-      "id": "1c47",
-      "userId": "e58f",
-      "action": "login",
-      "timestamp": "2025-02-04T15:34:02.774Z"
-    },
-    {
-      "id": "1f08",
-      "userId": "1",
-      "action": "login",
-      "timestamp": "2025-02-04T15:45:42.248Z"
-    },
-    {
-      "id": "b9d0",
-      "userId": "e58f",
-      "action": "login",
-      "timestamp": "2025-02-04T16:47:16.497Z"
-    },
-    {
-      "id": "18ee",
-      "userId": "e58f",
-      "action": "login",
-      "timestamp": "2025-02-04T16:51:56.228Z"
-    },
-    {
-      "id": "892b",
-      "userId": "1",
-      "action": "login",
-      "timestamp": "2025-02-04T16:57:03.882Z"
-    },
-    {
-      "id": "6c0c",
-      "userId": "2",
-      "action": "login",
-      "timestamp": "2025-02-04T22:59:01.885Z"
-    },
-    {
-      "id": "5e71",
-      "userId": "2",
-      "action": "Borrowed book - ID: 1",
-      "timestamp": "2025-02-04T22:59:06.286Z"
-    },
-    {
-      "id": "15f7",
-      "userId": "2",
-      "action": "Borrowed book - ID: 1",
-      "timestamp": "2025-02-04T22:59:12.127Z"
-    },
-    {
-      "id": "8f75",
-      "userId": "2",
-      "action": "Returned book - ID: 1",
-      "timestamp": "2025-02-04T22:59:18.164Z"
-    },
-    {
-      "id": "9f6e",
-      "userId": "2",
-      "action": "Returned book - ID: 1",
-      "timestamp": "2025-02-04T22:59:21.250Z"
-    },
-    {
-      "id": "175d",
-      "userId": "2",
       "action": "logged out",
-      "timestamp": "2025-02-04T22:59:24.183Z"
+      "timestamp": "2025-02-09T12:40:41.425Z"
+    },
+    {
+      "id": "f70f",
+      "userId": "e58f",
+      "action": "login",
+      "timestamp": "2025-02-09T12:41:06.532Z"
+    },
+    {
+      "id": "a9dd",
+      "userId": "e58f",
+      "action": "logged out",
+      "timestamp": "2025-02-09T13:30:06.511Z"
+    },
+    {
+      "id": "6018",
+      "userId": "1",
+      "action": "login",
+      "timestamp": "2025-02-09T13:31:28.394Z"
+    },
+    {
+      "id": "ea1f",
+      "userId": "1",
+      "action": "logged out",
+      "timestamp": "2025-02-09T13:31:32.078Z"
+    },
+    {
+      "id": "ea11",
+      "userId": "e58f",
+      "action": "login",
+      "timestamp": "2025-02-09T13:31:53.713Z"
+    },
+    {
+      "id": "4328",
+      "userId": "e58f",
+      "action": "login",
+      "timestamp": "2025-02-09T13:40:51.109Z"
+    },
+    {
+      "id": "d0b3",
+      "userId": "e58f",
+      "action": "Borrowed book - ID: 1",
+      "timestamp": "2025-02-09T13:42:21.500Z"
+    },
+    {
+      "id": "4fca",
+      "userId": "e58f",
+      "action": "Borrowed book - ID: facd",
+      "timestamp": "2025-02-09T13:42:24.918Z"
+    },
+    {
+      "id": "aac3",
+      "userId": "e58f",
+      "action": "Borrowed book - ID: 0d82",
+      "timestamp": "2025-02-09T13:42:26.718Z"
+    },
+    {
+      "id": "314d",
+      "userId": "1",
+      "action": "ADMIN_SENT_RETURN_REMINDER",
+      "timestamp": "2025-02-13T22:22:23.369Z"
+    },
+    {
+      "id": "0f53",
+      "userId": "1",
+      "action": "ADMIN_SENT_RETURN_REMINDER",
+      "timestamp": "2025-02-13T22:36:50.229Z"
+    },
+    {
+      "id": "0439",
+      "userId": "1",
+      "action": "ADMIN_SENT_RETURN_REMINDER",
+      "timestamp": "2025-02-13T22:36:54.333Z"
+    },
+    {
+      "id": "f459",
+      "userId": "1",
+      "action": "ADMIN_SENT_RETURN_REMINDER",
+      "timestamp": "2025-02-13T22:36:57.622Z"
+    },
+    {
+      "id": "dc57",
+      "userId": "1",
+      "action": "ADMIN_SENT_RETURN_REMINDER",
+      "timestamp": "2025-02-13T22:37:58.629Z"
+    },
+    {
+      "id": "e6f3",
+      "userId": "1",
+      "action": "logged out",
+      "timestamp": "2025-02-13T22:38:07.678Z"
+    },
+    {
+      "id": "979b",
+      "userId": "e58f",
+      "action": "login",
+      "timestamp": "2025-02-13T22:38:17.494Z"
+    },
+    {
+      "id": "d387",
+      "userId": "e58f",
+      "action": "logged out",
+      "timestamp": "2025-02-13T23:02:28.474Z"
+    },
+    {
+      "id": "b6a1",
+      "userId": "1",
+      "action": "login",
+      "timestamp": "2025-02-13T23:02:40.117Z"
+    },
+    {
+      "id": "c671",
+      "userId": "1",
+      "action": "ADMIN_SENT_RETURN_REMINDER",
+      "timestamp": "2025-02-13T23:02:50.339Z"
+    },
+    {
+      "id": "1e3e",
+      "userId": "1",
+      "action": "ADMIN_SENT_RETURN_REMINDER",
+      "timestamp": "2025-02-13T23:09:08.026Z"
+    }
+  ],
+  "messages": [
+    {
+      "id": "391c",
+      "userId": "e58f",
+      "message": "Proszę zwrócić książkę Nic mnie nie złamie.",
+      "bookId": "4"
+    },
+    {
+      "id": "ccf4",
+      "userId": "1",
+      "message": "Proszę zwrócić książkę Władca Pierścieni: Drużyna Pierścienia",
+      "bookId": "3"
     }
   ]
 }

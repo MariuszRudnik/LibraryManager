@@ -6,7 +6,7 @@ export const useCreateLogMutation = () => {
   return useMutation({
     mutationKey: ['new-log'],
     mutationFn: async (body: LogDto) => {
-      apiCall<Log, LogDto>('logs', {
+      return await apiCall<Log, LogDto>('logs', {
         method: 'POST',
         body,
       });

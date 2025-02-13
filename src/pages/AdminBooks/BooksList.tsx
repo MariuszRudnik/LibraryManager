@@ -165,7 +165,7 @@ export const BooksList = () => {
           <TableBody>
             {displayedBooks
               .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-              .map((row) => {
+              .map((row, index) => {
                 return (
                   <TableRow hover role="checkbox" tabIndex={-1} key={row.id}>
                     <TableCell

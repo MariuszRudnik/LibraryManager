@@ -5,73 +5,66 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import DoneIcon from '@mui/icons-material/Done';
 import { Button, Chip } from '@mui/material';
-import { brown, red } from '@mui/material/colors';
-import { LogDto, RentalBook } from '../../../types';
-import { getDaysFromNow } from '../../../utills/getDaysBetweenLogs';
-import { booksOptions } from '../../../queries/books';
+import { brown, green, red } from '@mui/material/colors';
+import { LogDto, MessageDto, RentalBook } from '../../types';
 import { useSuspenseQuery } from '@tanstack/react-query';
-import { formatDate } from '../../../utills/formatData';
-import { useEditRentalBookMutation } from '../../../mutations/useEditRentalBookMutation';
-import { useEditBookMutation } from '../../../mutations/useEditBookMutation';
-import { useCreateLogMutation } from '../../../mutations/useCreateLogMutation';
-import { useUserStore } from '../../../store/useUserStore';
+import { formatDate } from '../../utills/formatData';
+import { useCreateLogMutation } from '../../mutations/useCreateLogMutation';
+import { useUserStore } from '../../store/useUserStore';
 import Swal from 'sweetalert2';
+import { bookOptions } from '../../queries/book';
+import { userOptions } from '../../queries/user';
+import { getDaysFromNow } from '../../utills/getDaysBetweenLogs';
+import { useCreateMessageMutation } from '../../mutations/useCreateMessageMutation';
 
-type SingleBorrowedBookProps = {
-  BorrowedBook: RentalBook;
+type AdminSingleBorrowedBookProps = {
+  rentalBook: RentalBook;
 };
 
-export default function SingleBorrowedBook({
-  BorrowedBook,
-}: SingleBorrowedBookProps) {
-  const { text, isWarning, expired } = getDaysFromNow(BorrowedBook.borrowDate);
-  const { data } = useSuspenseQuery(booksOptions);
+export const AdminSingleBorrowedBook = ({
+  rentalBook,
+}: AdminSingleBorrowedBookProps) => {
+  const { data: book } = useSuspenseQuery(bookOptions(rentalBook.bookId));
+  const { data: user } = useSuspenseQuery(userOptions(rentalBook.userId));
   const { mutate: SaveLog } = useCreateLogMutation();
-  const book = data.find((book) => book.id === BorrowedBook.bookId);
-  const { user } = useUserStore();
+  const { mutate: SendMessage } = useCreateMessageMutation();
+  const { user: ThisUser } = useUserStore();
 
-  const { mutate: EditRentalBookMutation } = useEditRentalBookMutation();
-  const { mutate: EditBookMutation } = useEditBookMutation();
+  const { text, isWarning, expired } = getDaysFromNow(rentalBook.borrowDate);
 
-  const handleEditRentalBook = () => {
+  const handleSubmitMessage = () => {
     Swal.fire({
-      title: 'Czy na pewno chcesz zwrócić książkę?',
-      text: book?.title,
-      icon: 'warning',
+      title: 'Wyślij przypomnienie',
+      text: `Czy chcesz wysłać przypomnienie o zwrocie książki do użytkownika ${user.firstName} ${user.lastName}?`,
+      icon: 'question',
       showCancelButton: true,
-      cancelButtonText: 'Anuluj',
       confirmButtonColor: '#3085d6',
       cancelButtonColor: '#d33',
-      confirmButtonText: 'Tak, zwróć',
+      confirmButtonText: 'Tak, wyślij',
+      cancelButtonText: 'Anuluj',
     }).then((result) => {
       if (result.isConfirmed) {
         Swal.fire({
-          title: 'Dziękujemy za oddanie książki',
-          text: 'zapraszamy po kolejne lektury',
+          title: 'Wysłano!',
+          text: 'Przypomnienie zostało wysłane do użytkownika.',
           icon: 'success',
-          timer: 1500,
+          timer: 2000,
         });
-        if (book) {
-          EditBookMutation({
-            ...book,
-            id: book.id,
-            availableCopies: book.availableCopies + 1,
-            borrowedCopies: book.borrowedCopies - 1,
-          });
 
-          const logData: LogDto = {
-            userId: user.id,
-            action: `Returned book - ID: ${book.id}`,
-            timestamp: new Date().toISOString(),
-          };
+        const logData: LogDto = {
+          userId: ThisUser.id,
+          action: 'ADMIN_SENT_RETURN_REMINDER',
+          timestamp: new Date().toISOString(),
+        };
 
-          SaveLog(logData);
-        }
-        EditRentalBookMutation({
-          ...BorrowedBook,
-          returnDate: new Date().toISOString(),
-          status: 'returned',
-        });
+        const message: MessageDto = {
+          userId: user.id,
+          message: `Proszę zwrócić książkę ${book.title}`,
+          bookId: book.id,
+        };
+
+        SaveLog(logData);
+        SendMessage(message);
       }
     });
   };
@@ -81,6 +74,9 @@ export default function SingleBorrowedBook({
       sx={{
         display: 'flex',
         justifyContent: 'space-between',
+        marginBottom: '1rem',
+        backgroundColor: expired ? red[100] : green[100],
+        maxWidth: '1400px',
       }}
     >
       <Box
@@ -100,6 +96,7 @@ export default function SingleBorrowedBook({
             sx={{
               display: 'flex',
               flexDirection: 'column',
+              justifyContent: 'space-between',
               padding: '12px',
               gap: '4px',
               minWidth: 0,
@@ -114,23 +111,47 @@ export default function SingleBorrowedBook({
               sx={{
                 overflow: 'hidden',
                 textOverflow: 'ellipsis',
-                maxWidth: '400px',
+                maxWidth: '500px',
               }}
             >
               {book?.title}
             </Typography>
-            <Typography
-              variant="subtitle1"
-              component="div"
-              sx={{
-                color: 'text.secondary',
-                whiteSpace: 'nowrap',
-                overflow: 'hidden',
-                textOverflow: 'ellipsis',
-              }}
-            >
-              {book?.author}
-            </Typography>
+            <Box>
+              <Typography
+                variant="subtitle1"
+                component="div"
+                sx={{
+                  color: 'text.secondary',
+                  whiteSpace: 'nowrap',
+                  overflow: 'hidden',
+                  textOverflow: 'ellipsis',
+                }}
+              >
+                Wypożyczone przez
+              </Typography>
+              <Typography
+                component="div"
+                variant="h6"
+                sx={{
+                  overflow: 'hidden',
+                  textOverflow: 'ellipsis',
+                  maxWidth: '400px',
+                }}
+              >
+                {`${user.firstName} ${user.lastName}`}
+              </Typography>
+              <Typography
+                component="div"
+                variant="subtitle1"
+                sx={{
+                  overflow: 'hidden',
+                  textOverflow: 'ellipsis',
+                  maxWidth: '400px',
+                }}
+              >
+                {`Numer karty ${user.libraryCardCode}`}
+              </Typography>
+            </Box>
           </CardContent>
         </Box>
       </Box>
@@ -172,7 +193,7 @@ export default function SingleBorrowedBook({
               component="div"
               sx={{ color: 'text.secondary' }}
             >
-              {formatDate(BorrowedBook.borrowDate)}
+              {formatDate(rentalBook.borrowDate)}
             </Typography>
           </Box>
         </Box>
@@ -206,12 +227,12 @@ export default function SingleBorrowedBook({
           <Button
             sx={{ background: brown[500] }}
             color="secondary"
-            onClick={handleEditRentalBook}
+            onClick={handleSubmitMessage}
           >
-            Zwróć książkę
+            Poproś o zwrot
           </Button>
         </Box>
       </Box>
     </Card>
   );
-}
+};

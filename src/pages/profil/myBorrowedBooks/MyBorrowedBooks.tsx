@@ -23,6 +23,7 @@ export const MyBorrowedBooks = () => {
         gap: 2,
         width: '1000px',
         margin: '0 auto',
+        textAlign: 'center',
       }}
     >
       {sortedData.length > 0 ? (

@@ -30,14 +30,8 @@ export const Register = () => {
   const { data } = useSuspenseQuery(usersOptions);
   const navigate = useNavigate();
 
-  useEffect(() => {
-    console.log(diffrentPassword);
-  }, [diffrentPassword]);
-
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
-    console.log('Password:', passwordNameInput.value);
-    console.log('Repeat password:', passwordNameInput2.value);
 
     if (passwordNameInput.value !== passwordNameInput2.value) {
       setDiffrentPassword(true);
