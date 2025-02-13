@@ -38,3 +38,11 @@ export type RentalBook = {
   status: string;
 };
 export type RentalBookDto = Omit<RentalBook, 'id'>;
+
+export type Message = {
+  id: string;
+  userId: string;
+  bookId: string;
+  message: string;
+};
+export type MessageDto = Omit<Message, 'id'>;

@@ -74,8 +74,8 @@
       "author": "Goggins David",
       "year": 2023,
       "description": "David Goggins jest człowiekiem o żelaznej woli i inspiracją dla wszystkich. Samo słuchanie tego faceta sprawia, że chce się wbiec na jakąś górę. Jestem przekonany, że ludzie tacy jak on mogą zmieniać losy świata.",
-      "borrowedCopies": 0,
-      "availableCopies": 11,
+      "borrowedCopies": 1,
+      "availableCopies": 10,
       "images": "https://ecsmedia.pl/cdn-cgi/image/format=webp,width=544,height=544,/c/nic-mnie-nie-zlamie-zapanuj-nad-swoim-umyslem-i-pokonaj-przeciwnosci-losu-b-iext172232004.jpg"
     },
     {
@@ -104,8 +104,8 @@
       "author": "Andrzej Sapkowski",
       "year": 2024,
       "description": "Tym razem arcymistrz polskiej fantasy cofa się do młodzieńczych lat Geralta, który stawia dopiero pierwsze kroki w wiedźmińskim fachu i musi sprostać licznym wyzwaniom. Uzbrojony w dwa runiczne miecze, zwalcza potwory, ratuje niewinne dziewice i pomaga nieszczęśliwym kochankom. Zawsze i wszędzie stara się przestrzegać niepisanego kodeksu, który przejął od swoich nauczycieli i mentorów. Jak to zwykle bywa, życie nie szczędzi mu rozczarowań - młodzieńczy idealizm raz po raz zderza się z rzeczywistością. Opowieść trwa. Historia nie kończy się nigdy...",
-      "borrowedCopies": 0,
-      "availableCopies": 2,
+      "borrowedCopies": 1,
+      "availableCopies": 1,
       "images": "https://bonito.pl/zdjecia/6/6f52637-wiedzmin-tom-9-rozdr.webp"
     },
     {
@@ -114,8 +114,8 @@
       "author": "Robert C. Martin",
       "year": 2022,
       "description": "Autor przedstawia zasady i dobre praktyki programistyczne, takie jak odpowiednie nazewnictwo, podział funkcji, unikanie nadmiernej złożoności oraz znaczenie testów jednostkowych. Książka zawiera liczne przykłady kodu oraz analizę zarówno dobrych, jak i złych praktyk, pomagając programistom rozwijać umiejętność pisania lepszego kodu",
-      "borrowedCopies": 1,
-      "availableCopies": 9,
+      "borrowedCopies": 2,
+      "availableCopies": 8,
       "images": "https://bonito.pl/cache/2/e643719-czysty-kod-podreczni_800.webp"
     },
     {
@@ -247,7 +247,7 @@
       "userId": "1",
       "bookId": "1",
       "status": "borrowed",
-      "borrowDate": "2025-02-09T13:45:45.472Z",
+      "borrowDate": "2025-01-07T13:45:45.472Z",
       "returnDate": null
     },
     {
@@ -296,6 +296,30 @@
       "bookId": "1096",
       "status": "borrowed",
       "borrowDate": "2025-02-09T13:45:58.534Z",
+      "returnDate": null
+    },
+    {
+      "id": "421f",
+      "userId": "e58f",
+      "bookId": "4",
+      "status": "borrowed",
+      "borrowDate": "2025-02-13T21:54:42.403Z",
+      "returnDate": null
+    },
+    {
+      "id": "3c45",
+      "userId": "e58f",
+      "bookId": "3ea0",
+      "status": "borrowed",
+      "borrowDate": "2025-02-13T21:54:46.769Z",
+      "returnDate": null
+    },
+    {
+      "id": "b10d",
+      "userId": "e58f",
+      "bookId": "cd4e",
+      "status": "borrowed",
+      "borrowDate": "2025-02-13T21:54:50.132Z",
       "returnDate": null
     }
   ],
@@ -361,642 +385,6 @@
       "timestamp": "2025-01-16T16:06:22.097Z"
     },
     {
-      "id": "ade3",
-      "userId": "e58f",
-      "action": "login",
-      "timestamp": "2025-01-16T20:10:12.219Z"
-    },
-    {
-      "id": "b101",
-      "userId": "1",
-      "action": "login",
-      "timestamp": "2025-01-16T20:10:52.264Z"
-    },
-    {
-      "id": "4c9d",
-      "userId": "e58f",
-      "action": "login",
-      "timestamp": "2025-01-16T20:14:25.783Z"
-    },
-    {
-      "id": "8d07",
-      "userId": "e58f",
-      "action": "login",
-      "timestamp": "2025-01-19T14:22:18.989Z"
-    },
-    {
-      "id": "ea7c",
-      "userId": "1",
-      "action": "login",
-      "timestamp": "2025-01-19T15:33:16.748Z"
-    },
-    {
-      "id": "ceb9",
-      "userId": "e58f",
-      "action": "login",
-      "timestamp": "2025-01-19T15:39:49.132Z"
-    },
-    {
-      "id": "3c49",
-      "userId": "1",
-      "action": "login",
-      "timestamp": "2025-01-19T15:40:19.061Z"
-    },
-    {
-      "id": "f927",
-      "userId": "1",
-      "action": "login",
-      "timestamp": "2025-01-19T15:46:24.692Z"
-    },
-    {
-      "id": "b440",
-      "userId": "1",
-      "action": "login",
-      "timestamp": "2025-01-19T15:59:06.273Z"
-    },
-    {
-      "id": "5398",
-      "userId": "e58f",
-      "action": "login",
-      "timestamp": "2025-01-19T20:43:41.550Z"
-    },
-    {
-      "id": "ea2f",
-      "userId": "1",
-      "action": "login",
-      "timestamp": "2025-01-19T20:54:24.464Z"
-    },
-    {
-      "id": "9db7",
-      "userId": "1",
-      "action": "login",
-      "timestamp": "2025-01-24T13:37:51.535Z"
-    },
-    {
-      "id": "065e",
-      "userId": "1",
-      "action": "login",
-      "timestamp": "2025-01-24T19:15:01.240Z"
-    },
-    {
-      "id": "8c26",
-      "userId": "1",
-      "action": "login",
-      "timestamp": "2025-01-24T19:16:04.649Z"
-    },
-    {
-      "id": "8b6a",
-      "userId": "e58f",
-      "action": "login",
-      "timestamp": "2025-01-25T14:08:13.915Z"
-    },
-    {
-      "id": "134a",
-      "userId": "1",
-      "action": "login",
-      "timestamp": "2025-01-25T19:40:25.251Z"
-    },
-    {
-      "id": "983d",
-      "userId": "1",
-      "action": "login",
-      "timestamp": "2025-01-27T22:39:05.525Z"
-    },
-    {
-      "id": "d4e7",
-      "userId": "1",
-      "action": "login",
-      "timestamp": "2025-01-28T18:26:10.651Z"
-    },
-    {
-      "id": "b5f9",
-      "userId": "e58f",
-      "action": "login",
-      "timestamp": "2025-02-01T11:27:32.416Z"
-    },
-    {
-      "id": "5292",
-      "userId": "e58f",
-      "action": "login",
-      "timestamp": "2025-02-01T12:46:39.294Z"
-    },
-    {
-      "id": "f50d",
-      "userId": "e58f",
-      "action": "login",
-      "timestamp": "2025-02-01T12:51:27.431Z"
-    },
-    {
-      "id": "a8a4",
-      "userId": "1",
-      "action": "login",
-      "timestamp": "2025-02-01T13:06:28.314Z"
-    },
-    {
-      "id": "51f4",
-      "userId": "e58f",
-      "action": "login",
-      "timestamp": "2025-02-01T13:37:02.130Z"
-    },
-    {
-      "id": "f0b0",
-      "userId": "e58f",
-      "action": "login",
-      "timestamp": "2025-02-01T13:41:05.359Z"
-    },
-    {
-      "id": "7b0b",
-      "userId": "1",
-      "action": "login",
-      "timestamp": "2025-02-01T16:54:20.605Z"
-    },
-    {
-      "id": "dcb0",
-      "userId": "e58f",
-      "action": "login",
-      "timestamp": "2025-02-01T16:55:54.281Z"
-    },
-    {
-      "id": "b9a6",
-      "userId": "1",
-      "action": "login",
-      "timestamp": "2025-02-01T17:03:27.756Z"
-    },
-    {
-      "id": "63cb",
-      "userId": "e58f",
-      "action": "login",
-      "timestamp": "2025-02-04T13:14:58.317Z"
-    },
-    {
-      "id": "0620",
-      "userId": "1",
-      "action": "login",
-      "timestamp": "2025-02-04T13:17:39.882Z"
-    },
-    {
-      "id": "1c47",
-      "userId": "e58f",
-      "action": "login",
-      "timestamp": "2025-02-04T15:34:02.774Z"
-    },
-    {
-      "id": "1f08",
-      "userId": "1",
-      "action": "login",
-      "timestamp": "2025-02-04T15:45:42.248Z"
-    },
-    {
-      "id": "b9d0",
-      "userId": "e58f",
-      "action": "login",
-      "timestamp": "2025-02-04T16:47:16.497Z"
-    },
-    {
-      "id": "18ee",
-      "userId": "e58f",
-      "action": "login",
-      "timestamp": "2025-02-04T16:51:56.228Z"
-    },
-    {
-      "id": "892b",
-      "userId": "1",
-      "action": "login",
-      "timestamp": "2025-02-04T16:57:03.882Z"
-    },
-    {
-      "id": "6c0c",
-      "userId": "2",
-      "action": "login",
-      "timestamp": "2025-02-04T22:59:01.885Z"
-    },
-    {
-      "id": "5e71",
-      "userId": "2",
-      "action": "Borrowed book - ID: 1",
-      "timestamp": "2025-02-04T22:59:06.286Z"
-    },
-    {
-      "id": "15f7",
-      "userId": "2",
-      "action": "Borrowed book - ID: 1",
-      "timestamp": "2025-02-04T22:59:12.127Z"
-    },
-    {
-      "id": "8f75",
-      "userId": "2",
-      "action": "Returned book - ID: 1",
-      "timestamp": "2025-02-04T22:59:18.164Z"
-    },
-    {
-      "id": "9f6e",
-      "userId": "2",
-      "action": "Returned book - ID: 1",
-      "timestamp": "2025-02-04T22:59:21.250Z"
-    },
-    {
-      "id": "175d",
-      "userId": "2",
-      "action": "logged out",
-      "timestamp": "2025-02-04T22:59:24.183Z"
-    },
-    {
-      "id": "ad6c",
-      "userId": "1",
-      "action": "Borrowed book - ID: 1",
-      "timestamp": "2025-02-08T15:01:53.154Z"
-    },
-    {
-      "id": "a7a0",
-      "userId": "1",
-      "action": "Returned book - ID: 1",
-      "timestamp": "2025-02-08T21:03:30.650Z"
-    },
-    {
-      "id": "1e6a",
-      "userId": "1",
-      "action": "Borrowed book - ID: 4",
-      "timestamp": "2025-02-08T21:04:09.228Z"
-    },
-    {
-      "id": "037e",
-      "userId": "1",
-      "action": "Returned book - ID: 4",
-      "timestamp": "2025-02-08T21:07:41.358Z"
-    },
-    {
-      "id": "6465",
-      "userId": "e58f",
-      "action": "login",
-      "timestamp": "2025-02-08T21:23:36.050Z"
-    },
-    {
-      "id": "af16",
-      "userId": "e58f",
-      "action": "login",
-      "timestamp": "2025-02-08T21:27:09.407Z"
-    },
-    {
-      "id": "e9c1",
-      "userId": "e58f",
-      "action": "logged out",
-      "timestamp": "2025-02-08T21:27:14.579Z"
-    },
-    {
-      "id": "b431",
-      "userId": "e58f",
-      "action": "login",
-      "timestamp": "2025-02-08T21:29:46.216Z"
-    },
-    {
-      "id": "fe91",
-      "userId": "e58f",
-      "action": "login",
-      "timestamp": "2025-02-08T21:32:45.684Z"
-    },
-    {
-      "id": "4da4",
-      "userId": "e58f",
-      "action": "login",
-      "timestamp": "2025-02-08T21:34:00.332Z"
-    },
-    {
-      "id": "7ae0",
-      "userId": "e58f",
-      "action": "login",
-      "timestamp": "2025-02-08T21:34:31.023Z"
-    },
-    {
-      "id": "7bca",
-      "userId": "e58f",
-      "action": "login",
-      "timestamp": "2025-02-08T21:44:55.359Z"
-    },
-    {
-      "id": "ddd0",
-      "userId": "e58f",
-      "action": "login",
-      "timestamp": "2025-02-08T21:45:43.387Z"
-    },
-    {
-      "id": "5edc",
-      "userId": "e58f",
-      "action": "login",
-      "timestamp": "2025-02-08T21:48:49.891Z"
-    },
-    {
-      "id": "aaf1",
-      "userId": "e58f",
-      "action": "login",
-      "timestamp": "2025-02-08T21:49:45.509Z"
-    },
-    {
-      "id": "ee80",
-      "userId": "e58f",
-      "action": "logged out",
-      "timestamp": "2025-02-08T21:52:52.910Z"
-    },
-    {
-      "id": "cc24",
-      "userId": "e58f",
-      "action": "login",
-      "timestamp": "2025-02-08T22:12:11.363Z"
-    },
-    {
-      "id": "886d",
-      "userId": "e58f",
-      "action": "logged out",
-      "timestamp": "2025-02-08T22:13:20.696Z"
-    },
-    {
-      "id": "3f4a",
-      "userId": "e58f",
-      "action": "login",
-      "timestamp": "2025-02-08T22:13:31.109Z"
-    },
-    {
-      "id": "a870",
-      "userId": "e58f",
-      "action": "login",
-      "timestamp": "2025-02-08T23:02:46.839Z"
-    },
-    {
-      "id": "0a97",
-      "userId": "e58f",
-      "action": "login",
-      "timestamp": "2025-02-08T23:03:17.444Z"
-    },
-    {
-      "id": "964c",
-      "userId": "e58f",
-      "action": "login",
-      "timestamp": "2025-02-08T23:03:18.116Z"
-    },
-    {
-      "id": "f8da",
-      "userId": "e58f",
-      "action": "logged out",
-      "timestamp": "2025-02-08T23:03:28.366Z"
-    },
-    {
-      "id": "b6ef",
-      "userId": "e58f",
-      "action": "logged out",
-      "timestamp": "2025-02-08T23:29:33.458Z"
-    },
-    {
-      "id": "11cf",
-      "userId": "e58f",
-      "action": "logged out",
-      "timestamp": "2025-02-08T23:29:48.367Z"
-    },
-    {
-      "id": "6e37",
-      "userId": "e58f",
-      "action": "login",
-      "timestamp": "2025-02-08T23:32:19.418Z"
-    },
-    {
-      "id": "a2bb",
-      "userId": "e58f",
-      "action": "logged out",
-      "timestamp": "2025-02-08T23:32:25.969Z"
-    },
-    {
-      "id": "0362",
-      "userId": "e58f",
-      "action": "login",
-      "timestamp": "2025-02-08T23:32:34.539Z"
-    },
-    {
-      "id": "bb2e",
-      "userId": "e58f",
-      "action": "logged out",
-      "timestamp": "2025-02-08T23:32:38.974Z"
-    },
-    {
-      "id": "fc6f",
-      "userId": "e58f",
-      "action": "login",
-      "timestamp": "2025-02-08T23:32:47.237Z"
-    },
-    {
-      "id": "474b",
-      "userId": "e58f",
-      "action": "logged out",
-      "timestamp": "2025-02-08T23:32:54.117Z"
-    },
-    {
-      "id": "8e03",
-      "userId": "e58f",
-      "action": "login",
-      "timestamp": "2025-02-08T23:33:19.698Z"
-    },
-    {
-      "id": "aa63",
-      "userId": "e58f",
-      "action": "logged out",
-      "timestamp": "2025-02-08T23:33:26.641Z"
-    },
-    {
-      "id": "1e27",
-      "userId": "e58f",
-      "action": "login",
-      "timestamp": "2025-02-08T23:33:39.064Z"
-    },
-    {
-      "id": "7f26",
-      "userId": "e58f",
-      "action": "login",
-      "timestamp": "2025-02-08T23:34:01.722Z"
-    },
-    {
-      "id": "2819",
-      "userId": "e58f",
-      "action": "logged out",
-      "timestamp": "2025-02-08T23:35:32.495Z"
-    },
-    {
-      "id": "9639",
-      "userId": "e58f",
-      "action": "login",
-      "timestamp": "2025-02-08T23:35:45.408Z"
-    },
-    {
-      "id": "e428",
-      "userId": "e58f",
-      "action": "logged out",
-      "timestamp": "2025-02-08T23:36:59.390Z"
-    },
-    {
-      "id": "6d1f",
-      "userId": "e58f",
-      "action": "login",
-      "timestamp": "2025-02-08T23:37:17.261Z"
-    },
-    {
-      "id": "a396",
-      "userId": "e58f",
-      "action": "logged out",
-      "timestamp": "2025-02-08T23:40:24.390Z"
-    },
-    {
-      "id": "850e",
-      "userId": "e58f",
-      "action": "login",
-      "timestamp": "2025-02-08T23:40:42.481Z"
-    },
-    {
-      "id": "8be2",
-      "userId": "e58f",
-      "action": "login",
-      "timestamp": "2025-02-08T23:40:58.353Z"
-    },
-    {
-      "id": "7289",
-      "userId": "e58f",
-      "action": "login",
-      "timestamp": "2025-02-08T23:41:11.428Z"
-    },
-    {
-      "id": "22c0",
-      "userId": "e58f",
-      "action": "login",
-      "timestamp": "2025-02-08T23:41:25.438Z"
-    },
-    {
-      "id": "f96c",
-      "userId": "e58f",
-      "action": "login",
-      "timestamp": "2025-02-08T23:44:40.597Z"
-    },
-    {
-      "id": "408a",
-      "userId": "e58f",
-      "action": "logged out",
-      "timestamp": "2025-02-08T23:44:46.492Z"
-    },
-    {
-      "id": "2dc9",
-      "userId": "e58f",
-      "action": "logged out",
-      "timestamp": "2025-02-09T09:32:03.727Z"
-    },
-    {
-      "id": "d058",
-      "userId": "e58f",
-      "action": "login",
-      "timestamp": "2025-02-09T09:36:39.177Z"
-    },
-    {
-      "id": "9b9a",
-      "userId": "e58f",
-      "action": "logged out",
-      "timestamp": "2025-02-09T09:36:43.041Z"
-    },
-    {
-      "id": "95fb",
-      "userId": "e58f",
-      "action": "login",
-      "timestamp": "2025-02-09T09:42:02.278Z"
-    },
-    {
-      "id": "983d",
-      "userId": "e58f",
-      "action": "logged out",
-      "timestamp": "2025-02-09T09:42:24.264Z"
-    },
-    {
-      "id": "5810",
-      "userId": "e58f",
-      "action": "logged out",
-      "timestamp": "2025-02-09T10:01:16.672Z"
-    },
-    {
-      "id": "e340",
-      "userId": "e58f",
-      "action": "logged out",
-      "timestamp": "2025-02-09T10:27:37.688Z"
-    },
-    {
-      "id": "c0d2",
-      "userId": "e58f",
-      "action": "logged out",
-      "timestamp": "2025-02-09T10:29:20.942Z"
-    },
-    {
-      "id": "57e2",
-      "userId": "1",
-      "action": "logged out",
-      "timestamp": "2025-02-09T10:39:23.190Z"
-    },
-    {
-      "id": "db28",
-      "userId": "1",
-      "action": "logged out",
-      "timestamp": "2025-02-09T10:40:36.765Z"
-    },
-    {
-      "id": "3fa3",
-      "userId": "e58f",
-      "action": "logged out",
-      "timestamp": "2025-02-09T10:43:54.373Z"
-    },
-    {
-      "id": "28b6",
-      "userId": "e58f",
-      "action": "logged out",
-      "timestamp": "2025-02-09T10:44:46.697Z"
-    },
-    {
-      "id": "6660",
-      "userId": "e58f",
-      "action": "logged out",
-      "timestamp": "2025-02-09T10:50:06.333Z"
-    },
-    {
-      "id": "0352",
-      "userId": "e58f",
-      "action": "logged out",
-      "timestamp": "2025-02-09T11:02:53.372Z"
-    },
-    {
-      "id": "e4b3",
-      "userId": "e58f",
-      "action": "logged out",
-      "timestamp": "2025-02-09T11:03:10.720Z"
-    },
-    {
-      "id": "2496",
-      "userId": "e58f",
-      "action": "logged out",
-      "timestamp": "2025-02-09T11:03:38.442Z"
-    },
-    {
-      "id": "49c7",
-      "userId": "e58f",
-      "action": "logged out",
-      "timestamp": "2025-02-09T12:14:58.333Z"
-    },
-    {
-      "id": "230b",
-      "userId": "e58f",
-      "action": "logged out",
-      "timestamp": "2025-02-09T12:16:11.829Z"
-    },
-    {
-      "id": "386c",
-      "userId": "e58f",
-      "action": "logged out",
-      "timestamp": "2025-02-09T12:17:13.942Z"
-    },
-    {
-      "id": "48c3",
-      "userId": "e58f",
-      "action": "login",
-      "timestamp": "2025-02-09T12:40:37.723Z"
-    },
-    {
       "id": "6758",
       "userId": "e58f",
       "action": "logged out",
@@ -1057,212 +445,84 @@
       "timestamp": "2025-02-09T13:42:26.718Z"
     },
     {
-      "id": "f61b",
-      "userId": "e58f",
-      "action": "Borrowed book - ID: 4",
-      "timestamp": "2025-02-09T13:42:29.868Z"
-    },
-    {
-      "id": "3178",
-      "userId": "e58f",
-      "action": "Borrowed book - ID: 3ea0",
-      "timestamp": "2025-02-09T13:42:32.377Z"
-    },
-    {
-      "id": "5cd3",
-      "userId": "e58f",
-      "action": "Borrowed book - ID: 1096",
-      "timestamp": "2025-02-09T13:42:34.043Z"
-    },
-    {
-      "id": "a94c",
-      "userId": "e58f",
-      "action": "Borrowed book - ID: cd4e",
-      "timestamp": "2025-02-09T13:42:36.066Z"
-    },
-    {
-      "id": "e8f4",
-      "userId": "e58f",
-      "action": "Returned book - ID: 1096",
-      "timestamp": "2025-02-09T13:42:45.250Z"
-    },
-    {
-      "id": "f979",
-      "userId": "e58f",
-      "action": "Returned book - ID: 0d82",
-      "timestamp": "2025-02-09T13:42:48.027Z"
-    },
-    {
-      "id": "0ba4",
-      "userId": "e58f",
-      "action": "Returned book - ID: 1",
-      "timestamp": "2025-02-09T13:42:54.809Z"
-    },
-    {
-      "id": "67a4",
-      "userId": "e58f",
-      "action": "Returned book - ID: 3ea0",
-      "timestamp": "2025-02-09T13:42:58.892Z"
-    },
-    {
-      "id": "f63a",
-      "userId": "e58f",
-      "action": "Returned book - ID: 4",
-      "timestamp": "2025-02-09T13:43:02.038Z"
-    },
-    {
-      "id": "7dfb",
-      "userId": "e58f",
-      "action": "logged out",
-      "timestamp": "2025-02-09T13:44:50.820Z"
-    },
-    {
-      "id": "30f9",
+      "id": "314d",
       "userId": "1",
-      "action": "login",
-      "timestamp": "2025-02-09T13:45:01.034Z"
+      "action": "ADMIN_SENT_RETURN_REMINDER",
+      "timestamp": "2025-02-13T22:22:23.369Z"
     },
     {
-      "id": "81f2",
+      "id": "0f53",
       "userId": "1",
-      "action": "Borrowed book - ID: 1",
-      "timestamp": "2025-02-09T13:45:45.474Z"
+      "action": "ADMIN_SENT_RETURN_REMINDER",
+      "timestamp": "2025-02-13T22:36:50.229Z"
     },
     {
-      "id": "0f7f",
+      "id": "0439",
       "userId": "1",
-      "action": "Borrowed book - ID: 3",
-      "timestamp": "2025-02-09T13:45:47.217Z"
+      "action": "ADMIN_SENT_RETURN_REMINDER",
+      "timestamp": "2025-02-13T22:36:54.333Z"
     },
     {
-      "id": "11d4",
+      "id": "f459",
       "userId": "1",
-      "action": "Borrowed book - ID: 0d82",
-      "timestamp": "2025-02-09T13:45:49.354Z"
+      "action": "ADMIN_SENT_RETURN_REMINDER",
+      "timestamp": "2025-02-13T22:36:57.622Z"
     },
     {
-      "id": "37c0",
+      "id": "dc57",
       "userId": "1",
-      "action": "Borrowed book - ID: 1096",
-      "timestamp": "2025-02-09T13:45:51.593Z"
+      "action": "ADMIN_SENT_RETURN_REMINDER",
+      "timestamp": "2025-02-13T22:37:58.629Z"
     },
     {
-      "id": "4207",
-      "userId": "1",
-      "action": "Borrowed book - ID: 3ea0",
-      "timestamp": "2025-02-09T13:45:53.348Z"
-    },
-    {
-      "id": "634c",
-      "userId": "1",
-      "action": "Borrowed book - ID: 4",
-      "timestamp": "2025-02-09T13:45:55.148Z"
-    },
-    {
-      "id": "8f95",
-      "userId": "1",
-      "action": "Borrowed book - ID: 1096",
-      "timestamp": "2025-02-09T13:45:58.534Z"
-    },
-    {
-      "id": "6018",
-      "userId": "1",
-      "action": "Returned book - ID: 4",
-      "timestamp": "2025-02-09T13:46:54.055Z"
-    },
-    {
-      "id": "d5b0",
-      "userId": "1",
-      "action": "Returned book - ID: 0d82",
-      "timestamp": "2025-02-09T13:46:56.629Z"
-    },
-    {
-      "id": "822f",
-      "userId": "1",
-      "action": "Returned book - ID: 1096",
-      "timestamp": "2025-02-09T13:47:02.082Z"
-    },
-    {
-      "id": "b333",
+      "id": "e6f3",
       "userId": "1",
       "action": "logged out",
-      "timestamp": "2025-02-09T13:51:57.469Z"
+      "timestamp": "2025-02-13T22:38:07.678Z"
     },
     {
-      "id": "3bbd",
+      "id": "979b",
       "userId": "e58f",
       "action": "login",
-      "timestamp": "2025-02-09T13:52:07.889Z"
+      "timestamp": "2025-02-13T22:38:17.494Z"
     },
     {
-      "id": "03c1",
+      "id": "d387",
       "userId": "e58f",
-      "action": "Returned book - ID: cd4e",
-      "timestamp": "2025-02-09T13:52:23.704Z"
-    },
-    {
-      "id": "5f99",
-      "userId": "e58f",
-      "action": "Returned book - ID: facd",
-      "timestamp": "2025-02-09T13:52:27.954Z"
-    },
-    {
-      "id": "cc6d",
-      "action": "login",
-      "timestamp": "2025-02-09T14:15:57.007Z"
-    },
-    {
-      "id": "2aaa",
       "action": "logged out",
-      "timestamp": "2025-02-09T14:17:22.299Z"
+      "timestamp": "2025-02-13T23:02:28.474Z"
     },
     {
-      "id": "20c5",
-      "userId": "1c3f",
+      "id": "b6a1",
+      "userId": "1",
       "action": "login",
-      "timestamp": "2025-02-09T14:17:31.615Z"
+      "timestamp": "2025-02-13T23:02:40.117Z"
     },
     {
-      "id": "d1e3",
-      "userId": "c76d",
-      "action": "login",
-      "timestamp": "2025-02-09T14:18:11.700Z"
+      "id": "c671",
+      "userId": "1",
+      "action": "ADMIN_SENT_RETURN_REMINDER",
+      "timestamp": "2025-02-13T23:02:50.339Z"
     },
     {
-      "id": "634b",
+      "id": "1e3e",
+      "userId": "1",
+      "action": "ADMIN_SENT_RETURN_REMINDER",
+      "timestamp": "2025-02-13T23:09:08.026Z"
+    }
+  ],
+  "messages": [
+    {
+      "id": "391c",
       "userId": "e58f",
-      "action": "login",
-      "timestamp": "2025-02-09T14:26:29.489Z"
+      "message": "Proszę zwrócić książkę Nic mnie nie złamie.",
+      "bookId": "4"
     },
     {
-      "id": "19fb",
-      "userId": "0ee0",
-      "action": "login",
-      "timestamp": "2025-02-09T14:27:39.292Z"
-    },
-    {
-      "id": "3455",
-      "userId": "0ee0",
-      "action": "logged out",
-      "timestamp": "2025-02-09T14:28:24.512Z"
-    },
-    {
-      "id": "6880",
-      "userId": "0ee0",
-      "action": "login",
-      "timestamp": "2025-02-09T14:28:35.107Z"
-    },
-    {
-      "id": "3ed9",
-      "userId": "0ee0",
-      "action": "logged out",
-      "timestamp": "2025-02-09T14:29:21.572Z"
-    },
-    {
-      "id": "fb03",
-      "userId": "e58f",
-      "action": "login",
-      "timestamp": "2025-02-09T14:29:32.006Z"
+      "id": "ccf4",
+      "userId": "1",
+      "message": "Proszę zwrócić książkę Władca Pierścieni: Drużyna Pierścienia",
+      "bookId": "3"
     }
   ]
 }

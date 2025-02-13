@@ -1,11 +1,11 @@
 import { queryOptions } from '@tanstack/react-query';
-import { Book } from '../types';
+import { User } from '../types';
 import { apiCall } from '../utills/apiCall';
 
-export const bookOptions = (id: string) =>
+export const userOptions = (id: string) =>
   queryOptions({
-    queryKey: ['book', id],
+    queryKey: ['user', id],
     queryFn: async () => {
-      return await apiCall<Book>(`books/${id}`);
+      return await apiCall<User>(`users/${id}`);
     },
   });
