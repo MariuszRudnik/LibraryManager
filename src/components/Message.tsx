@@ -3,17 +3,27 @@ import IconButton from '@mui/material/IconButton';
 import Menu from '@mui/material/Menu';
 import { Badge, MenuItem } from '@mui/material';
 import MailIcon from '@mui/icons-material/Mail';
+import { useSuspenseQuery } from '@tanstack/react-query';
+import { messagesOptions } from '../queries/messages';
+import { useUserStore } from '../store/useUserStore';
+import { useNavigate } from '@tanstack/react-router';
 
 export const Message = () => {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+  const { user } = useUserStore();
+  const { data: messages } = useSuspenseQuery(messagesOptions(user.id));
+  const navigate = useNavigate();
+
   const handleMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
   };
   const handleClose = () => {
     setAnchorEl(null);
   };
-
-  const messages = ['Proszę oddać książke Harry Potter'];
+  const handleNavigate = () => {
+    navigate({ to: '/profil/myBorrowedBooks' });
+    handleClose();
+  };
 
   return (
     <>
@@ -52,8 +62,10 @@ export const Message = () => {
           open={Boolean(anchorEl)}
           onClose={handleClose}
         >
-          {messages.map((message, index) => (
-            <MenuItem key={index}>{message}</MenuItem>
+          {messages.map((message) => (
+            <MenuItem onClick={handleNavigate} key={message.id}>
+              {message.message}
+            </MenuItem>
           ))}
         </Menu>
       )}

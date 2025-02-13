@@ -15,6 +15,7 @@ export const getDaysFromNow = (
     return {
       text: `Termin upłynął ${Math.abs(diffDays)} dni temu`,
       isWarning: true,
+      expired: true,
     };
   }
   if (diffDays === 0) {
