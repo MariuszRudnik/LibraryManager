@@ -4,7 +4,7 @@ export type User = {
   lastName: string;
   email: string;
   password: string;
-  role: 'client' | 'admin' | 'DELETED';
+  role: 'client' | 'admin' | 'DELETED' | '';
   libraryCardCode: string;
 };
 export type UserDto = Omit<User, 'id'>;
@@ -39,11 +39,11 @@ export type RentalBook = {
 };
 export type RentalBookDto = Omit<RentalBook, 'id'>;
 
-export type Message = {
+export type MessageType = {
   id: string;
   userId: string;
   bookId: string;
   title: string;
   preMessage: string;
 };
-export type MessageDto = Omit<Message, 'id'>;
+export type MessageDto = Omit<MessageType, 'id'>;

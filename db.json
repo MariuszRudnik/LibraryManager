@@ -681,20 +681,6 @@
   ],
   "messages": [
     {
-      "id": "44ed",
-      "userId": "e58f",
-      "preMessage": "Proszę zwrócić książkę ",
-      "title": "Nic mnie nie złamie.",
-      "bookId": "4"
-    },
-    {
-      "id": "7de7",
-      "userId": "e58f",
-      "preMessage": "Proszę zwrócić książkę ",
-      "title": "Czysty kod. Podręcznik dobrego programisty",
-      "bookId": "3ea0"
-    },
-    {
       "id": "7d70",
       "userId": "1",
       "preMessage": "Proszę zwrócić książkę ",

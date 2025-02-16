@@ -16,6 +16,8 @@ import { useEditBookMutation } from '../../../mutations/useEditBookMutation';
 import { useCreateLogMutation } from '../../../mutations/useCreateLogMutation';
 import { useUserStore } from '../../../store/useUserStore';
 import Swal from 'sweetalert2';
+import styles from './styles.module.scss';
+import { usePageStore } from '../../../store/usePageStore';
 
 type SingleBorrowedBookProps = {
   BorrowedBook: RentalBook;
@@ -29,6 +31,7 @@ export default function SingleBorrowedBook({
   const { mutate: SaveLog } = useCreateLogMutation();
   const book = data.find((book) => book.id === BorrowedBook.bookId);
   const { user } = useUserStore();
+  const { SelectElement } = usePageStore();
 
   const { mutate: EditRentalBookMutation } = useEditRentalBookMutation();
   const { mutate: EditBookMutation } = useEditBookMutation();
@@ -78,6 +81,7 @@ export default function SingleBorrowedBook({
 
   return (
     <Card
+      className={SelectElement === book?.id ? styles.scaleUpDown : ''}
       sx={{
         display: 'flex',
         justifyContent: 'space-between',
