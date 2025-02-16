@@ -7,12 +7,17 @@ import { useSuspenseQuery } from '@tanstack/react-query';
 import { messagesOptions } from '../queries/messages';
 import { useUserStore } from '../store/useUserStore';
 import { useNavigate } from '@tanstack/react-router';
+import { useDeleteMessageMutation } from '../mutations/useDeleteMessageMutation';
+import { usePageStore } from '../store/usePageStore';
+import { MessageType } from '../types';
 
 export const Message = () => {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const { user } = useUserStore();
   const { data: messages } = useSuspenseQuery(messagesOptions(user.id));
+  const { mutate: deleteMessage } = useDeleteMessageMutation(user.id);
   const navigate = useNavigate();
+  const { SelectedElement } = usePageStore();
 
   const handleMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
@@ -20,9 +25,11 @@ export const Message = () => {
   const handleClose = () => {
     setAnchorEl(null);
   };
-  const handleNavigate = () => {
+  const handleNavigate = (message: MessageType) => {
     navigate({ to: '/profil/myBorrowedBooks' });
+    deleteMessage(message.id);
     handleClose();
+    SelectedElement(message.bookId);
   };
 
   return (
@@ -46,7 +53,7 @@ export const Message = () => {
           <MailIcon />
         </Badge>
       </IconButton>
-      {messages && (
+      {messages && messages.length > 0 && (
         <Menu
           id="menu-appbar"
           anchorEl={anchorEl}
@@ -63,8 +70,11 @@ export const Message = () => {
           onClose={handleClose}
         >
           {messages.map((message) => (
-            <MenuItem onClick={handleNavigate} key={message.id}>
-              {message.message}
+            <MenuItem onClick={() => handleNavigate(message)} key={message.id}>
+              <div>
+                {message.preMessage}{' '}
+                <span style={{ fontWeight: 'bold' }}>{message.title}</span>
+              </div>
             </MenuItem>
           ))}
         </Menu>
