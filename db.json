@@ -104,8 +104,8 @@
       "author": "Andrzej Sapkowski",
       "year": 2024,
       "description": "Tym razem arcymistrz polskiej fantasy cofa się do młodzieńczych lat Geralta, który stawia dopiero pierwsze kroki w wiedźmińskim fachu i musi sprostać licznym wyzwaniom. Uzbrojony w dwa runiczne miecze, zwalcza potwory, ratuje niewinne dziewice i pomaga nieszczęśliwym kochankom. Zawsze i wszędzie stara się przestrzegać niepisanego kodeksu, który przejął od swoich nauczycieli i mentorów. Jak to zwykle bywa, życie nie szczędzi mu rozczarowań - młodzieńczy idealizm raz po raz zderza się z rzeczywistością. Opowieść trwa. Historia nie kończy się nigdy...",
-      "borrowedCopies": 1,
-      "availableCopies": 1,
+      "borrowedCopies": 0,
+      "availableCopies": 2,
       "images": "https://bonito.pl/zdjecia/6/6f52637-wiedzmin-tom-9-rozdr.webp"
     },
     {
@@ -318,9 +318,9 @@
       "id": "b10d",
       "userId": "e58f",
       "bookId": "cd4e",
-      "status": "borrowed",
+      "status": "returned",
       "borrowDate": "2025-02-13T21:54:50.132Z",
-      "returnDate": null
+      "returnDate": "2025-02-16T15:55:32.134Z"
     }
   ],
   "logs": [
@@ -509,20 +509,197 @@
       "userId": "1",
       "action": "ADMIN_SENT_RETURN_REMINDER",
       "timestamp": "2025-02-13T23:09:08.026Z"
+    },
+    {
+      "id": "94c1",
+      "userId": "1",
+      "action": "logged out",
+      "timestamp": "2025-02-16T15:37:16.694Z"
+    },
+    {
+      "id": "7124",
+      "userId": "e58f",
+      "action": "login",
+      "timestamp": "2025-02-16T15:37:29.971Z"
+    },
+    {
+      "id": "aefd",
+      "userId": "e58f",
+      "action": "logged out",
+      "timestamp": "2025-02-16T15:39:38.387Z"
+    },
+    {
+      "id": "97f1",
+      "userId": "1",
+      "action": "login",
+      "timestamp": "2025-02-16T15:39:52.635Z"
+    },
+    {
+      "id": "7870",
+      "userId": "1",
+      "action": "ADMIN_SENT_RETURN_REMINDER",
+      "timestamp": "2025-02-16T15:40:13.587Z"
+    },
+    {
+      "id": "d156",
+      "userId": "1",
+      "action": "ADMIN_SENT_RETURN_REMINDER",
+      "timestamp": "2025-02-16T15:40:16.691Z"
+    },
+    {
+      "id": "d756",
+      "userId": "1",
+      "action": "ADMIN_SENT_RETURN_REMINDER",
+      "timestamp": "2025-02-16T15:40:20.223Z"
+    },
+    {
+      "id": "b851",
+      "userId": "1",
+      "action": "logged out",
+      "timestamp": "2025-02-16T15:40:50.241Z"
+    },
+    {
+      "id": "4937",
+      "userId": "e58f",
+      "action": "login",
+      "timestamp": "2025-02-16T15:40:57.953Z"
+    },
+    {
+      "id": "c0fc",
+      "userId": "e58f",
+      "action": "Returned book - ID: cd4e",
+      "timestamp": "2025-02-16T15:55:32.134Z"
+    },
+    {
+      "id": "4a74",
+      "userId": "e58f",
+      "action": "logged out",
+      "timestamp": "2025-02-16T16:04:36.726Z"
+    },
+    {
+      "id": "83d6",
+      "userId": "1",
+      "action": "login",
+      "timestamp": "2025-02-16T16:04:49.846Z"
+    },
+    {
+      "id": "3812",
+      "userId": "1",
+      "action": "ADMIN_SENT_RETURN_REMINDER",
+      "timestamp": "2025-02-16T16:05:05.239Z"
+    },
+    {
+      "id": "6c16",
+      "userId": "1",
+      "action": "ADMIN_SENT_RETURN_REMINDER",
+      "timestamp": "2025-02-16T16:05:08.476Z"
+    },
+    {
+      "id": "874e",
+      "userId": "1",
+      "action": "logged out",
+      "timestamp": "2025-02-16T16:05:15.931Z"
+    },
+    {
+      "id": "3d6b",
+      "userId": "e58f",
+      "action": "login",
+      "timestamp": "2025-02-16T16:05:25.434Z"
+    },
+    {
+      "id": "5349",
+      "userId": "e58f",
+      "action": "logged out",
+      "timestamp": "2025-02-16T16:07:43.678Z"
+    },
+    {
+      "id": "8ba1",
+      "userId": "1",
+      "action": "login",
+      "timestamp": "2025-02-16T16:07:56.117Z"
+    },
+    {
+      "id": "444e",
+      "userId": "1",
+      "action": "ADMIN_SENT_RETURN_REMINDER",
+      "timestamp": "2025-02-16T16:09:33.267Z"
+    },
+    {
+      "id": "e4fb",
+      "userId": "1",
+      "action": "logged out",
+      "timestamp": "2025-02-16T16:09:36.617Z"
+    },
+    {
+      "id": "bd99",
+      "userId": "e58f",
+      "action": "login",
+      "timestamp": "2025-02-16T16:09:45.339Z"
+    },
+    {
+      "id": "078a",
+      "userId": "e58f",
+      "action": "logged out",
+      "timestamp": "2025-02-16T16:14:33.426Z"
+    },
+    {
+      "id": "124a",
+      "userId": "1",
+      "action": "login",
+      "timestamp": "2025-02-16T16:14:53.927Z"
+    },
+    {
+      "id": "2368",
+      "userId": "1",
+      "action": "ADMIN_SENT_RETURN_REMINDER",
+      "timestamp": "2025-02-16T16:15:01.579Z"
+    },
+    {
+      "id": "bfd7",
+      "userId": "1",
+      "action": "ADMIN_SENT_RETURN_REMINDER",
+      "timestamp": "2025-02-16T16:15:03.809Z"
+    },
+    {
+      "id": "dec3",
+      "userId": "1",
+      "action": "ADMIN_SENT_RETURN_REMINDER",
+      "timestamp": "2025-02-16T16:15:08.049Z"
+    },
+    {
+      "id": "288c",
+      "userId": "1",
+      "action": "logged out",
+      "timestamp": "2025-02-16T16:15:18.247Z"
+    },
+    {
+      "id": "da46",
+      "userId": "e58f",
+      "action": "login",
+      "timestamp": "2025-02-16T16:15:27.367Z"
     }
   ],
   "messages": [
     {
-      "id": "391c",
+      "id": "44ed",
       "userId": "e58f",
-      "message": "Proszę zwrócić książkę Nic mnie nie złamie.",
+      "preMessage": "Proszę zwrócić książkę ",
+      "title": "Nic mnie nie złamie.",
       "bookId": "4"
     },
     {
-      "id": "ccf4",
+      "id": "7de7",
+      "userId": "e58f",
+      "preMessage": "Proszę zwrócić książkę ",
+      "title": "Czysty kod. Podręcznik dobrego programisty",
+      "bookId": "3ea0"
+    },
+    {
+      "id": "7d70",
       "userId": "1",
-      "message": "Proszę zwrócić książkę Władca Pierścieni: Drużyna Pierścienia",
-      "bookId": "3"
+      "preMessage": "Proszę zwrócić książkę ",
+      "title": "JavaScript i jQuery",
+      "bookId": "1096"
     }
   ]
 }

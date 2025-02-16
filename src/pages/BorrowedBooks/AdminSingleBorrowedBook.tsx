@@ -59,7 +59,8 @@ export const AdminSingleBorrowedBook = ({
 
         const message: MessageDto = {
           userId: user.id,
-          message: `Proszę zwrócić książkę ${book.title}`,
+          preMessage: `Proszę zwrócić książkę `,
+          title: book.title,
           bookId: book.id,
         };
 

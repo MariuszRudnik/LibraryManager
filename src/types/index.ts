@@ -43,6 +43,7 @@ export type Message = {
   id: string;
   userId: string;
   bookId: string;
-  message: string;
+  title: string;
+  preMessage: string;
 };
 export type MessageDto = Omit<Message, 'id'>;
